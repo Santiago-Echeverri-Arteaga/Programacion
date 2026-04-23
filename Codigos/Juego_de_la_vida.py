@@ -44,7 +44,7 @@ def seed_glider(grid, top, left):
 
 # ----- Demo -----
 H, W = 80, 120
-grid0 = (np.random.rand(H, W) < 0.20).astype(np.uint8)
+grid0 = (np.random.rand(H, W) < 0.30).astype(np.uint8)
 
 # Un par de patrones bonitos
 seed_glider(grid0, 5, 5)
@@ -54,7 +54,7 @@ gen = life(grid0)  # generador infinito
 
 fig, ax = plt.subplots()
 im = ax.imshow(next(gen), interpolation="nearest")
-ax.set_title("Juego de la Vida — NumPy + Matplotlib (q para cerrar)")
+ax.set_title("Juego de la Vida — NumPy + Matplotlib")
 ax.set_axis_off()
 
 
