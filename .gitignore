@@ -1,3 +1,18 @@
 .env
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.ruff_cache/
 .DS_Store
 Codigos/.DS_Store
+
+# Material exclusivo del docente. Puede convertirse en un repositorio privado.
+_docente_privado/
+
+# Datos y resultados generados durante las actividades.
+datos/generados/
+resultados/
+*.log

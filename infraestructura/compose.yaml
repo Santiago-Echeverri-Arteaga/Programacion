@@ -1,0 +1,33 @@
+name: programacion-fisica
+
+services:
+  db:
+    image: postgres:18-alpine
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-fisica}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Copie .env.example a .env}
+      POSTGRES_DB: ${POSTGRES_DB:-observatorio}
+    ports:
+      - "127.0.0.1:${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql
+      - ./postgresql/init:/docker-entrypoint-initdb.d:ro
+      - ./postgresql:/material:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-fisica} -d ${POSTGRES_DB:-observatorio}"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  analisis:
+    profiles: ["demo"]
+    build:
+      context: ./docker
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-fisica}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-observatorio}
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  postgres_data:

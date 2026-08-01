@@ -1,0 +1,15 @@
+instante,sensor,temperatura,unidad,incertidumbre,calidad
+2026-02-10T14:00:00-05:00,A,82.1,degC,0.4,valida
+2026-02-10T14:05:00-05:00,A,70.2,degC,0.4,valida
+2026-02-10T14:10:00-05:00,A,60.8,degC,0.4,valida
+2026-02-10T14:10:00-05:00,A,60.8,degC,0.4,valida
+2026-02-10T14:15:00-05:00,A,,degC,0.4,descartada
+2026-02-10T14:20:00-05:00,A,318.7,K,0.5,valida
+2026-02-10T14:25:00-05:00,A,39.9,degC,0.4,valida
+2026-02-10T14:00:00-05:00,B,61.5,degC,0.5,valida
+2026-02-10T14:05:00-05:00,B,55.1,degC,0.5,valida
+2026-02-10T14:10:00-05:00,B,49.9,degC,0.5,sospechosa
+2026-02-10T14:15:00-05:00,B,457.0,degC,0.5,sospechosa
+2026-02-10T14:20:00-05:00,B,42.3,degC,0.5,valida
+2026-02-10T14:25:00-05:00,B,39.6,degC,0.5,valida
+

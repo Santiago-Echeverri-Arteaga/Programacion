@@ -1,40 +1,59 @@
-<div align="center">
-<h1>Programación</h1>
+# Programación científica con Python para Física
 
-<img src="https://www.nextibs.com/wp-content/uploads/2021/12/seguridad-informatica-2048x877.jpeg.webp" alt="Imagen con una pantalla digital y una mano acercansose a tocarla"
-     width="768"
-     height="329">
-</div>
+Curso de Programación del programa de Física de la Universidad del Quindío.
 
-**Programa de Física**
-**Universidad del Quindío**
+Este repositorio reúne las guías, ejemplos, notebooks, datos y laboratorios que se
+utilizan en clase. El curso prioriza la capacidad de leer, escribir, depurar,
+probar y explicar código, además de aplicar la programación a modelos y datos
+físicos de forma reproducible.
 
-**Docente:** *Ph.D. Santiago Echeverri Arteaga*
+## Organización
 
-# Curso de Programación en Python para Físicos
+- [`programa/`](programa/README.md): resultados de aprendizaje, cronograma,
+  evaluación, política de IA y proyecto final.
+- [`guias/`](guias/README.md): guías de clase y material de apoyo.
+- [`ejemplos/`](ejemplos/README.md): programas breves usados en demostraciones.
+- [`notebooks/`](notebooks/README.md): notebooks de trabajo guiado.
+- [`datos/`](datos/README.md): conjuntos de datos pequeños con procedencia.
+- [`laboratorios/`](laboratorios/README.md): enunciados y archivos iniciales.
+- [`proyecto_final/`](proyecto_final/README.md): instrucciones y plantillas.
+- [`infraestructura/`](infraestructura/README.md): PostgreSQL y Docker.
+- [`recursos/`](recursos/README.md): referencias y enlaces de apoyo.
 
-## Descripción del Curso
-La asignatura se centrará en la aplicación de Python a problemas de la física y la ciencia de datos, con un enfoque en proyectos prácticos. Los estudiantes aprenderán programación orientada a objetos desde el inicio, junto con el uso de bibliotecas científicas y herramientas de manejo de datos.
+El directorio histórico `Codigos/` se conserva temporalmente mientras sus
+materiales se revisan, migran o descartan. No hace parte de la ruta oficial del
+curso nuevo.
 
-## Objetivos del Curso
-1. Introducir a los estudiantes en la programación orientada a objetos con Python.
-2. Desarrollar habilidades en el uso de bibliotecas científicas como NumPy, SciPy, y Matplotlib.
-3. Enseñar técnicas de manejo y análisis de datos utilizando Pandas.
-4. Aplicar conocimientos de programación y bases de datos a proyectos prácticos.
-5. Capacitar a los estudiantes en el uso de herramientas y métodos de la ciencia de datos.
+## Preparación del entorno
 
-Recuerde que para el curso deberá tener instalado los [**compiladores de Python**](https://www.python.org/downloads/), [**Visual Studio Code**](https://code.visualstudio.com/download) y el [**GIT BASH**](https://git-scm.com/downloads). Si desea complementar el contenido dado en el aula de clase, puede revisar el siguiente material audiovisual concerniente al manejo de VSCode y Git:
-
-1. [VSCode](https://youtu.be/Ei1y51K8jQk)
-2. [Git Tutorial *Hola Mundo*](https://youtu.be/VdGzPZ31ts8)
-3. [Git Tutorial *codigofacilito*](https://www.youtube.com/watch?v=zH3I1DZNovk&list=PL9xYXqvLX2kMUrXTvDY6GI2hgacfy0rId)
-4. [Documental Hola Mundo!](https://www.youtube.com/watch?v=GNRhblNcZv4)
-
-Ya teniendo instalado lo anterior, descargue el archivo requirements.txt del presente repositorio, cree un entorno virtual de Python y en una terminal (de GIT BASH si está en Windows)  copie el siguiente código
+Se requiere Python 3.12 o posterior, Git y una terminal Linux. Para los módulos
+finales se requiere Docker.
 
 ```bash
-pip install requirements.txt
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
 ```
 
-## [Bibliografía Recomendada](https://1drv.ms/u/s!AvgPrG5g0hS9geYeVJN97X8LEwTkiQ?e=f4NW5x).
-## [Presentaciones usadas en clase](https://drive.google.com/drive/folders/1uW9cyS9lSuLa0c1ZweMbd6OUFk5jAe19?usp=share_link).
+En Windows PowerShell, la activación equivalente es:
+
+```powershell
+.venv\Scripts\Activate.ps1
+```
+
+Las instrucciones completas se desarrollarán en las guías de instalación y de
+Linux/Bash.
+
+## Uso de inteligencia artificial
+
+La IA generativa no está permitida en parciales, pruebas escritas, ejercicios de
+salida ni actividades que se identifiquen como evaluación individual protegida.
+En actividades abiertas solo puede usarse cuando la guía lo autorice y siempre
+debe declararse. Consulte [`programa/politica_ia.md`](programa/politica_ia.md).
+
+## Material docente privado
+
+Las soluciones, bancos de preguntas, claves de calificación y notas de clase se
+mantienen en `_docente_privado/`, excluido de este repositorio público mediante
+`.gitignore`.

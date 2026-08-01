@@ -1,8 +1,16 @@
-virtualenv==20.17.1
-pytest==7.2.1
-pylint==2.15.10
-numpy==1.24.1
-matplotlib==3.6.3
-matplotlib-inline==0.1.6
-scipy==1.10.0
-pandas==1.5.3
+# Cómputo científico
+numpy>=2.0,<3
+scipy>=1.13,<2
+sympy>=1.13,<2
+pandas>=2.2,<4
+matplotlib>=3.9,<4
+
+# Notebooks y pruebas
+jupyterlab>=4,<5
+ipykernel>=6.29,<8
+pytest>=8,<10
+
+# PostgreSQL
+psycopg[binary]>=3.2,<4
+SQLAlchemy>=2.0,<3
+python-dotenv>=1,<2
