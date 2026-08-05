@@ -6,7 +6,7 @@
 - Duración: 120 minutos.
 - Nivel de IA: 3 durante la demostración; 0 en la salida individual.
 - Resultados: RA 6, RA 12 y RA 13.
-- Archivos: `ejemplos/ia/` y `proyecto_final/AI_USAGE.md`.
+- Archivos: `Codigos/14_ia_agentes/` y `proyecto_final/AI_USAGE.md`.
 
 ## Propósito
 
@@ -76,4 +76,3 @@ Se presenta un fragmento nuevo. El estudiante debe escribir:
 Que una IA haya producido el código no es argumento para aceptarlo ni para
 rechazarlo. El criterio es la evidencia. Quien entrega el resultado conserva la
 responsabilidad de comprenderlo y defenderlo.
-

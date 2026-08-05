@@ -1,44 +1,90 @@
-# Laboratorio 6 — Del servidor PostgreSQL a una figura reproducible
+# Laboratorio 6 — De PostgreSQL a una figura reproducible
 
-## Pregunta
+## 1. Identificación
+
+| Campo | Especificación |
+|---|---|
+| Duración presencial | 120 min |
+| Trabajo | Parejas con comprobación individual |
+| Herramientas | PostgreSQL, `psql`, Python, psycopg y Docker Compose |
+| IA | Nivel 2: crítica/pruebas después de una primera versión propia; declarar |
+| Archivo inicial | [`consulta_y_figura.py`](consulta_y_figura.py) |
+
+## 2. Pregunta de trabajo
 
 ¿Puede construirse un análisis verificable cuyo origen sea una base PostgreSQL y
 que se ejecute de la misma manera dentro de un contenedor?
 
-## IA
+## 3. Marco teórico breve
 
-Nivel 2. Puede utilizarse para crítica o generación de casos de prueba después de
-una primera implementación propia. Debe entregarse `AI_USAGE.md`.
+PostgreSQL es un sistema cliente–servidor: SQL define y consulta relaciones bajo
+restricciones. Una unión combina tablas según claves y una agregación cambia la
+unidad de análisis; ambas deben validarse. Las consultas parametrizadas separan
+datos de instrucciones. Docker empaqueta sistema y dependencias en imágenes y
+ejecuta contenedores aislados; Compose conecta servicios mediante una red y
+volúmenes. Dentro de un contenedor, `localhost` se refiere al propio contenedor.
+Contenerizar mejora repetibilidad, pero no valida datos ni resultados físicos.
 
-## Tareas
+## 4. Objetivos
 
-1. Iniciar la infraestructura suministrada.
-2. Formular una pregunta que requiera al menos un `JOIN` y una agregación.
-3. Probar primero la consulta en `psql`.
-4. Ejecutar una consulta parametrizada desde Python.
-5. Validar número de filas, unidades y un resultado calculable manualmente.
-6. Construir una figura o tabla científica derivada del resultado.
-7. Ejecutar el cliente dentro del contenedor de análisis.
-8. Explicar por qué `localhost` cambia de significado dentro del contenedor.
-9. Registrar la consulta, dependencias, comandos y asistencia de IA.
+- formular y probar una consulta científica primero en SQL puro;
+- conectar Python mediante parámetros y secretos externos;
+- validar granularidad, unidades y al menos un resultado manual;
+- reproducir el flujo completo con Docker Compose.
 
-## Extensión remota
+## 5. Materiales, seguridad y acceso
 
-Si el docente suministra una cuenta temporal de lectura, cambiar únicamente
-`DATABASE_URL` y verificar la misma consulta sobre el servicio remoto con TLS.
+- infraestructura de [`../../infraestructura/`](../../infraestructura/README.md);
+- Docker, Compose, `psql` y Python;
+- credenciales locales de desarrollo suministradas mediante `.env` no versionado;
+- cuenta remota temporal de solo lectura, si el docente la habilita.
 
-## Criterios de aceptación
+Nunca publique credenciales ni datos sensibles. El acceso remoto usa TLS y mínimo
+privilegio; al terminar se revoca. La IA no recibe URLs, credenciales o datos no
+autorizados. Declare su uso en `AI_USAGE.md`.
 
-- Ninguna credencial aparece en Git.
-- La consulta usa parámetros para valores externos.
-- SQL realiza filtrado, combinación o agregación que no conviene trasladar en
-  bruto a Python.
-- La imagen se construye desde el Dockerfile suministrado o uno justificado.
-- Se distingue persistencia del volumen y ciclo de vida del contenedor.
-- Existe al menos una prueba independiente del resultado de la consulta.
+## 6. Procedimiento
 
-## Salida individual
+1. Dibuje la arquitectura: cliente, servicio PostgreSQL, volumen, red y salida.
+2. Inicie la infraestructura y compruebe estado y registros sin borrar volúmenes.
+3. Explore tablas, claves y restricciones desde `psql`.
+4. Formule una pregunta que requiera al menos un `JOIN` y una agregación.
+5. Escriba la consulta en un archivo `.sql`; prediga columnas y número de filas.
+6. Ejecútela en `psql` y valide clave de agrupación, nulos, unidades y granularidad.
+7. Calcule manualmente un subconjunto y compárelo con SQL.
+8. Ejecute la consulta parametrizada desde Python; no concatene valores externos.
+9. Construya una tabla o figura científica a partir del resultado.
+10. Construya el contenedor del cliente y ejecútelo en la red de Compose usando el
+    nombre del servicio, no `localhost`.
+11. Pruebe desde un entorno limpio siguiendo únicamente el README.
+12. Si hay cuenta remota, cambie solo `DATABASE_URL`, exija TLS y compare esquema,
+    latencia y resultado; no incluya la URL en evidencias.
+13. Registre consulta, dependencias, comandos, versión Git y asistencia de IA.
 
-Dibujar la arquitectura y responder oralmente una modificación de la consulta
-elegida por el docente.
+## 7. Resultados y discusión
 
+Presente esquema relacional mínimo, consulta comentada, validación manual, salida
+y figura. Discuta:
+
+1. ¿Qué trabajo debe realizar SQL y cuál Python en este caso?
+2. ¿Cómo podría un `JOIN` duplicar filas sin que el programa falle?
+3. ¿Por qué cambia `localhost` dentro del contenedor?
+4. ¿Qué persiste al eliminar un contenedor y por qué?
+5. ¿Qué reproduce Docker y qué factores externos siguen sin controlar?
+
+## 8. Qué se debe presentar
+
+- informe PDF de 5–7 páginas según
+  [`../plantilla_informe.md`](../plantilla_informe.md);
+- `compose.yaml`, Dockerfile, SQL, código Python, pruebas y README;
+- figura/tabla, salida de validación y diagrama de arquitectura;
+- `.env.example` sin secretos y `AI_USAGE.md` completo;
+- identificador de versión Git y evidencia individual.
+
+No se acepta una entrega con credenciales versionadas. Una consulta que funciona
+pero cuya granularidad no puede explicarse carece de validación científica.
+
+## 9. Evidencia individual
+
+Dibujar la arquitectura, anticipar una modificación de la consulta y explicar
+oralmente variables de entorno, parámetros SQL, red y persistencia.

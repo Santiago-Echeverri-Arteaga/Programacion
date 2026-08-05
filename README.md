@@ -11,8 +11,10 @@ físicos de forma reproducible.
 
 - [`programa/`](programa/README.md): resultados de aprendizaje, cronograma,
   evaluación, política de IA y proyecto final.
+- [`clases/`](clases/README.md): 48 encuentros preparados, cada uno con guion y
+  archivos de trabajo.
 - [`guias/`](guias/README.md): guías de clase y material de apoyo.
-- [`ejemplos/`](ejemplos/README.md): programas breves usados en demostraciones.
+- [`Codigos/`](Codigos/README.md): ejemplos desarrollados, organizados por tema.
 - [`notebooks/`](notebooks/README.md): notebooks de trabajo guiado.
 - [`datos/`](datos/README.md): conjuntos de datos pequeños con procedencia.
 - [`laboratorios/`](laboratorios/README.md): enunciados y archivos iniciales.
@@ -20,14 +22,16 @@ físicos de forma reproducible.
 - [`infraestructura/`](infraestructura/README.md): PostgreSQL y Docker.
 - [`recursos/`](recursos/README.md): referencias y enlaces de apoyo.
 
-El directorio histórico `Codigos/` se conserva temporalmente mientras sus
-materiales se revisan, migran o descartan. No hace parte de la ruta oficial del
-curso nuevo.
+Cada carpeta importante contiene un `README.md` que explica su propósito, sus
+archivos y la forma de uso. El material histórico que no pertenece a la nueva
+ruta pública se conserva de forma recuperable en el archivo docente ignorado por
+Git.
 
 ## Preparación del entorno
 
-Se requiere Python 3.12 o posterior, Git y una terminal Linux. Para los módulos
-finales se requiere Docker.
+Python 3.12 es la versión de referencia del curso. Se requieren además Git y una
+terminal Linux; para los módulos finales, Docker. Usar una versión posterior de
+Python exige verificar previamente todas las dependencias.
 
 ```bash
 python -m venv .venv

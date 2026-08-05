@@ -46,14 +46,16 @@ del proyecto ni de herramientas automáticas.
 Los laboratorios pueden realizarse en parejas, con rotación de roles. Cada uno
 termina con una evidencia individual breve y sin IA.
 
-Rúbrica común de 100 puntos:
+Rúbrica común de 100 puntos, desarrollada en
+[`../laboratorios/README.md`](../laboratorios/README.md):
 
-- funcionamiento y cumplimiento: 30;
-- razonamiento físico o algorítmico: 20;
-- validación y pruebas: 20;
-- claridad y modularidad: 15;
-- datos y visualización: 10;
-- reproducibilidad: 5.
+- pregunta, fundamento y predicciones: 10;
+- procedimiento, código y cumplimiento técnico: 25;
+- resultados y calidad de figuras/tablas: 15;
+- validación, pruebas y tratamiento del error: 20;
+- discusión física o algorítmica: 15;
+- reproducibilidad, Git y documentación: 10;
+- evidencia individual: 5.
 
 ## Suficiencia individual
 
@@ -61,4 +63,3 @@ Si la normativa institucional lo permite, para aprobar la asignatura el promedio
 ponderado de parciales y evaluaciones individuales protegidas debe ser al menos
 3,0 sobre 5,0. Este requisito debe quedar explícito desde el inicio del semestre y
 ser aprobado por la instancia académica correspondiente.
-

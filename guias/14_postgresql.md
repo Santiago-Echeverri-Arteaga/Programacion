@@ -72,7 +72,7 @@ Desde otro contenedor del mismo Compose, el host es `db`, no `localhost`.
 
 ```bash
 export DATABASE_URL='postgresql://fisica:CLAVE@localhost:5432/observatorio'
-python ../ejemplos/sql/conexion_postgresql.py
+python ../Codigos/15_sql_postgresql/conexion_postgresql.py
 ```
 
 ### Puntos obligatorios

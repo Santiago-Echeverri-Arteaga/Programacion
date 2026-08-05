@@ -1,44 +1,82 @@
 # Laboratorio 5 — Datos de enfriamiento imperfectos
 
-## Pregunta
+## 1. Identificación
+
+| Campo | Especificación |
+|---|---|
+| Duración presencial | 120 min |
+| Trabajo | Parejas con evidencia individual |
+| Herramientas | Pandas, NumPy y Matplotlib |
+| IA | Nivel 1; ocurre antes de la clase formal de IA |
+| Datos | `datos/enfriamiento_sintetico_sucio.csv` |
+
+## 2. Pregunta de trabajo
 
 ¿Qué puede concluirse sobre el enfriamiento de dos zonas de una placa después de
 documentar y tratar problemas de calidad de los datos?
 
-## IA
+## 3. Marco teórico breve
 
-Nivel 1. Esta actividad ocurre antes de la clase formal de IA.
+La ley de enfriamiento de Newton propone que la rapidez de cambio de temperatura
+es proporcional a la diferencia con el ambiente, bajo supuestos que deben
+declararse. Antes de ajustar o comparar, una tabla se audita por tipos, faltantes,
+duplicados, rangos, unidades y categorías. Limpiar no significa eliminar todo lo
+inusual: una observación sospechosa puede ser error, evento real o dato que exige
+metadatos adicionales. Los datos crudos son inmutables; cada transformación debe
+ser reproducible y cuantificada.
 
-## Datos
+## 4. Objetivos
 
-`datos/enfriamiento_sintetico_sucio.csv` contiene intencionalmente:
+- auditar sistemáticamente un conjunto tabular imperfecto;
+- definir reglas de transformación basadas en evidencia;
+- conservar procedencia, unidades y conteos antes/después;
+- comparar dos zonas sin exceder lo que permiten los datos.
 
-- una fila duplicada;
-- una medición faltante;
-- unidades mezcladas;
-- un valor físicamente sospechoso;
-- etiquetas de calidad que no deben ignorarse.
+## 5. Datos y precauciones
 
-## Tareas
+El archivo contiene intencionalmente una fila duplicada, una medición faltante,
+unidades mezcladas, un valor físicamente sospechoso y etiquetas de calidad. No
+sobrescriba el original. Trabaje con una copia lógica y conserve columnas de
+origen. Una etiqueta no se ignora ni se toma como verdad sin discutirla.
 
-1. Cargar sin modificar el archivo original.
-2. Inspeccionar tipos, nulos, duplicados, categorías y rangos.
-3. Convertir temperaturas a una unidad común conservando la columna original.
-4. Definir y justificar reglas de exclusión o marcado.
-5. Crear una tabla limpia reproducible.
-6. Comparar sensores mediante resúmenes y una figura con incertidumbre.
-7. Registrar cuántas filas cambian en cada etapa.
-8. Redactar una conclusión que no exceda la evidencia disponible.
+## 6. Procedimiento
 
-## Criterios de aceptación
+1. Lea procedencia y diccionario; formule una predicción para las dos zonas.
+2. Cargue el archivo desde `datos/raw` sin modificarlo.
+3. Registre forma, columnas, tipos, nulos, duplicados, categorías y rangos.
+4. Prepare una tabla de incidencias: fila, problema, evidencia y acción propuesta.
+5. Convierta temperaturas a una unidad común conservando valor/unidad originales.
+6. Distinga duplicado exacto de posible réplica. Defina tratamiento de faltantes
+   y valores sospechosos sin eliminación silenciosa.
+7. Implemente transformaciones encadenadas o funciones reproducibles.
+8. Registre cuántas filas se conservan, marcan, convierten o excluyen en cada etapa.
+9. Valide claves, tipos, unidades, rangos y unicidad esperada después de limpiar.
+10. Compare zonas mediante resúmenes y una figura con incertidumbre o dispersión.
+11. Reinicie el kernel, ejecute todo de principio a fin y exporte resultados.
 
-- No se eliminan filas silenciosamente.
-- Una fila sospechosa no se transforma automáticamente en descartada.
-- La procedencia y las unidades permanecen rastreables.
-- El notebook puede ejecutarse de principio a fin con kernel reiniciado.
+## 7. Resultados y discusión
 
-## Salida individual
+Incluya auditoría inicial, registro de decisiones, flujo de conteos, tabla limpia
+resumida y figura final. Responda:
 
-Se presenta una regla de limpieza propuesta por otra persona. El estudiante debe
-identificar un posible sesgo e indicar qué evidencia necesitaría para aceptarla.
+1. ¿Cómo cambia la conclusión bajo una regla alternativa razonable?
+2. ¿Excluir el valor sospechoso introduce un sesgo posible?
+3. ¿Qué metadato adicional resolvería la decisión más incierta?
+4. ¿Los datos permiten afirmar una diferencia física o solo descriptiva?
 
+## 8. Qué se debe presentar
+
+- informe PDF de 5–7 páginas según
+  [`../plantilla_informe.md`](../plantilla_informe.md);
+- notebook reiniciable y funciones auxiliares en `src/` cuando corresponda;
+- datos crudos, tabla procesada, diccionario, figura y registro de limpieza;
+- README con orden exacto de ejecución y versión de dependencias;
+- registro individual previo a la limpieza.
+
+El informe debe diferenciar datos crudos, decisiones, resultados e inferencias.
+No se acepta una tabla «limpia» sin trazabilidad.
+
+## 9. Evidencia individual
+
+Analizar una regla de limpieza propuesta por otra persona, identificar un sesgo
+posible y señalar qué evidencia se necesitaría para aceptarla.
