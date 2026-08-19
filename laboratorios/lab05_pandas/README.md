@@ -10,6 +10,13 @@
 | IA | Nivel 1; ocurre antes de la clase formal de IA |
 | Datos | `datos/enfriamiento_sintetico_sucio.csv` |
 
+## Sincronización
+
+- Realización: jueves 29 de octubre de 2026.
+- Último contenido requerido: martes 27 de octubre; el miércoles 28 es práctica.
+- `groupby`, combinaciones entre tablas y ajustes de curvas pueden mostrarse en la
+  práctica, pero no son requisitos de la entrega.
+
 ## 2. Pregunta de trabajo
 
 ¿Qué puede concluirse sobre el enfriamiento de dos zonas de una placa después de
@@ -51,7 +58,8 @@ origen. Una etiqueta no se ignora ni se toma como verdad sin discutirla.
 7. Implemente transformaciones encadenadas o funciones reproducibles.
 8. Registre cuántas filas se conservan, marcan, convierten o excluyen en cada etapa.
 9. Valide claves, tipos, unidades, rangos y unicidad esperada después de limpiar.
-10. Compare zonas mediante resúmenes y una figura con incertidumbre o dispersión.
+10. Compare zonas mediante selección, resúmenes y una figura con incertidumbre o
+    dispersión. No se exige `groupby`.
 11. Reinicie el kernel, ejecute todo de principio a fin y exporte resultados.
 
 ## 7. Resultados y discusión

@@ -1,6 +1,6 @@
-# Clase 03 — Terminal Linux: rutas, navegación y ayuda
+# Material del 26 de agosto — Terminal Linux: rutas, navegación y ayuda
 
-- Semana: 1. Duración: 120 minutos. IA: nivel 1.
+- Fecha: miércoles 26 de agosto de 2026. Duración: 120 minutos. IA: nivel 1.
 - Material: `rutas_y_ayuda.sh` y un árbol de archivos preparado.
 
 ## Resultados
@@ -25,4 +25,3 @@
 
 Si falla la sala, la búsqueda se realiza sobre un árbol impreso y conserva el
 objetivo conceptual.
-

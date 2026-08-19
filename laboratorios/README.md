@@ -1,40 +1,44 @@
 # Laboratorios del curso
 
 Los seis laboratorios forman una secuencia acumulativa. Cada carpeta contiene una
-guía tradicional completa, archivos iniciales y un `README.md` que explica su
-contenido. Las soluciones, datos de contingencia y claves de calificación se
-mantienen en `_docente_privado/`.
+guía, archivos iniciales y un `README.md`. Las soluciones, datos de contingencia y
+claves de calificación se mantienen en `_docente_privado/`.
 
-| Lab. | Semana | Tema | Modalidad de IA | Peso |
-|---:|---:|---|---|---:|
-| 1 | 2 | Linux, Bash, Git y reproducibilidad | Nivel 1 | 3,5 % |
-| 2 | 5 | Python nativo y datos físicos | Nivel 1 | 3,5 % |
-| 3 | 8 | Modelo modular y verificable | Nivel 1 | 3,5 % |
-| 4 | 10 | NumPy, simulación y Matplotlib OO | Nivel 1 | 3,5 % |
-| 5 | 13 | Pandas y datos imperfectos | Nivel 1 | 3,5 % |
-| 6 | 15 | PostgreSQL, Python y Docker | Nivel 2 declarado | 3,5 % |
+## Sincronización con las clases
 
-Los laboratorios 1–2, 3–4 y 5–6 aportan respectivamente 7 % a los tres primeros
-cortes. Consulte [`../programa/evaluacion.md`](../programa/evaluacion.md).
+`Cierre de prerrequisitos` es el último encuentro que puede introducir una
+técnica exigida. Entre ese cierre y el laboratorio hay al menos un encuentro de
+práctica o integración sin requisito nuevo.
+
+| Lab. | Fecha | Cierre de prerrequisitos | Encuentro intermedio | Tema | Peso |
+|---:|---|---|---|---|---:|
+| 1 | Jueves 3 sep. | Martes 1 sep. | Miércoles 2 sep.: taller | WSL2 documentado, Bash, Git y GitHub | 3,5 % |
+| 2 | Jueves 24 sep. | Martes 22 sep. | Miércoles 23 sep.: práctica | Python nativo y datos físicos | 3,5 % |
+| 3 | Martes 6 oct. | Miércoles 30 sep. | Jueves 1 oct.: parcial | Modelo modular, algoritmo suministrado y pruebas | 3,5 % |
+| 4 | Jueves 15 oct. | Martes 13 oct. | Miércoles 14 oct.: práctica | NumPy, simulación y Matplotlib OO | 3,5 % |
+| 5 | Jueves 29 oct. | Martes 27 oct. | Miércoles 28 oct.: práctica | Pandas y datos imperfectos | 3,5 % |
+| 6 | Martes 10 nov. | Miércoles 4 nov. | Jueves 5 nov.: integración | PostgreSQL, Python y Docker | 3,5 % |
+
+Si una clase necesaria no se alcanza a realizar, el laboratorio correspondiente
+se simplifica o se mueve; no se deja el tema como aprendizaje autónomo obligatorio.
 
 ## Forma de trabajo
 
 - Equipos de máximo dos estudiantes, salvo indicación institucional distinta.
 - Roles de conductor y revisor rotan durante la sesión.
-- Cada estudiante conserva un cuaderno o registro individual de predicciones,
-  decisiones y errores encontrados.
-- La programación principal ocurre durante la sesión; el informe puede terminarse
-  en el plazo anunciado por el docente.
+- Cada estudiante conserva un registro individual de predicciones, decisiones y
+  errores encontrados.
+- La programación principal ocurre durante la sesión; la documentación puede
+  terminarse en el plazo anunciado por el docente.
 - Cada laboratorio finaliza con una comprobación individual sin IA.
 
-## Informe tradicional
+## Entregables
 
-Salvo que la guía indique algo adicional, se entrega un PDF de 4–7 páginas sin
-contar anexos, acompañado del repositorio. La estructura obligatoria está en
-[`plantilla_informe.md`](plantilla_informe.md): portada, resumen, objetivos, marco
-teórico, metodología, resultados, discusión, conclusiones, referencias y anexos.
-El código no se pega completo en el cuerpo: se citan módulos, funciones, versión
-de Git y figuras relevantes.
+El laboratorio 1 tiene una entrega corta en Markdown y repositorio; no exige
+informe científico PDF. Los laboratorios 2–6 entregan un PDF de 4–7 páginas sin
+contar anexos, acompañado del repositorio, salvo ajuste explícito en su guía. La
+estructura para esos informes está en
+[`plantilla_informe.md`](plantilla_informe.md).
 
 ## Rúbrica común de cada laboratorio
 
@@ -49,24 +53,25 @@ de Git y figuras relevantes.
 | Evidencia individual | 5 |
 | **Total** | **100** |
 
-Una entrega que no ejecuta desde las instrucciones presentadas o carece de datos
-identificables no puede obtener los puntos de reproducibilidad ni validación.
-La rúbrica puede particularizarse en cada guía sin cambiar el total.
+En el laboratorio 1, “resultados” significa evidencias textuales y “validación”
+significa comprobar entorno, redirecciones, ejecución del script y estado de Git.
+Una entrega que no ejecuta desde las instrucciones o carece de datos identificables
+no obtiene los puntos de reproducibilidad ni validación.
 
 ## Convención de archivos entregados
 
 ```text
 labNN_apellido1_apellido2/
 ├── README.md
-├── informe.pdf
+├── informe.pdf              # laboratorios 2–6
 ├── datos/
-│   ├── raw/                 # originales inmutables
-│   └── processed/           # si aplica
-├── src/                     # .py, .sh o .sql
-├── tests/                   # comprobaciones automatizadas
-├── resultados/              # tablas y figuras finales
+│   ├── raw/
+│   └── processed/
+├── src/
+├── tests/
+├── resultados/
 ├── requirements.txt         # si aplica
-└── AI_USAGE.md              # solo cuando la guía autorice IA
+└── AI_USAGE.md              # cuando la guía autorice IA
 ```
 
-Cada guía especifica qué elementos de esta estructura son obligatorios.
+Cada guía especifica qué elementos son obligatorios.

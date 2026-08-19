@@ -1,6 +1,6 @@
-# Clase 02 — Sistema operativo, procesos y archivos
+# Material del 25 de agosto — Sistema operativo, procesos, archivos y WSL2
 
-- Semana: 1. Duración: 120 minutos. IA: nivel 1.
+- Fecha: martes 25 de agosto de 2026. Duración: 120 minutos. IA: nivel 1.
 - Material: `procesos.sh` y tres escenarios de error.
 
 ## Resultados
@@ -8,6 +8,7 @@
 - Explicar servicios básicos del sistema operativo.
 - Relacionar proceso, usuario, permiso, variable de entorno y archivo.
 - Interpretar “programa no encontrado” y “permiso denegado”.
+- Instalar o verificar WSL2 y distinguir Windows, Ubuntu y Bash.
 
 ## Secuencia
 
@@ -17,12 +18,11 @@
 | 15–35 | Kernel, procesos, usuarios y sistema de archivos |
 | 35–55 | Ejecutar e inspeccionar un proceso breve |
 | 55–65 | Pausa |
-| 65–85 | Permisos y variables de entorno sin administración avanzada |
-| 85–108 | Diagnosticar tres errores preparados |
-| 108–120 | Salida: explicar el error antes de proponer un comando |
+| 65–85 | Demostración de instalación/verificación de WSL2 y Ubuntu |
+| 85–108 | Rutas Linux y Windows; diagnóstico de errores preparados |
+| 108–120 | Iniciar la documentación de configuración y explicar un error |
 
 ## Cierre
 
 No se espera memorizar señales o permisos octales. Se espera localizar qué capa
 del sistema puede explicar una falla.
-

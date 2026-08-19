@@ -10,6 +10,12 @@
 | IA | Nivel 1: documentación; no generación de código o informe |
 | Archivo inicial | [`caminata.py`](caminata.py) |
 
+## Sincronización
+
+- Realización: jueves 15 de octubre de 2026.
+- Último contenido requerido: martes 13 de octubre; el miércoles 14 es práctica.
+- No se exige Pandas, SciPy, SymPy ni POO.
+
 ## 2. Pregunta de trabajo
 
 ¿Cómo crece el desplazamiento cuadrático medio de un conjunto de caminantes

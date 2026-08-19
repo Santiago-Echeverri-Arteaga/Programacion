@@ -2,10 +2,11 @@
 
 ## Ficha
 
-- Semana: 13.
+- Realización: miércoles 21 de octubre de 2026, integrada con la clínica del
+  proyecto y la propuesta.
 - Duración: 120 minutos.
 - Nivel de IA: 3 durante la demostración; 0 en la salida individual.
-- Resultados: RA 6, RA 12 y RA 13.
+- Resultados: RA 6, RA 10 y RA 11.
 - Archivos: `Codigos/14_ia_agentes/` y `proyecto_final/AI_USAGE.md`.
 
 ## Propósito

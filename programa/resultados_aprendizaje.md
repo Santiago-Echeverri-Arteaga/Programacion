@@ -21,14 +21,13 @@ Al finalizar el curso, el estudiante estará en capacidad de:
    problema y de los datos.
 9. Procesar arreglos y datos tabulares, y comunicar resultados mediante figuras
    científicas creadas con la interfaz orientada a objetos de Matplotlib.
-10. Usar de forma focalizada herramientas de SciPy y SymPy para resolver o
-    comprobar un problema físico.
-11. Diseñar programas pequeños con clases cuando estas aporten claridad,
-    favoreciendo composición, responsabilidades acotadas y estructuras simples.
-12. Formular, desarrollar, reproducir y defender un proyecto computacional con
+10. Formular, desarrollar, reproducir y defender un proyecto computacional con
     una pregunta física no trivial y evidencia de validación.
-13. Evaluar críticamente código y explicaciones producidos por IA, declarar su
+11. Evaluar críticamente código y explicaciones producidos por IA, declarar su
     uso y conservar responsabilidad intelectual sobre el resultado.
+
+Clases y objetos, herencia, SciPy y SymPy se ofrecen como extensiones si el tiempo
+lo permite; no son resultados obligatorios en el calendario de reanudación.
 
 ## Principios del curso
 
@@ -37,4 +36,3 @@ Al finalizar el curso, el estudiante estará en capacidad de:
 - La simplicidad justificada vale más que la complejidad ornamental.
 - Todo resultado importante debe poder verificarse y reproducirse.
 - Consultar documentación es una competencia; delegar la comprensión no lo es.
-

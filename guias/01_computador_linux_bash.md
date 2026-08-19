@@ -1,109 +1,120 @@
-# Guía 01 — Computador, Linux y Bash
+# Guía 01 — Computador, WSL2, Linux y Bash básico
 
 ## Ficha
 
-- Semana: 1 y comienzo de la 2.
-- Duración: cuatro encuentros de 120 minutos, incluido el inicio del laboratorio 1.
-- Nivel de IA: 0 en el diagnóstico; 1 en la práctica.
+- Realización: clase inicial ya realizada y encuentros del 25 al 27 de agosto.
+- Aplicación: taller del 2 de septiembre y laboratorio del 3 de septiembre.
+- Nivel de IA: 0 en el diagnóstico; 1 en práctica documental.
 - Resultados: RA 1 y RA 2.
 
-## Alcance
+## Alcance reducido
 
-El objetivo no es memorizar comandos ni impartir un curso de administración de
-sistemas. El estudiante debe construir un modelo mental suficiente para entender
-dónde está un archivo, qué programa ejecuta una orden, qué es un proceso y cómo
-combinar herramientas pequeñas de forma reproducible.
+La clase sobre funcionamiento del computador ya ocurrió antes de la interrupción.
+Al reanudar, se recupera ese modelo y se prepara un entorno Linux reproducible en
+WSL2. El estudiante aprende rutas, directorios, ayuda, búsqueda, flujos,
+redirecciones, tuberías y ejecución de un script secuencial.
 
-## Encuentro 1 — Del hardware al programa
+No se enseñan todavía condicionales, ciclos, funciones, arreglos, administración
+del sistema ni expresiones regulares avanzadas. Tampoco se usan en el laboratorio
+`set -euo pipefail`, variables o sustitución de comandos.
+
+## Martes 25 de agosto — Sistema operativo y preparación de WSL2
 
 ### Resultados
 
-- Diferenciar almacenamiento, memoria, procesador y periféricos.
-- Explicar qué servicios presta el sistema operativo.
-- Distinguir programa, proceso, archivo y flujo de datos.
+- recuperar la relación entre almacenamiento, memoria, CPU, sistema operativo y
+  proceso;
+- distinguir Windows, WSL2 y una distribución Linux;
+- instalar o verificar WSL2 sin borrar instalaciones existentes;
+- explicar dónde viven los archivos de Linux y de Windows.
 
 ### Secuencia
 
 | Tiempo | Actividad |
 |---:|---|
-| 0–20 | Diagnóstico individual: dibujar qué ocurre desde que se escribe `python experimento.py` hasta que aparece una salida |
-| 20–45 | Reconstrucción colectiva: CPU, RAM, almacenamiento, kernel, procesos y dispositivos |
-| 45–65 | Demostración de procesos y archivos abiertos |
-| 65–95 | Comparación entre Windows, Linux y contenedor sin entrar en detalles de implementación |
-| 95–112 | Análisis de tres fallas: archivo inexistente, permiso negado y programa no encontrado |
-| 112–120 | Salida: explicar cada falla con vocabulario del modelo |
+| 0–20 | Recuperación de la clase previa y diagnóstico después de la interrupción |
+| 20–45 | Windows, WSL2, Ubuntu, terminal y Bash |
+| 45–65 | Demostración `wsl --install`, `wsl --status` y `wsl --list --verbose` |
+| 65–85 | Primer usuario, actualización de paquetes e instalación de Git |
+| 85–105 | Rutas `~/...`, `/mnt/c/...` y ubicación recomendada del proyecto |
+| 105–120 | Inicio de `CONFIGURACION_WSL2.md` y salida individual |
 
-## Encuentro 2 — Sistema de archivos y terminal
+La instalación que exija permisos o reinicio se termina antes del laboratorio. No
+se usa `wsl --unregister` en esta unidad.
 
-Comandos esenciales:
+## Miércoles 26 de agosto — Sistema de archivos y terminal
 
 ```bash
 pwd
+ls
 ls -lah
 cd
-mkdir
-cp
-mv
-rm
-file
-head
-tail
-less
-man
+cd ..
+mkdir practica_linux
+mkdir -p practica_linux/resultados
+man ls
+ls --help
 ```
 
-Ideas que se evalúan:
+Ideas evaluables:
 
 - rutas absolutas y relativas;
 - directorio actual y directorio personal;
+- distinción entre archivo y directorio;
 - nombres con espacios;
-- diferencia entre archivo de texto y archivo binario;
-- expansión de comodines por el shell;
-- lectura de ayuda antes de probar opciones al azar.
+- lectura de ayuda antes de probar opciones;
+- diferencia entre una ruta Windows y una ruta Linux.
 
-No se realizarán eliminaciones recursivas durante la primera práctica.
+No se realizan eliminaciones recursivas en la práctica inicial.
 
-## Encuentro 3 — Flujos, búsqueda y composición
+## Jueves 27 de agosto — Flujos, búsqueda y scripts secuenciales
 
 ```bash
-wc -l datos/*.csv
-head -n 5 datos/mediciones.csv
-grep -n "sospechosa" datos/mediciones.csv
-cut -d, -f2 datos/mediciones.csv | sort | uniq -c
-find . -type f -name "*.py"
+grep -n "sensor" datos/mediciones.txt
+grep -n "sensor" datos/mediciones.txt | wc -l
+ls -lah > resultados/listado.txt
+ls -lah >> resultados/listado.txt
+grep -n "sensor" datos/mediciones.txt 2> resultados/errores.log
+grep -n "temperatura" datos/mediciones.txt 2>> resultados/errores.log
+bash comandos_basicos.sh
+chmod u+x comandos_basicos.sh
+./comandos_basicos.sh
 ```
 
-Conceptos:
+Conceptos evaluables:
 
-- entrada estándar, salida estándar y salida de error;
-- redirección `>` y `>>`;
+- salida estándar y salida de error;
+- `>` frente a `>>`;
+- `2>` frente a `2>>`;
 - tubería `|`;
-- códigos de salida;
-- variables y comillas;
-- un script Bash pequeño con `set -euo pipefail`.
+- búsqueda literal básica con `grep`;
+- *shebang* y permiso de ejecución.
 
-## Ejercicio integrador
+La sintaxis para anexar errores es `2>> archivo`. `>>2` anexa la salida estándar a
+un archivo llamado `2`; no es una forma alternativa de escribir `2>>`.
 
-Entregar un directorio con archivos de medición desordenados. El estudiante debe:
+## Taller del miércoles 2 de septiembre
 
-1. identificar los tipos de archivo;
-2. contar registros y localizar valores marcados;
-3. crear un resumen usando una tubería;
-4. guardar los comandos en `resumir.sh`;
-5. explicar qué parte hace cada programa de la tubería.
+El taller no introduce comandos nuevos. Cada pareja debe:
+
+1. verificar WSL2 y Git;
+2. crear la estructura del laboratorio;
+3. predecir las salidas de cuatro redirecciones;
+4. ejecutar un `.sh` de las dos formas enseñadas;
+5. revisar la plantilla de documentación y los criterios del laboratorio.
 
 ## Errores previsibles
 
 | Error | Aprendizaje esperado |
 |---|---|
-| Confundir `/` con `\` | Las rutas dependen del entorno, no de Python |
-| Ejecutar un archivo desde otro directorio | El proceso tiene un directorio de trabajo |
-| Escribir rutas sin comillas | El shell separa argumentos antes de ejecutar el programa |
+| Confundir `/` con `\` | Las rutas dependen del entorno |
+| Trabajar sin saber el directorio actual | `pwd` precede el diagnóstico |
 | Usar `>` cuando se quería anexar | La redirección puede reemplazar contenido |
-| Copiar comandos destructivos sin leerlos | Todo comando debe interpretarse antes de ejecutarse |
+| Escribir `>>2` para errores | El descriptor debe ir antes del operador: `2>>` |
+| Ejecutar `./archivo.sh` sin permiso | Puede usarse `bash archivo.sh` o agregar permiso |
+| Copiar un token al README | Las credenciales nunca se versionan |
 
 ## Salida individual
 
-Sin ejecutar comandos, predecir el contenido de `resumen.txt` después de una
-tubería dada y explicar en qué orden se ejecutan sus componentes.
-
+Sin ejecutar, predecir qué queda en pantalla y en cada archivo tras una tubería
+con redirección separada de salida y error.

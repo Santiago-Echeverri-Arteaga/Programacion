@@ -16,8 +16,8 @@ Cada actividad indicará uno de estos niveles:
 ### Nivel 0 — Evaluación protegida
 
 No se permite IA generativa, autocompletado generativo, comunicación externa ni
-soluciones preparadas. Aplica a parciales, evaluación integradora, ejercicios de
-salida y sustentaciones.
+soluciones preparadas. Aplica a parciales, ejercicios de salida, evidencias
+individuales y sustentaciones.
 
 ### Nivel 1 — Recursos convencionales
 
@@ -65,4 +65,3 @@ El estudiante conserva responsabilidad por:
 No se usarán detectores automáticos de IA como única evidencia de una falta. La
 autenticidad se establecerá principalmente mediante proceso, historial, pruebas,
 preguntas específicas y desempeño individual.
-

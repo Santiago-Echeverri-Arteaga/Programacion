@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-set -euo pipefail
 
 echo "Sistema y kernel:"
 uname -a
@@ -7,11 +6,11 @@ uname -a
 echo "Directorio de trabajo:"
 pwd
 
-echo "Shell actual:"
-printf '%s\n' "${SHELL:-no disponible}"
+echo "Archivos visibles y ocultos:"
+ls -lah
 
-echo "Procesos del usuario:"
-ps -u "$(id -u)" -o pid,comm --sort=comm | head
+echo "Procesos:"
+ps
 
 echo "Uso del sistema de archivos:"
 df -h .

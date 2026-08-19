@@ -38,11 +38,14 @@ del cuarto corte definidos en `evaluacion.md`.
 6. La asistencia de IA no demostrada, no revisada o no declarada no se considera
    evidencia de aprendizaje.
 
-## Conversión al cuarto corte
+## Conversión al 25 % del proyecto
 
-- Producto computacional, 8 %: criterios 1 a 6.
-- Sustentación y modificación, 5 %: criterio 8, con preguntas sobre todo el
-  proyecto.
-- Reproducibilidad, Git e IA, 2 %: criterio 7 y `AI_USAGE.md`.
-- La evaluación integradora escrita, 10 %, se califica por separado.
+- Producto computacional, 12 % del curso: criterios 1 a 6.
+- Sustentación y modificación, 8 % del curso: criterio 8, con preguntas sobre
+  todo el proyecto.
+- Reproducibilidad, Git e IA, 5 % del curso: criterio 7, `AI_USAGE.md` y
+  comprobación de ejecución limpia.
 
+La rúbrica interna continúa sumando 100 puntos; cada grupo de criterios se escala
+al componente correspondiente. No existe una evaluación integradora escrita
+adicional en el calendario reducido.

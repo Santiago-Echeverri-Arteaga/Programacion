@@ -10,6 +10,14 @@
 | IA | Nivel 2: crítica/pruebas después de una primera versión propia; declarar |
 | Archivo inicial | [`consulta_y_figura.py`](consulta_y_figura.py) |
 
+## Sincronización
+
+- Realización: martes 10 de noviembre de 2026.
+- Último contenido requerido: miércoles 4 de noviembre; el jueves 5 es integración
+  guiada y congelamiento de requisitos del proyecto.
+- La guía suministra el esquema, el archivo Compose y la estructura del cliente;
+  no se exige diseñar infraestructura desde cero.
+
 ## 2. Pregunta de trabajo
 
 ¿Puede construirse un análisis verificable cuyo origen sea una base PostgreSQL y

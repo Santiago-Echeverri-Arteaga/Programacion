@@ -2,10 +2,11 @@
 
 ## Ficha
 
-- Semana: 14, encuentro C.
-- Duración: 120 minutos.
+- Realización: segunda parte del miércoles 4 y práctica del jueves 5 de noviembre
+  de 2026.
+- Duración: 60 minutos de conceptos y hasta 120 minutos de práctica guiada.
 - Nivel de IA: 1.
-- Resultados: RA 1 y RA 12.
+- Resultados: RA 1 y RA 10.
 - Archivos: `infraestructura/compose.yaml` y `infraestructura/docker/`.
 
 ## Resultados
@@ -83,4 +84,3 @@ qué elementos pertenecen a la imagen, al contenedor, a la red y al volumen.
 - Dockerfile: <https://docs.docker.com/reference/dockerfile/>
 - Compose: <https://docs.docker.com/compose/compose-file/>
 - Imagen oficial de PostgreSQL: <https://hub.docker.com/_/postgres>
-

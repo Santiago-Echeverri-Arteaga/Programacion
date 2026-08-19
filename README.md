@@ -2,6 +2,10 @@
 
 Curso de Programación del programa de Física de la Universidad del Quindío.
 
+El calendario de reanudación vigente cubre del martes 25 de agosto al jueves 19
+de noviembre de 2026. La última semana completa se reserva para sustentaciones;
+consulte [`programa/cronograma.md`](programa/cronograma.md).
+
 Este repositorio reúne las guías, ejemplos, notebooks, datos y laboratorios que se
 utilizan en clase. El curso prioriza la capacidad de leer, escribir, depurar,
 probar y explicar código, además de aplicar la programación a modelos y datos
@@ -11,8 +15,8 @@ físicos de forma reproducible.
 
 - [`programa/`](programa/README.md): resultados de aprendizaje, cronograma,
   evaluación, política de IA y proyecto final.
-- [`clases/`](clases/README.md): 48 encuentros preparados, cada uno con guion y
-  archivos de trabajo.
+- [`clases/`](clases/README.md): banco original de 48 encuentros y mapa de uso
+  para la ruta reducida de reanudación.
 - [`guias/`](guias/README.md): guías de clase y material de apoyo.
 - [`Codigos/`](Codigos/README.md): ejemplos desarrollados, organizados por tema.
 - [`notebooks/`](notebooks/README.md): notebooks de trabajo guiado.

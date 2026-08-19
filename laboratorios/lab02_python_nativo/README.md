@@ -10,6 +10,16 @@
 | IA | Nivel 1: no se permite generar código ni texto de la entrega |
 | Archivos | [`analisis_caida.py`](analisis_caida.py) y datos del curso |
 
+## Sincronización
+
+- Realización: jueves 24 de septiembre de 2026.
+- Último contenido requerido: martes 22 de septiembre (archivos, `pathlib`,
+  `with` y excepciones).
+- El miércoles 23 se dedica a práctica y lectura de errores; no agrega una técnica
+  evaluable.
+- `pytest` todavía no es prerrequisito. Las comprobaciones se ejecutan con casos
+  pequeños y se documentan en una tabla.
+
 ## 2. Pregunta de trabajo
 
 ¿Son compatibles las posiciones suministradas con un movimiento de caída libre
@@ -29,7 +39,7 @@ orden temporal y distinguir datos, modelo y estimación.
 - leer y validar un CSV con la biblioteca estándar;
 - descomponer el análisis en funciones puras con contratos;
 - estimar y resumir `g` con unidades y cifras razonables;
-- diseñar pruebas normales, de frontera e inválidas.
+- diseñar casos de prueba normales, de frontera e inválidos sin exigir `pytest`.
 
 ## 5. Materiales y restricciones
 
@@ -50,8 +60,9 @@ orden temporal y distinguir datos, modelo y estimación.
 6. Calcule media, desviación y rango usando funciones propias o `statistics`.
 7. Compare el estimado con el valor de referencia indicado, declarando el criterio
    de compatibilidad que emplea.
-8. Pruebe al menos: caso pequeño calculable a mano, archivo vacío, fila inválida,
-   tiempo no creciente y límite `t=0`.
+8. Ejecute y documente al menos: caso pequeño calculable a mano, archivo vacío,
+   fila inválida, tiempo no creciente y límite `t=0`. Puede usar llamadas simples
+   y `assert`; no se exige una suite de `pytest`.
 9. Ejecute desde la raíz y desde otro directorio para verificar las rutas.
 
 ## 7. Resultados y discusión
@@ -68,7 +79,7 @@ respuesta a:
 
 - informe PDF de 4–6 páginas con la estructura de
   [`../plantilla_informe.md`](../plantilla_informe.md);
-- `src/analisis_caida.py`, `tests/`, datos originales y README de ejecución;
+- `src/analisis_caida.py`, datos originales, casos de comprobación y README de ejecución;
 - salida textual versionada con unidades y versión de Git;
 - registro individual de predicción y casos de prueba.
 

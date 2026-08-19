@@ -10,6 +10,20 @@ validación, la interpretación y el dominio individual.
 Puede realizarse individualmente o en parejas. En parejas, cada integrante recibe
 una nota individual de sustentación y debe poder explicar el sistema completo.
 
+## Fechas definitivas
+
+| Hito | Fecha |
+|---|---|
+| Publicación de líneas y criterios | Jueves 17 de septiembre de 2026 |
+| Elección de pregunta y fuente de datos o modelo | Jueves 8 de octubre |
+| Propuesta y criterio de validación | Miércoles 21 de octubre |
+| Congelamiento de requisitos y primera ejecución limpia | Jueves 5 de noviembre |
+| Entrega definitiva y versión congelada | Jueves 12 de noviembre |
+| Sustentaciones | Martes 17, miércoles 18 y jueves 19 de noviembre |
+
+La semana de sustentaciones no se usa para completar el producto. Después del 12
+de noviembre solo se admite la modificación breve solicitada durante la defensa.
+
 ## Modalidades
 
 ### A. Modelado o simulación
@@ -85,4 +99,3 @@ Durante la sustentación el docente puede solicitar:
 
 La incapacidad de explicar partes esenciales activa los límites establecidos en la
 rúbrica, independientemente de la calidad aparente del repositorio.
-

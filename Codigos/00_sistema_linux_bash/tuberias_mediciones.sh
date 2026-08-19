@@ -1,14 +1,9 @@
 #!/usr/bin/env bash
-set -euo pipefail
 
-ruta="${1:-datos/enfriamiento_sintetico_sucio.csv}"
+# Ejecutar desde la raíz del repositorio.
+mkdir -p tmp/bash_apoyo
 
-if [[ ! -f "$ruta" ]]; then
-    echo "No existe el archivo: $ruta" >&2
-    exit 2
-fi
-
-echo "Filas de datos: $(( $(wc -l < "$ruta") - 1 ))"
-echo "Registros sospechosos:"
-grep ',sospechosa$' "$ruta" | cut -d, -f2 | sort | uniq -c
+grep -n "sospechosa" datos/enfriamiento_sintetico_sucio.csv > tmp/bash_apoyo/sospechosas.txt 2> tmp/bash_apoyo/errores.log
+grep -n "sospechosa" datos/enfriamiento_sintetico_sucio.csv | wc -l > tmp/bash_apoyo/conteo.txt
+ls -lah tmp/bash_apoyo >> tmp/bash_apoyo/listado.txt 2>> tmp/bash_apoyo/errores.log
 

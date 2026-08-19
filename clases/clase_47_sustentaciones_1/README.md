@@ -1,4 +1,4 @@
-# Clase 47 — Demostraciones y sustentaciones I
+# Sustentaciones del martes 17 de noviembre
 
 ## Propósito
 

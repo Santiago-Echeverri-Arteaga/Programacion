@@ -15,16 +15,17 @@ independiente y demás campos administrativos.
 | Naturaleza | Teórico-práctica |
 | Créditos | 3 — confirmar equivalencia horaria institucional |
 | Docencia directa | 6 horas semanales |
-| Duración | 16 semanas |
+| Duración | Una clase realizada antes de la interrupción y 13 semanas de reanudación, del 25 de agosto al 19 de noviembre de 2026 |
 | Requisito | Ecuaciones diferenciales — confirmar con el plan vigente |
 | Habilitable, validable y homologable | Confirmar con el programa |
 
 ### Revisión administrativa pendiente
 
 El documento anterior declara 196 horas y simultáneamente 6 horas semanales de
-docencia y 6 de trabajo independiente. Para 16 semanas estas cantidades producen
-192 horas. La nueva versión no debe conservar cifras incompatibles; el cálculo
-final debe validarse con la definición institucional de crédito académico.
+docencia y 6 de trabajo independiente. La interrupción extraordinaria obliga a
+recalcular las horas efectivamente programadas para las 13 semanas confirmadas.
+La versión final no debe conservar cifras incompatibles; el cálculo
+debe validarse con la definición institucional de crédito académico.
 
 ## 2. Descripción
 
@@ -80,15 +81,15 @@ institucional pueden agruparse así:
 
 ## 6. Enseñanzas
 
-### Unidad 1 — Entorno computacional y reproducibilidad, semanas 1–2
+### Unidad 1 — Entorno computacional y reproducibilidad, clase realizada y 25 de agosto–3 de septiembre
 
 - Componentes funcionales del computador.
 - Sistema operativo, procesos y sistema de archivos.
 - Linux y Bash: navegación, búsqueda, flujos, tuberías y scripts.
-- Git y GitHub: estados, commits, ramas, remotos y colaboración.
+- Git y GitHub: estados, commits, remotos y publicación básica.
 - Organización reproducible de un proyecto científico.
 
-### Unidad 2 — Fundamentos de programación, semanas 3–7
+### Unidad 2 — Fundamentos de programación, 8 de septiembre–6 de octubre
 
 - Intérprete, scripts, notebooks y entornos virtuales.
 - Tipos, operadores, variables, entrada y salida.
@@ -96,21 +97,20 @@ institucional pueden agruparse así:
 - Booleanos, condicionales, ciclos y patrones de acumulación.
 - Cadenas y colecciones.
 - Archivos, rutas, excepciones, depuración, módulos y dependencias.
-- Pruebas, casos límite, algoritmos elementales y punto flotante.
+- Pruebas, casos límite, algoritmos elementales y error numérico.
 
-### Unidad 3 — Diseño y cómputo científico, semanas 8–11
+### Unidad 3 — Cómputo científico, 7–15 de octubre
 
-- Clases, objetos, `dataclass`, composición e invariantes.
-- Herencia simple y polimorfismo cuando aportan al modelo.
-- Recursividad, generadores y decoradores como lectura o extensión.
 - NumPy: arreglos, formas, tipos, indexación, vistas, broadcasting y
   vectorización.
 - Aleatoriedad reproducible.
 - Matplotlib mediante interfaz orientada a objetos.
-- Uso focalizado de SciPy y SymPy.
 - Validación, convergencia, error e interpretación física.
 
-### Unidad 4 — Datos, servicios y práctica responsable, semanas 12–15
+Clases y objetos, herencia, SciPy y SymPy permanecen como extensiones de consulta
+y no se evalúan en los parciales del calendario reducido.
+
+### Unidad 4 — Datos, servicios y práctica responsable, 20 de octubre–10 de noviembre
 
 - Lectura de datos con Python nativo, NumPy y Pandas.
 - Selección, tipos, faltantes, duplicados, agrupación y combinación.
@@ -121,9 +121,8 @@ institucional pueden agruparse así:
 - Docker: imágenes, contenedores, redes, volúmenes y reproducibilidad.
 - Integración en un flujo científico pequeño.
 
-### Unidad 5 — Integración y comunicación, semana 16
+### Unidad 5 — Integración y comunicación, 11–19 de noviembre
 
-- Evaluación individual acumulativa.
 - Demostración y sustentación de proyecto.
 - Discusión de límites, validación y reproducibilidad.
 
@@ -139,9 +138,10 @@ Los notebooks se usan para exploración y comunicación; los componentes
 reutilizables se desarrollan en archivos Python y se prueban por separado. Git se
 usa durante todo el semestre, no únicamente como tema inicial.
 
-Se programan seis laboratorios acumulativos y cinco sesiones flexibles. Las
-sesiones flexibles absorben pérdidas de clase, permiten recuperación o se usan
-para práctica; no contienen resultados nuevos indispensables.
+Se programan seis laboratorios acumulativos. Antes de cada laboratorio se cierra
+el contenido requerido y se reserva al menos un encuentro completo para práctica,
+integración o evaluación. La última semana, del 17 al 19 de noviembre, se dedica
+completa a sustentaciones y no introduce contenidos ni entregables nuevos.
 
 El proyecto se desarrolla mediante propuesta, aprobación de alcance, demostración
 mínima, congelamiento de código y sustentación. Los proyectos pueden ser
@@ -152,13 +152,17 @@ individuales.
 
 Se adopta el sistema descrito en [`evaluacion.md`](evaluacion.md):
 
-- tres cortes de 25 %, cada uno con parcial escrito de 18 % y laboratorios de 7 %;
-- cuarto corte de 25 % con evaluación integradora escrita de 10 %, producto del
-  proyecto de 8 %, sustentación individual de 5 % y reproducibilidad de 2 %.
+- tres parciales escritos de 18 % cada uno;
+- seis laboratorios de 3,5 % cada uno;
+- proyecto final de 25 %, distribuido entre producto (12 %), sustentación y
+  modificación explicada (8 %), y reproducibilidad, Git y declaración de IA (5 %).
 
-Los parciales y la evaluación integradora se realizan en papel. Las hojas de
+Los parciales se realizan en papel. Las hojas de
 referencia suministradas por el docente reducen la dependencia de memorización de
 APIs y permiten evaluar trazado, diagnóstico, diseño, pruebas e interpretación.
+Cada parcial incluye como máximo lo visto el jueves de la semana anterior y
+excluye los temas del martes y miércoles de la semana del examen, como se detalla
+en [`cronograma.md`](cronograma.md).
 
 La rúbrica del proyecto se encuentra en
 [`rubrica_proyecto_final.md`](rubrica_proyecto_final.md).
@@ -210,4 +214,3 @@ consolidar por sí misma toda la competencia computacional del físico.
 
 - Borrador de rediseño integral: 2026-II.
 - Próxima revisión: al cierre del primer semestre de implementación.
-

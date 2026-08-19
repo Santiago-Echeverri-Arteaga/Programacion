@@ -1,64 +1,64 @@
-# Clases preparadas
+# Banco de clases y mapa de reanudación
 
-El curso tiene 48 encuentros de 120 minutos. Cada carpeta contiene un `README.md`
-con objetivos, preparación, secuencia, evidencia y materiales, además de código o
-archivos de trabajo. Las cinco clases `FLEX` permiten recuperar encuentros
-perdidos sin introducir contenidos esenciales nuevos.
+Esta carpeta conserva los 48 encuentros preparados antes de la interrupción. Los
+números de carpeta identifican materiales del banco; no corresponden al orden ni
+a las fechas definitivas. La clase 01 ya fue realizada. El calendario vigente es
+[`../programa/cronograma.md`](../programa/cronograma.md).
 
-| Clase | Tema |
-|---:|---|
-| 01 | Presentación, diagnóstico y funcionamiento del computador |
-| 02 | Sistemas operativos, procesos y sistema de archivos |
-| 03 | Terminal Linux: rutas, navegación y ayuda |
-| 04 | Bash: búsqueda, tuberías, redirección y scripts |
-| 05 | Git, GitHub y reproducibilidad |
-| 06 | Laboratorio 1 |
-| 07 | Python: intérprete, scripts, notebooks y entornos |
-| 08 | Tipos, operadores, asignación, entrada y salida |
-| 09 | Funciones, contratos y descomposición |
-| 10 | Booleanos y condicionales |
-| 11 | Ciclos y patrones de acumulación |
-| 12 | Cadenas y colecciones |
-| 13 | Archivos, `pathlib`, `with`, excepciones y depuración |
-| 14 | Laboratorio 2 |
-| 15 | FLEX 1: práctica y recuperación |
-| 16 | Módulos, importaciones, entornos y dependencias |
-| 17 | FLEX 2: lectura y depuración |
-| 18 | Parcial 1 escrito |
-| 19 | Funciones avanzadas, tipos y documentación |
-| 20 | Pruebas, casos límite y `pytest` |
-| 21 | Algoritmos, eficiencia y error numérico |
-| 22 | Clases y objetos |
-| 23 | Composición, invariantes y `dataclass` |
-| 24 | Laboratorio 3 |
-| 25 | Herencia simple y polimorfismo con criterio |
-| 26 | FLEX 3: recursividad, generadores y decoradores |
-| 27 | NumPy: arreglos, forma, tipo e indexación |
-| 28 | NumPy: vistas, broadcasting, vectorización y azar |
-| 29 | Matplotlib orientado a objetos |
-| 30 | Laboratorio 4 |
-| 31 | SciPy y SymPy seleccionados |
-| 32 | FLEX 4: clínica de código |
-| 33 | Parcial 2 escrito |
-| 34 | Un archivo con Python, NumPy y Pandas |
-| 35 | Pandas: tipos, faltantes y limpieza |
-| 36 | Agrupación, combinación y validación |
-| 37 | Incertidumbre, procedencia y comunicación científica |
-| 38 | Laboratorio 5 |
-| 39 | IA para programar: crítica, agentes y responsabilidad |
-| 40 | PostgreSQL desde SQL puro |
-| 41 | PostgreSQL desde Python y bases remotas |
-| 42 | Docker desde cero y reproducibilidad |
-| 43 | Laboratorio 6 integrador |
-| 44 | FLEX 5: retroalimentación y recuperación |
-| 45 | Parcial 3 escrito |
-| 46 | Evaluación integradora individual escrita |
-| 47 | Demostraciones y sustentaciones I |
-| 48 | Demostraciones y sustentaciones II |
+| Fecha | Tema | Material principal del banco |
+|---|---|---|
+| Mar. 25 ago. | Sistema operativo, procesos, archivos y WSL2 | `clase_02_sistema_operativo` y guía 01 |
+| Mié. 26 ago. | Terminal Linux | `clase_03_terminal_linux` |
+| Jue. 27 ago. | Bash, flujos y scripts simples | `clase_04_bash_tuberias` |
+| Mar. 1 sep. | Git y GitHub básico | `clase_05_git_github` y guía 02 |
+| Mié. 2 sep. | Taller preparatorio | ejercicios seleccionados de clases 03–05 |
+| Jue. 3 sep. | Laboratorio 1 | `clase_06_laboratorio_1` y guía actualizada |
+| Mar. 8 sep. | Python, scripts, notebooks y entorno | `clase_07_python_entornos` |
+| Mié. 9 sep. | Tipos, operadores y E/S | `clase_08_tipos_operadores_io` |
+| Jue. 10 sep. | Parcial 1 | adaptar `clase_18_parcial_1` al corte del 3 de septiembre |
+| Mar. 15 sep. | Funciones y contratos | `clase_09_funciones_contratos` |
+| Mié. 16 sep. | Condicionales | `clase_10_condicionales` |
+| Jue. 17 sep. | Ciclos y colecciones | selección de clases 11–12 |
+| Mar. 22 sep. | Archivos, rutas y excepciones | selección de `clase_13_archivos_excepciones` |
+| Mié. 23 sep. | Depuración guiada | clases 13 y 17, sin contenido evaluable nuevo |
+| Jue. 24 sep. | Laboratorio 2 | `clase_14_laboratorio_2` |
+| Mar. 29 sep. | Módulos y dependencias | `clase_16_modulos_dependencias` |
+| Mié. 30 sep. | Casos límite, `pytest` y paso numérico | clases 20–21 |
+| Jue. 1 oct. | Parcial 2 | adaptar `clase_33_parcial_2` al corte del 24 de septiembre |
+| Mar. 6 oct. | Laboratorio 3 | `clase_24_laboratorio_3` |
+| Mié. 7 oct. | NumPy: arreglos | `clase_27_numpy_arreglos` |
+| Jue. 8 oct. | NumPy: vectorización y azar | `clase_28_numpy_vectorizacion` |
+| Mar. 13 oct. | Matplotlib OO | `clase_29_matplotlib_oo` |
+| Mié. 14 oct. | Simulación y preparación | ejercicios de clases 28–29; sin tema nuevo |
+| Jue. 15 oct. | Laboratorio 4 | `clase_30_laboratorio_4` |
+| Mar. 20 oct. | Pandas: lectura y auditoría | `clase_34_lectura_datos` |
+| Mié. 21 oct. | Proyecto, procedencia e IA crítica | `clase_39_ia_agentes` y guía 13 |
+| Jue. 22 oct. | Parcial 3 | adaptar `clase_45_parcial_3` al corte del 15 de octubre |
+| Mar. 27 oct. | Pandas: limpieza | `clase_35_pandas_limpieza` |
+| Mié. 28 oct. | Comparación y validación | selección de `clase_36_pandas_agrupar_combinar` |
+| Jue. 29 oct. | Laboratorio 5 | `clase_38_laboratorio_5` |
+| Mar. 3 nov. | PostgreSQL y SQL | `clase_40_postgresql_sql` |
+| Mié. 4 nov. | Python/PostgreSQL y Docker | selección de clases 41–42 y guías 14–15 |
+| Jue. 5 nov. | Integración y congelamiento del proyecto | selección de clases 43–44, sin API nueva |
+| Mar. 10 nov. | Laboratorio 6 | `clase_43_laboratorio_6` |
+| Mié. 11 nov. | Verificación y ensayo | selección de clases 44 y 47 |
+| Jue. 12 nov. | Entrega final y prueba reproducible | materiales de clases 46–47, sin examen adicional |
+| Mar. 17 nov. | Sustentaciones I | `clase_47_sustentaciones_1` |
+| Mié. 18 nov. | Sustentaciones II | `clase_48_sustentaciones_2` |
+| Jue. 19 nov. | Sustentaciones III y cierre | reutilizar protocolo de clases 47–48 |
+
+## Material que pasa a extensión
+
+Las carpetas 19, 22, 23, 25, 26 y 31 no son prerrequisitos del curso reajustado.
+Se conservan para consulta sobre funciones avanzadas, POO, recursividad, SciPy o
+SymPy. La evaluación integradora original de la carpeta 46 queda retirada; el 12
+de noviembre solo se usa su material técnico de comprobación y la autenticación
+individual ocurre en las sustentaciones del 17 al 19.
 
 ## Uso docente
 
-Los guiones son rutas previstas, no diapositivas. El docente registra qué partes
-se realizaron y qué debe recuperarse. Los bancos de preguntas, soluciones y
-resultados esperados permanecen en `_docente_privado/`.
-
+Antes de cada encuentro se seleccionan solamente los fragmentos indicados. Los
+guiones originales no se asignan completos cuando combinan dos temas. El docente
+registra qué partes se realizaron y publica el corte de cada parcial. Los bancos
+de preguntas, soluciones y resultados esperados permanecen en
+`_docente_privado/`.

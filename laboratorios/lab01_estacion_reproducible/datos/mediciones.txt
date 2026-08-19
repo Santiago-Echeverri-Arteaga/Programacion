@@ -1,0 +1,6 @@
+sensor_a temperatura 20.1 C
+sensor_b temperatura 20.4 C
+sensor_a presion 101.2 kPa
+sensor_c temperatura 19.9 C
+sensor_b estado estable
+

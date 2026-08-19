@@ -1,4 +1,4 @@
-# Clase 48 — Demostraciones y sustentaciones II
+# Sustentaciones del miércoles 18 y jueves 19 de noviembre
 
 ## Propósito
 
@@ -7,7 +7,8 @@ sobre reproducibilidad, límites y posibles continuaciones.
 
 ## Secuencia
 
-1. Sustentaciones restantes con el mismo protocolo de la clase 47.
+1. Sustentaciones restantes durante ambos encuentros, con el mismo protocolo de
+   la clase 47.
 2. Recuperación de contingencias autorizadas, si aplica.
 3. Cierre: qué puede el código, qué no demuestra y cómo continuaría el trabajo.
 4. Archivo de versiones evaluadas y declaraciones de autoría/IA.

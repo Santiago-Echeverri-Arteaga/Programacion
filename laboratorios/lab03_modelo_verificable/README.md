@@ -10,6 +10,15 @@
 | IA | Nivel 1: documentación; no generación de solución |
 | Archivo inicial | [`pendulo.py`](pendulo.py) |
 
+## Sincronización
+
+- Realización: martes 6 de octubre de 2026.
+- Último contenido requerido: miércoles 30 de septiembre (casos límite, `pytest`
+  y el paso numérico suministrado).
+- El parcial del jueves 1 de octubre queda como encuentro intermedio y no agrega
+  una API ni un paradigma.
+- No se requieren clases, herencia, `dataclass`, SciPy ni SymPy.
+
 ## 2. Pregunta de trabajo
 
 ¿En qué condiciones la aproximación de ángulo pequeño describe adecuadamente un
@@ -27,7 +36,7 @@ signos, límites conocidos, sensibilidad al paso y propiedades físicas.
 ## 4. Objetivos
 
 - implementar un modelo no lineal con responsabilidades separadas;
-- justificar funciones, estructuras de datos o clases empleadas;
+- justificar funciones, módulos y estructuras de datos simples;
 - comparar periodos para distintas amplitudes con el límite analítico;
 - cuantificar sensibilidad temporal y comportamiento de la energía.
 
@@ -36,12 +45,13 @@ signos, límites conocidos, sensibilidad al paso y propiedades físicas.
 - archivo inicial y Python 3.12;
 - valores de gravedad, longitud, amplitudes y duración indicados por el docente;
 - ángulos internos en radianes y unidades SI;
-- no usar variables globales ni jerarquías de herencia sin necesidad demostrable.
+- no usar variables globales; organizar el trabajo con funciones pequeñas.
 
 ## 6. Procedimiento
 
 1. Derive el sistema de primer orden y prediga el efecto de duplicar `L`.
-2. Defina contratos para parámetros, estado, aceleración, paso e integración.
+2. Defina contratos para parámetros, aceleración, paso e integración usando
+   números, tuplas, listas o diccionarios sencillos.
 3. Implemente un paso Euler-Cromer para la ecuación no lineal.
 4. Separe el modelo físico del ciclo temporal y del análisis de resultados.
 5. Estime el periodo con un criterio explícito y valídelo a amplitud pequeña
@@ -51,8 +61,8 @@ signos, límites conocidos, sensibilidad al paso y propiedades físicas.
 8. Calcule energía cinética y potencial; cuantifique su variación relativa.
 9. Pruebe entradas inválidas, signo de aceleración, tendencia con longitud y un
    caso analítico.
-10. Compare una organización con funciones frente a una clase pequeña; use la que
-    tenga responsabilidades más claras.
+10. Separe el modelo, la integración y el análisis en funciones o módulos con
+    responsabilidades claras.
 
 ## 7. Resultados y discusión
 
@@ -62,7 +72,7 @@ tabla o figura de sensibilidad; y energía frente al tiempo. Discuta:
 1. ¿Qué criterio define «adecuadamente» y por qué?
 2. ¿El error observado proviene del modelo, del método o de ambos?
 3. ¿Cómo detectaría un signo incorrecto sin leer la implementación?
-4. ¿Qué abstracción facilitó una prueba y cuál habría sido innecesaria?
+4. ¿Qué separación entre funciones facilitó una prueba y cuál habría sido innecesaria?
 
 ## 8. Qué se debe presentar
 

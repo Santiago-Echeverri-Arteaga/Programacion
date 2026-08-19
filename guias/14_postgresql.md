@@ -2,10 +2,11 @@
 
 ## Ficha
 
-- Semana: 14, encuentros A y B.
-- Duración: 240 minutos en total.
+- Realización: martes 3 de noviembre y primera parte del miércoles 4 de noviembre
+  de 2026.
+- Duración: hasta 180 minutos.
 - Nivel de IA: 1.
-- Resultados: RA 4, RA 8 y RA 12.
+- Resultados: RA 4, RA 8 y RA 10.
 - Infraestructura: `infraestructura/compose.yaml`.
 
 ## Objetivo
