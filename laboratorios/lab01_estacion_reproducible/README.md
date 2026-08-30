@@ -1,199 +1,165 @@
-# Laboratorio 1 — Puesta a punto con WSL2, Bash, Git y GitHub
-
-## 1. Identificación y sincronización
+# Laboratorio 1 — Una estación de trabajo reproducible
 
 | Campo | Especificación |
 |---|---|
-| Realización | Jueves 3 de septiembre de 2026 |
-| Cierre de prerrequisitos | Martes 1 de septiembre: Git/GitHub; el miércoles 2 es práctica |
-| Duración presencial | 120 min |
-| Trabajo | Parejas con evidencia individual |
-| Herramientas | Windows con WSL2/Ubuntu, Bash, Git, GitHub y editor de texto |
-| IA | Nivel 1: consultar documentación; no generar la entrega |
-| Archivos iniciales | [`comandos_basicos.sh`](comandos_basicos.sh) y [`PLANTILLA_CONFIGURACION_WSL2.md`](PLANTILLA_CONFIGURACION_WSL2.md) |
+| Fecha de realización/entrega | Jueves 10 de septiembre de 2026 |
+| Modalidad | Tarea en parejas; no reemplaza la clase regular de ese día |
+| Tiempo estimado | 120 minutos |
+| Herramientas | WSL2/Ubuntu, Bash, Python 3, Git, GitHub y editor de texto |
 
-Esta actividad usa solamente navegación, flujos de texto, un script secuencial y
-el ciclo básico de Git. **No requiere** variables de Bash, condicionales, ciclos,
-funciones, ramas, conflictos ni automatización avanzada.
+## Teoría breve
 
-## 2. Pregunta de trabajo
+La terminal recibe un comando y separa dos flujos: la salida normal, descriptor
+`1`, y los errores, descriptor `2`. Una tubería (`|`) conecta la salida normal de
+un comando con la entrada del siguiente. `>` y `1>` reemplazan un archivo;
+`>>` y `1>>` anexan la salida normal; `2>` y `2>>` hacen lo mismo con los errores.
 
-¿Puede otra persona instalar o verificar el mismo entorno, ejecutar un script
-sencillo y reconocer en Git/GitHub qué quedó registrado, usando únicamente la
-documentación del equipo?
+El orden de los caracteres importa: `1>> salida.txt` y `2>> errores.txt` son
+redirecciones. En cambio, `>>1` y `>>2` anexan la salida normal a archivos
+literalmente llamados `1` y `2`; no significan «flujo 1» y «flujo 2».
 
-## 3. Objetivos
+`grep` selecciona líneas que contienen un patrón; `wc -l` cuenta líneas;
+`mkdir` crea directorios. Un archivo de Python es texto y puede ejecutarse con
+`python3 nombre.py`. Para este laboratorio basta saber que
+`print("texto")` envía texto a la salida normal. No se necesitan variables,
+condicionales, ciclos ni funciones.
 
-- explicar en Markdown cómo instalar y verificar WSL2 con Ubuntu;
-- navegar y crear directorios con comandos básicos de Linux;
-- distinguir salida estándar y salida de error;
-- usar `grep`, `>`, `>>`, `2>`, `2>>` y una tubería;
-- ejecutar un archivo `.sh` con `bash` y como archivo ejecutable;
-- registrar cambios con Git y publicar un repositorio básico en GitHub.
-
-## 4. Preparación antes de la sesión
-
-La instalación puede exigir permisos de administrador y reinicio. Debe hacerse
-antes del laboratorio o en la sesión de preparación del miércoles 2 de septiembre.
-
-En PowerShell con permisos de administrador:
-
-```powershell
-wsl --install -d Ubuntu
-```
-
-Después del reinicio y de crear el usuario de Ubuntu, comprobar en PowerShell:
-
-```powershell
-wsl --status
-wsl --list --verbose
-```
-
-La distribución debe aparecer con versión `2`. Si una instalación existente está
-en versión 1, el docente explicará el cambio con `wsl --set-version`; el estudiante
-no debe desregistrar ni borrar distribuciones.
-
-Ya dentro de Ubuntu, ejecutar cada orden por separado:
+Un script Bash es un archivo de texto que comienza normalmente con
+`#!/usr/bin/env bash` y guarda comandos en el orden en que deben ejecutarse.
+`bash archivo.sh` pide a Bash que lo interprete aunque no tenga permiso de
+ejecución. Para ejecutarlo directamente como `./archivo.sh`, se concede permiso
+al propietario con:
 
 ```bash
-sudo apt update
-sudo apt install git
-git --version
+chmod u+x archivo.sh
+ls -l archivo.sh
+./archivo.sh
 ```
 
-Documentación de referencia:
+La letra `x` visible en `ls -l` confirma el permiso. Un script puede llamar a
+otro con `./otro.sh`; ese segundo archivo también necesita permiso de ejecución.
+Si se invoca como `bash otro.sh`, el permiso no es necesario, pero en este
+laboratorio se practicará explícitamente la primera forma.
 
-- [Instalación oficial de WSL](https://learn.microsoft.com/windows/wsl/install)
-- [Trabajo entre sistemas de archivos en WSL](https://learn.microsoft.com/windows/wsl/filesystems)
-- [Primeros pasos de Git](https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Fundamentos-de-Git)
+Git registra versiones locales mediante `status`, `add`, `commit` y `log`.
+GitHub almacena una copia remota; no reemplaza los commits locales.
 
-No incluya contraseñas, tokens, claves privadas ni capturas que los revelen.
+## Objetivos
 
-## 5. Comandos incluidos
+- crear y recorrer una estructura sencilla de directorios;
+- construir tuberías pequeñas con `grep` y comandos de conteo;
+- diferenciar y redirigir la salida normal y los errores;
+- escribir y ejecutar un script `.sh` secuencial;
+- conceder permisos con `chmod` y llamar un `.sh` desde otro `.sh`;
+- crear y ejecutar un archivo de Python elemental;
+- registrar el trabajo con el flujo básico de Git y publicarlo en GitHub;
+- explicar por escrito y en video qué hizo cada comando importante.
 
-### Navegación y archivos
+## Requerimientos y límites
 
-```bash
-pwd
-ls
-ls -lah
-mkdir practica_linux
-mkdir -p practica_linux/resultados
-cd practica_linux
-```
+- usar el archivo [`datos/mediciones.txt`](datos/mediciones.txt) sin modificarlo;
+- estudiar [`demo_filtrar_temperaturas.sh`](demo_filtrar_temperaturas.sh) y
+  [`demo_contar_temperaturas.sh`](demo_contar_temperaturas.sh) como ejemplos, sin
+  copiarlos como solución;
+- crear desde cero un script principal llamado `analizar_mediciones.sh`;
+- utilizar solamente comandos secuenciales;
+- no usar variables de Bash, ciclos, condicionales, funciones, `awk`, `sed` ni
+  características avanzadas de Git;
+- no incluir contraseñas, tokens, claves privadas ni capturas que los revelen.
 
-### Búsqueda, tuberías y redirecciones
+## Procedimiento
 
-```bash
-grep -n "sensor" datos/mediciones.txt
-grep -n "sensor" datos/mediciones.txt | wc -l
-ls -lah > resultados/listado.txt
-ls -lah >> resultados/listado.txt
-grep -n "sensor" datos/mediciones.txt 2> resultados/errores.log
-grep -n "temperatura" datos/mediciones.txt 2>> resultados/errores.log
-```
+1. Comprueben con `pwd` y `ls` dónde están. Creen con `mkdir` una carpeta para
+   datos, otra para resultados y otra para errores. Copien el archivo de
+   mediciones a la ubicación que hayan decidido.
+2. Inspeccionen el archivo y describan con sus palabras qué representa cada
+   línea. Antes de ejecutar cada orden, predigan si verán algo en pantalla o si
+   quedará escrito en un archivo.
+3. Ejecuten primero `bash demo_filtrar_temperaturas.sh`. Después concedan permiso
+   a los dos demos, compruébenlo y ejecuten el segundo directamente:
 
-`>` reemplaza la salida; `>>` la anexa. El descriptor `2` representa la salida de
-error: `2>` la reemplaza y `2>>` la anexa. La forma `>>2` **no** redirige errores;
-en Bash se interpreta como anexar la salida estándar a un archivo llamado `2`.
+   ```bash
+   chmod u+x demo_filtrar_temperaturas.sh demo_contar_temperaturas.sh
+   ls -l demo_filtrar_temperaturas.sh demo_contar_temperaturas.sh
+   ./demo_contar_temperaturas.sh
+   ```
 
-### Ejecución del script
+   Expliquen por qué el segundo demo necesita que el primero también sea
+   ejecutable.
+4. Construyan una tubería que seleccione con `grep` las líneas de un sensor y
+   cuente cuántas hay. Construyan otra que seleccione un tipo de medición y
+   conserve el resultado en un archivo.
+5. Ejecuten una búsqueda válida y anéxenla dos veces a un archivo mediante
+   `1>>`. Expliquen por qué el contenido crece.
+6. Provoquen de forma controlada un error buscando en un archivo inexistente y
+   anéxenlo mediante `2>>` a un registro de errores. La terminal no debe mezclar
+   ese mensaje con los resultados correctos.
+7. Creen por su cuenta un archivo `presentacion.py` que produzca al menos tres
+   líneas de texto: nombre de la actividad, archivo analizado y una frase sobre
+   el resultado. Ejecútenlo con `python3` y redirijan una ejecución a un archivo.
+8. Escriban `analizar_mediciones.sh` con *shebang* y comandos secuenciales. Debe:
 
-```bash
-bash comandos_basicos.sh
-chmod u+x comandos_basicos.sh
-./comandos_basicos.sh
-```
+   - crear los directorios necesarios con `mkdir -p`;
+   - llamar directamente con `./` al menos uno de los demos `.sh`;
+   - contener una tubería propia con `grep`;
+   - anexar salida normal con `1>>` y un error controlado con `2>>`;
+   - ejecutar `presentacion.py` con `python3`.
 
-El estudiante debe poder explicar el *shebang*, el permiso de ejecución y la
-diferencia entre las dos formas de ejecutar. No se evalúan condicionales ni ciclos.
+   No se admiten variables, ciclos, condicionales ni funciones. Concedan permiso
+   y ejecútenlo así:
 
-### Git y GitHub básico
+   ```bash
+   chmod u+x analizar_mediciones.sh
+   ls -l analizar_mediciones.sh
+   ./analizar_mediciones.sh
+   ```
 
-Configure una identidad académica sin copiar credenciales en el repositorio:
+9. Inicialicen un repositorio. Usen `git status` antes y después de `git add`;
+   creen al menos dos commits con mensajes que describan cambios reales y
+   compruébenlos con `git log --oneline`.
+10. Publiquen el repositorio en GitHub mediante el mecanismo de autenticación
+   autorizado por la Universidad. Verifiquen que no contiene secretos ni
+   archivos llamados accidentalmente `1` o `2`.
+11. Una pareja diferente debe seguir la explicación escrita y repetir una
+   tubería, la ejecución del `.sh` y la ejecución del archivo de Python sin ayuda
+   oral.
 
-```bash
-git config --global user.name "Nombre Apellido"
-git config --global user.email "correo@example.com"
-git init
-git status
-git add README.md CONFIGURACION_WSL2.md comandos_basicos.sh
-git diff --staged
-git commit -m "Documenta la puesta a punto de WSL2"
-git log --oneline
-```
+## Resultados puntuales que deben obtener
 
-Después de crear en GitHub un repositorio remoto vacío y seguir el mecanismo de
-autenticación autorizado por la Universidad:
+La entrega debe mostrar, sin imponer una estructura de carpetas específica:
 
-```bash
-git branch -M main
-git remote add origin URL_DEL_REPOSITORIO
-git remote -v
-git push -u origin main
-```
+1. una estructura creada con `mkdir` que se entienda al verla con `ls`;
+2. un archivo con las coincidencias de un sensor;
+3. el conteo verificable de esas coincidencias;
+4. un archivo donde dos usos sucesivos de `1>>` sean visibles;
+5. un registro que contenga al menos un error real capturado con `2>>`;
+6. `analizar_mediciones.sh` ejecutable, sin variables, ciclos, condicionales o
+   funciones, que llame otro `.sh`;
+7. evidencia de permisos de ejecución y una ejecución directa correcta;
+8. la salida guardada de `presentacion.py` y una ejecución correcta en pantalla;
+9. un historial Git con al menos dos commits y un `git status` final limpio;
+10. una URL funcional del repositorio remoto.
 
-No se requieren ramas adicionales, `merge`, resolución de conflictos ni
-reescritura de historial.
+No se entrega una lista de comandos resuelta. Cada equipo debe decidir las
+tuberías exactas, ejecutarlas, comprobar sus archivos y explicar por qué producen
+esos resultados.
 
-## 6. Procedimiento
+## Explicación escrita y video
 
-1. Copie la plantilla como `CONFIGURACION_WSL2.md` y complétela con explicaciones
-   propias, comandos y salidas breves de verificación.
-2. Cree `datos` y `resultados` con `mkdir`. Use el archivo de muestra suministrado
-   en [`datos/mediciones.txt`](datos/mediciones.txt).
-3. Ejecute manualmente cada comando del bloque de búsqueda y prediga antes si la
-   salida aparecerá en pantalla o en un archivo.
-4. Abra `comandos_basicos.sh`, lea cada línea y complete solo las dos líneas `TODO`
-   usando un `grep` y una tubería. No agregue condicionales ni ciclos.
-5. Ejecute el script primero con `bash` y luego mediante permiso de ejecución.
-6. Compare el efecto de ejecutar dos veces sobre los archivos creados con `>` y
-   `>>`; explique la diferencia en el README.
-7. Inicialice Git y cree dos commits coherentes: documentación del entorno y
-   script/resultados. Revise `git status` antes de cada commit.
-8. Publique el repositorio en GitHub y verifique que no contiene credenciales ni
-   archivos ajenos a la actividad.
-9. Una pareja diferente sigue el README y marca cualquier paso que dependa de una
-   explicación oral.
+La explicación escrita debe incluir los comandos elegidos, la función del
+*shebang*, `chmod`, `|`, `1>>` y `2>>`, la diferencia entre `bash archivo.sh` y
+`./archivo.sh`, la diferencia entre Git y GitHub, un error encontrado y la forma
+en que se verificó cada resultado.
 
-## 7. Entrega
+El video de YouTube, de 3 a 5 minutos, debe mostrar los permisos con `ls -l`, la
+ejecución directa de `analizar_mediciones.sh`, la llamada entre scripts, una
+tubería, la ejecución de `presentacion.py` y el historial Git. Ambas personas
+deben explicar al menos una decisión. Puede publicarse como no listado y no exige
+mostrar el rostro.
 
-No se exige informe PDF en este primer laboratorio. Se entrega la URL del
-repositorio con:
+## Evidencia individual
 
-```text
-lab01_apellido1_apellido2/
-├── README.md
-├── CONFIGURACION_WSL2.md
-├── comandos_basicos.sh
-├── datos/
-│   └── mediciones.txt
-└── resultados/
-    ├── listado.txt
-    ├── coincidencias.txt
-    ├── conteo.txt
-    └── errores.log
-```
-
-El README explica cómo ejecutar el script, qué produce y qué diferencia existe
-entre Git y GitHub. `CONFIGURACION_WSL2.md` explica instalación, verificación,
-ubicación recomendada del proyecto y un problema encontrado con su solución.
-
-## 8. Criterios particulares
-
-- documentación de WSL2 comprensible y verificable: 20 puntos;
-- navegación, estructura y ejecución del `.sh`: 15 puntos;
-- `grep`, tubería y redirecciones correctas: 25 puntos;
-- flujo Git y publicación en GitHub sin secretos: 20 puntos;
-- reproducción por otra pareja y explicación: 15 puntos;
-- evidencia individual: 5 puntos.
-
-## 9. Evidencia individual
-
-Sin equipo ni IA, cada estudiante:
-
-1. predice dónde termina la salida de una orden con tubería, `>` y `2>>`;
-2. interpreta un `git status` sencillo;
-3. explica cómo comprobaría que Ubuntu está usando WSL2;
-4. indica qué comando usaría para ejecutar un `.sh` que todavía no tiene permiso
-   de ejecución.
+Sin equipo ni IA, cada estudiante interpreta una tubería, predice dónde termina
+la salida de una orden con `1>>` y `2>>`, explica qué cambia con `chmod u+x`,
+distingue `bash archivo.sh` de `./archivo.sh`, interpreta un `git status` sencillo
+y dice cómo ejecutaría un archivo `.py` desde la terminal.

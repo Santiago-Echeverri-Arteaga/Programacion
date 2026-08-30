@@ -1,7 +1,8 @@
-# Material del 26 de agosto — Terminal Linux: rutas, navegación y ayuda
+# Clase del 3 de septiembre — Terminal Linux: rutas, navegación y ayuda
 
-- Fecha: miércoles 26 de agosto de 2026. Duración: 120 minutos. IA: nivel 1.
-- Material: `rutas_y_ayuda.sh` y un árbol de archivos preparado.
+- Fecha: jueves 3 de septiembre de 2026. Duración: 120 minutos. IA: nivel 1.
+- Demo: [`demo_terminal.md`](demo_terminal.md).
+- Práctica: [`practica.md`](practica.md).
 
 ## Resultados
 

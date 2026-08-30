@@ -26,8 +26,9 @@ Al finalizar el curso, el estudiante estará en capacidad de:
 11. Evaluar críticamente código y explicaciones producidos por IA, declarar su
     uso y conservar responsabilidad intelectual sobre el resultado.
 
-Clases y objetos, herencia, SciPy y SymPy se ofrecen como extensiones si el tiempo
-lo permite; no son resultados obligatorios en el calendario de reanudación.
+Clases y objetos, herencia, SciPy, SymPy, SimPy, scikit-learn, PostgreSQL y Docker
+se ofrecen como extensiones o recuperaciones si el tiempo lo permite; no son
+resultados obligatorios en el calendario de reanudación.
 
 ## Principios del curso
 

@@ -1,7 +1,8 @@
-# Material del 27 de agosto — Bash: flujos, tuberías y scripts secuenciales
+# Clase del 8 de septiembre — Bash: flujos, tuberías y scripts secuenciales
 
-- Fecha: jueves 27 de agosto de 2026. Duración: 120 minutos. IA: nivel 1.
-- Material: `flujos.sh` y datos sintéticos del repositorio.
+- Fecha: martes 8 de septiembre de 2026. Duración: 120 minutos. IA: nivel 1.
+- Demos: [`demo_filtrar_temperaturas.sh`](../../laboratorios/lab01_estacion_reproducible/demo_filtrar_temperaturas.sh) y [`demo_contar_temperaturas.sh`](../../laboratorios/lab01_estacion_reproducible/demo_contar_temperaturas.sh).
+- Práctica: [`practica.md`](practica.md).
 
 ## Resultados
 
@@ -19,7 +20,7 @@
 | 35–55 | Construcción incremental de una tubería |
 | 55–65 | Pausa |
 | 65–85 | Ejecutar con `bash`, permiso de ejecución y *shebang* |
-| 85–110 | Completar `flujos.sh` sin variables ni control de flujo |
+| 85–110 | Crear un script propio y enlazar dos scripts sin variables ni control de flujo |
 | 110–120 | Salida: explicar qué programa hace cada transformación |
 
 ## Límite

@@ -1,8 +1,8 @@
-# Material del 1 de septiembre — Git y GitHub básico
+# Clase del 9 de septiembre — Git y GitHub básico
 
-- Fecha: martes 1 de septiembre de 2026. Duración: 120 minutos. IA: nivel 1.
-- Material: secuencia y script de datos en
-  [`../../Codigos/01_git_github/`](../../Codigos/01_git_github/README.md).
+- Fecha: miércoles 9 de septiembre de 2026. Duración: 120 minutos. IA: nivel 1.
+- Demo: [`secuencia_comandos.md`](../../Codigos/01_git_github/secuencia_comandos.md).
+- Práctica: [`practica_git.md`](practica_git.md).
 
 ## Resultados
 

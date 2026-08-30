@@ -1,7 +1,7 @@
 # Clase 01 — Diagnóstico y funcionamiento del computador
 
 - Semana: 1. Duración: 120 minutos. IA: nivel 0 en el diagnóstico.
-- Material: `diagnostico.sh`, papel y tablero.
+- Material: [`../clase_02_sistema_operativo/demo_entorno.py`](../clase_02_sistema_operativo/demo_entorno.py), papel y tablero.
 
 ## Resultados
 
@@ -23,11 +23,10 @@ el diagnóstico. No calificarlo.
 | 35–55 | Comparar modelos en parejas y formular dudas |
 | 55–65 | Pausa |
 | 65–90 | Construcción colectiva: CPU, RAM, disco, entrada y salida |
-| 90–108 | Ejecutar `diagnostico.sh` e interpretar cada salida |
+| 90–108 | Ejecutar `demo_entorno.py` e interpretar cada salida |
 | 108–120 | Salida: distinguir programa, proceso y archivo |
 
 ## Evidencia
 
 Conservar solo resultados agregados del diagnóstico y tres conceptos que deban
 reforzarse. No publicar respuestas individuales.
-

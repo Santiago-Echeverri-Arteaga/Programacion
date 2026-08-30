@@ -16,7 +16,7 @@ una nota individual de sustentación y debe poder explicar el sistema completo.
 |---|---|
 | Publicación de líneas y criterios | Jueves 17 de septiembre de 2026 |
 | Elección de pregunta y fuente de datos o modelo | Jueves 8 de octubre |
-| Propuesta y criterio de validación | Miércoles 21 de octubre |
+| Propuesta y criterio de validación | Martes 27 de octubre |
 | Congelamiento de requisitos y primera ejecución limpia | Jueves 5 de noviembre |
 | Entrega definitiva y versión congelada | Jueves 12 de noviembre |
 | Sustentaciones | Martes 17, miércoles 18 y jueves 19 de noviembre |
@@ -38,11 +38,12 @@ Análisis de datos experimentales u observacionales con decisiones justificadas 
 limpieza, unidades, incertidumbre, visualización y ajuste o comparación de
 modelos.
 
-### C. Datos y base relacional
+### C. Integración de datos y herramientas
 
-Diseño o uso de una base PostgreSQL con datos científicos, consultas SQL no
-triviales y un análisis reproducible desde Python. Debe existir una pregunta
-científica; almacenar y mostrar registros no constituye por sí solo un proyecto.
+Análisis que combine archivos o fuentes permitidas mediante Python, NumPy o
+Pandas y produzca una conclusión verificable. Debe existir una pregunta
+científica; reunir tablas y mostrar registros no constituye por sí solo un
+proyecto.
 
 ## Filtro de seriedad
 

@@ -8,11 +8,12 @@
 | Modelado y validación física | Laboratorios 3 y 4; proyecto | Parciales 2 y 3, defensa individual |
 | NumPy y visualización | Demostraciones y laboratorio 4 | Parcial 3 y proyecto cuando aplique |
 | Datos y Pandas | Laboratorio 5 y proyecto | Parcial 3 |
-| PostgreSQL y Docker | Bloque introductorio final y laboratorio 6 | Evidencia del laboratorio; opcional en el proyecto |
+| Integración científica | Laboratorio 6 y ejecución limpia del proyecto | Sustentación y evidencia reproducible |
 | Uso crítico de IA | Clínica de proyecto, crítica de salida y registro | Sustentación, `AI_USAGE.md` y preguntas de validación |
 
 La tabla debe revisarse al terminar cada semestre. Un tema que no aparezca en una
 actividad ni en una evidencia no debe permanecer como resultado obligatorio.
 
-Clases y objetos, herencia, SciPy y SymPy se conservan como extensiones. No son
-resultados obligatorios ni prerrequisitos en el calendario reducido.
+Clases y objetos, herencia, SciPy, SymPy, SimPy, scikit-learn, PostgreSQL y Docker
+se conservan como extensiones o recuperaciones. No son resultados obligatorios
+ni prerrequisitos en el calendario reducido.

@@ -2,9 +2,10 @@
 
 Curso de Programación del programa de Física de la Universidad del Quindío.
 
-El calendario de reanudación vigente cubre del martes 25 de agosto al jueves 19
-de noviembre de 2026. La última semana completa se reserva para sustentaciones;
-consulte [`programa/cronograma.md`](programa/cronograma.md).
+El calendario de reanudación vigente cubre del martes 1 de septiembre al jueves
+19 de noviembre de 2026. La primera sesión se dedica al acta de concertación y
+la última semana completa se reserva para sustentaciones; consulte
+[`programa/cronograma.md`](programa/cronograma.md).
 
 Este repositorio reúne las guías, ejemplos, notebooks, datos y laboratorios que se
 utilizan en clase. El curso prioriza la capacidad de leer, escribir, depurar,
@@ -21,9 +22,10 @@ físicos de forma reproducible.
 - [`Codigos/`](Codigos/README.md): ejemplos desarrollados, organizados por tema.
 - [`notebooks/`](notebooks/README.md): notebooks de trabajo guiado.
 - [`datos/`](datos/README.md): conjuntos de datos pequeños con procedencia.
-- [`laboratorios/`](laboratorios/README.md): enunciados y archivos iniciales.
-- [`proyecto_final/`](proyecto_final/README.md): instrucciones y plantillas.
-- [`infraestructura/`](infraestructura/README.md): PostgreSQL y Docker.
+- [`laboratorios/`](laboratorios/README.md): enunciados de los laboratorios.
+- [`proyecto_final/`](proyecto_final/README.md): instrucciones del proyecto.
+- [`infraestructura/`](infraestructura/README.md): material opcional de
+  PostgreSQL y Docker.
 - [`recursos/`](recursos/README.md): referencias y enlaces de apoyo.
 
 Cada carpeta importante contiene un `README.md` que explica su propósito, sus
@@ -34,8 +36,8 @@ Git.
 ## Preparación del entorno
 
 Python 3.12 es la versión de referencia del curso. Se requieren además Git y una
-terminal Linux; para los módulos finales, Docker. Usar una versión posterior de
-Python exige verificar previamente todas las dependencias.
+terminal Linux. Usar una versión posterior de Python exige verificar previamente
+todas las dependencias.
 
 ```bash
 python -m venv .venv

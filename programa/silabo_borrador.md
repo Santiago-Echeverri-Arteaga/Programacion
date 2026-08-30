@@ -15,7 +15,7 @@ independiente y demás campos administrativos.
 | Naturaleza | Teórico-práctica |
 | Créditos | 3 — confirmar equivalencia horaria institucional |
 | Docencia directa | 6 horas semanales |
-| Duración | Una clase realizada antes de la interrupción y 13 semanas de reanudación, del 25 de agosto al 19 de noviembre de 2026 |
+| Duración | Una clase realizada antes de la interrupción y 12 semanas de reanudación, del 1 de septiembre al 19 de noviembre de 2026 |
 | Requisito | Ecuaciones diferenciales — confirmar con el plan vigente |
 | Habilitable, validable y homologable | Confirmar con el programa |
 
@@ -34,8 +34,8 @@ trabajo científico. Mediante Python, Linux, Git y bibliotecas del ecosistema
 científico, el estudiante aprende a traducir problemas físicos a procedimientos
 computacionales, leer y escribir código, procesar datos, producir visualizaciones,
 depurar, probar y validar resultados. El curso incorpora prácticas de
-reproducibilidad, una introducción a PostgreSQL y Docker, y formación explícita
-para evaluar críticamente la asistencia de inteligencia artificial.
+reproducibilidad y formación explícita para evaluar críticamente la asistencia de
+inteligencia artificial.
 
 El énfasis se encuentra en fundamentos transferibles. Los temas avanzados se
 seleccionan por su utilidad para la física y la ciencia de datos, evitando cubrir
@@ -81,15 +81,16 @@ institucional pueden agruparse así:
 
 ## 6. Enseñanzas
 
-### Unidad 1 — Entorno computacional y reproducibilidad, clase realizada y 25 de agosto–3 de septiembre
+### Unidad 1 — Concertación, entorno y reproducibilidad, clase realizada y 1–10 de septiembre
 
+- Discusión y concertación del acta del curso.
 - Componentes funcionales del computador.
 - Sistema operativo, procesos y sistema de archivos.
 - Linux y Bash: navegación, búsqueda, flujos, tuberías y scripts.
 - Git y GitHub: estados, commits, remotos y publicación básica.
 - Organización reproducible de un proyecto científico.
 
-### Unidad 2 — Fundamentos de programación, 8 de septiembre–6 de octubre
+### Unidad 2 — Fundamentos de programación, 15 de septiembre–6 de octubre
 
 - Intérprete, scripts, notebooks y entornos virtuales.
 - Tipos, operadores, variables, entrada y salida.
@@ -99,7 +100,7 @@ institucional pueden agruparse así:
 - Archivos, rutas, excepciones, depuración, módulos y dependencias.
 - Pruebas, casos límite, algoritmos elementales y error numérico.
 
-### Unidad 3 — Cómputo científico, 7–15 de octubre
+### Unidad 3 — Cómputo científico, 7–20 de octubre
 
 - NumPy: arreglos, formas, tipos, indexación, vistas, broadcasting y
   vectorización.
@@ -107,18 +108,16 @@ institucional pueden agruparse así:
 - Matplotlib mediante interfaz orientada a objetos.
 - Validación, convergencia, error e interpretación física.
 
-Clases y objetos, herencia, SciPy y SymPy permanecen como extensiones de consulta
-y no se evalúan en los parciales del calendario reducido.
+Clases y objetos, herencia, SciPy, SymPy, SimPy y scikit-learn permanecen como
+extensiones o recuperaciones y no se evalúan en los parciales del calendario
+reducido.
 
-### Unidad 4 — Datos, servicios y práctica responsable, 20 de octubre–10 de noviembre
+### Unidad 4 — Datos e integración responsable, 21 de octubre–12 de noviembre
 
 - Lectura de datos con Python nativo, NumPy y Pandas.
 - Selección, tipos, faltantes, duplicados, agrupación y combinación.
 - Incertidumbre, procedencia y comunicación científica.
 - Uso crítico de IA y agentes de programación.
-- PostgreSQL: modelo relacional y SQL puro.
-- Conexión local y remota desde Python.
-- Docker: imágenes, contenedores, redes, volúmenes y reproducibilidad.
 - Integración en un flujo científico pequeño.
 
 ### Unidad 5 — Integración y comunicación, 11–19 de noviembre
@@ -138,10 +137,12 @@ Los notebooks se usan para exploración y comunicación; los componentes
 reutilizables se desarrollan en archivos Python y se prueban por separado. Git se
 usa durante todo el semestre, no únicamente como tema inicial.
 
-Se programan seis laboratorios acumulativos. Antes de cada laboratorio se cierra
-el contenido requerido y se reserva al menos un encuentro completo para práctica,
-integración o evaluación. La última semana, del 17 al 19 de noviembre, se dedica
-completa a sustentaciones y no introduce contenidos ni entregables nuevos.
+Se programan seis laboratorios acumulativos. Cada uno exige solamente contenidos
+ya explicados y practicados. Además se planean ocho clases de recuperación sin
+fecha fija sobre NumPy, Matplotlib, Pandas, SciPy, SimPy, scikit-learn e
+integración. Son espacios de apoyo y no amplían el temario evaluable. La última
+semana, del 17 al 19 de noviembre, se dedica completa a sustentaciones y no
+introduce contenidos ni entregables nuevos.
 
 El proyecto se desarrolla mediante propuesta, aprobación de alcance, demostración
 mínima, congelamiento de código y sustentación. Los proyectos pueden ser

@@ -1,13 +1,13 @@
 # Sistema de evaluación ajustado
 
 La evaluación conserva tres parciales, seis laboratorios y un proyecto final. Los
-cuatro hitos mayores se distribuyen cada tres semanas según
-[`cronograma.md`](cronograma.md). Los laboratorios se realizan cuando sus
-prerrequisitos ya tuvieron una sesión posterior de práctica o integración.
+tres parciales se separan por tres semanas; el proyecto conserva la fecha final
+institucional indicada en [`cronograma.md`](cronograma.md). Los laboratorios se
+realizan después de enseñar y practicar sus prerrequisitos.
 
-Los hitos mayores son: parcial 1 el 10 de septiembre, parcial 2 el 1 de octubre,
-parcial 3 el 22 de octubre y entrega final del proyecto el 12 de noviembre. Cada
-uno ocurre nueve encuentros después del anterior.
+Los hitos mayores son: parcial 1 el 17 de septiembre, parcial 2 el 8 de octubre,
+parcial 3 el 29 de octubre y entrega final del proyecto el 12 de noviembre. La
+entrega final se conserva aunque el periodo de reanudación se haya reducido.
 
 | Componente | Peso en el curso |
 |---|---:|
@@ -31,9 +31,8 @@ suministrar una hoja breve de referencia con firmas o fragmentos de
 documentación; el objetivo no es memorizar APIs.
 
 La regla de alcance es obligatoria: cada parcial cubre únicamente lo enseñado
-hasta el jueves de la semana anterior, siete días antes. Lo visto el martes y
-miércoles de la semana del examen queda excluido. El alcance concreto se publica
-al comenzar esa semana y nunca se amplía el día del examen.
+hasta el jueves de la semana anterior, siete días antes. Lo visto después del
+corte publicado queda excluido. Las clases de recuperación no amplían el examen.
 
 Estructura recomendada:
 

@@ -1,93 +1,79 @@
 # Laboratorio 2 — Caída libre con Python nativo
 
-## 1. Identificación
-
 | Campo | Especificación |
 |---|---|
-| Duración presencial | 120 min |
+| Fecha de realización/entrega | Martes 29 de septiembre de 2026 |
+| Modalidad | Tarea; no reemplaza la clase regular de ese día |
+| Tiempo estimado | 120 minutos |
 | Trabajo | Parejas con evidencia individual |
 | Herramientas | Python 3.12 y biblioteca estándar |
-| IA | Nivel 1: no se permite generar código ni texto de la entrega |
-| Archivos | [`analisis_caida.py`](analisis_caida.py) y datos del curso |
 
-## Sincronización
-
-- Realización: jueves 24 de septiembre de 2026.
-- Último contenido requerido: martes 22 de septiembre (archivos, `pathlib`,
-  `with` y excepciones).
-- El miércoles 23 se dedica a práctica y lectura de errores; no agrega una técnica
-  evaluable.
-- `pytest` todavía no es prerrequisito. Las comprobaciones se ejecutan con casos
-  pequeños y se documentan en una tabla.
-
-## 2. Pregunta de trabajo
-
-¿Son compatibles las posiciones suministradas con un movimiento de caída libre
-desde el reposo?
-
-## 3. Marco teórico breve
+## Teoría breve
 
 Para movimiento vertical con aceleración constante y velocidad inicial nula,
-`h(t)=h_0-g t²/2`; por tanto, para `t>0`, una estimación puntual es
-`g_i=2(h_0-h_i)/t_i²`. El cociente amplifica perturbaciones cuando `t` es pequeño.
-La media y la dispersión resumen una serie, pero no demuestran por sí solas que el
-modelo sea válido. La lectura computacional debe conservar unidades, validar el
-orden temporal y distinguir datos, modelo y estimación.
+`h(t)=h₀-g t²/2`. Para `t>0`, cada observación permite estimar
+`gᵢ=2(h₀-hᵢ)/tᵢ²`. Los tiempos muy pequeños amplifican las perturbaciones.
+Una media resume valores, pero no basta para validar el modelo: también se deben
+revisar unidades, orden temporal, datos inválidos y sensibilidad.
 
-## 4. Objetivos
+## Objetivos
 
 - leer y validar un CSV con la biblioteca estándar;
-- descomponer el análisis en funciones puras con contratos;
-- estimar y resumir `g` con unidades y cifras razonables;
-- diseñar casos de prueba normales, de frontera e inválidos sin exigir `pytest`.
+- separar lectura, validación, cálculo y presentación en funciones propias;
+- estimar y resumir `g` con unidades;
+- comprobar el programa con casos normales, de frontera e inválidos;
+- explicar el alcance físico del resultado.
 
-## 5. Materiales y restricciones
+## Requerimientos y límites
 
-- `datos/caida_libre_sintetica.csv`;
-- módulos estándar `csv`, `pathlib`, `statistics` y `math` si se requieren;
-- no usar NumPy, Pandas, SciPy ni IA generativa;
-- no modificar el archivo original ni ocultar errores con `except Exception`.
+- usar `datos/caida_libre_sintetica.csv` y conservarlo sin cambios;
+- emplear `csv`, `pathlib`, `statistics` y `math` según se necesiten;
+- crear todo el código desde cero; no se suministra esqueleto ni nombres de
+  funciones obligatorios;
+- no usar NumPy, Pandas, SciPy, `pytest` ni IA generativa;
+- no ocultar errores mediante `except Exception` sin tratamiento específico.
 
-## 6. Procedimiento
+## Procedimiento
 
-1. Lea encabezado, diccionario de datos y procedencia; prediga el orden de `g`.
-2. Diseñe funciones separadas para leer, validar, calcular, resumir y presentar.
-3. Con `csv`, convierta cada fila a tipos numéricos e informe número de línea ante
-   un dato inválido.
-4. Valide archivo no vacío, columnas, tiempos estrictamente crecientes, alturas e
-   incertidumbres según el diccionario.
-5. Calcule `g_i` solamente para tiempos positivos; conserve cada resultado.
-6. Calcule media, desviación y rango usando funciones propias o `statistics`.
-7. Compare el estimado con el valor de referencia indicado, declarando el criterio
-   de compatibilidad que emplea.
-8. Ejecute y documente al menos: caso pequeño calculable a mano, archivo vacío,
-   fila inválida, tiempo no creciente y límite `t=0`. Puede usar llamadas simples
-   y `assert`; no se exige una suite de `pytest`.
-9. Ejecute desde la raíz y desde otro directorio para verificar las rutas.
+1. Lean el encabezado y documenten columnas, unidades y significado físico.
+2. Diseñen antes de programar cómo separarán lectura, validación, cálculo,
+   resumen y escritura de resultados.
+3. Lean el CSV y conviertan sus campos a tipos numéricos. Un dato inválido debe
+   producir un mensaje que permita localizar la fila.
+4. Validen archivo no vacío, columnas necesarias, tiempos estrictamente
+   crecientes y valores compatibles con el diccionario de datos.
+5. Calculen `gᵢ` solo para tiempos positivos y conserven cada estimación.
+6. Obtengan media, desviación y rango. Comparen con el valor de referencia y
+   definan qué significa «compatible» para el equipo.
+7. Comprueben como mínimo un caso calculable a mano, un archivo vacío, una fila
+   inválida, tiempos no crecientes y el límite `t=0`. Pueden usar llamadas y
+   `assert` sencillos.
+8. Ejecuten el programa desde dos ubicaciones distintas para revisar el manejo de
+   rutas y registren cualquier corrección necesaria.
 
-## 7. Resultados y discusión
+## Resultados puntuales que deben obtener
 
-Presente tabla de `t`, `h` y `g_i`, resumen con unidades, resultados de pruebas y
-respuesta a:
+1. número de filas leídas, aceptadas y rechazadas;
+2. tabla con `t`, `h` y cada `gᵢ`, incluyendo unidades;
+3. media, desviación, mínimo y máximo de las estimaciones válidas;
+4. diferencia absoluta y relativa frente al valor de referencia;
+5. resultado visible de los cinco casos de comprobación;
+6. conclusión explícita sobre compatibilidad y al menos una limitación.
 
-1. ¿Por qué los tiempos iniciales producen estimaciones más inestables?
-2. ¿Qué supuesto del modelo podría fallar en un experimento real?
-3. ¿Compatibilidad significa igualdad exacta? Justifique.
-4. ¿Qué validación protege la conclusión y cuál solo protege el programa?
+Los valores numéricos no se anticipan en la guía. El equipo debe obtenerlos,
+verificarlos y decidir una presentación comprensible.
 
-## 8. Qué se debe presentar
+## Explicación escrita y video
 
-- informe PDF de 4–6 páginas con la estructura de
-  [`../plantilla_informe.md`](../plantilla_informe.md);
-- `src/analisis_caida.py`, datos originales, casos de comprobación y README de ejecución;
-- salida textual versionada con unidades y versión de Git;
-- registro individual de predicción y casos de prueba.
+El texto debe explicar la ecuación y sus supuestos, la organización elegida para
+el programa, el criterio de compatibilidad, por qué los tiempos iniciales son más
+inestables y qué validación protege la conclusión física.
 
-El informe debe incluir ecuación y supuestos, diagrama breve de funciones, tabla
-de resultados, discusión de sensibilidad a tiempos pequeños y conclusión
-limitada a la evidencia.
+El video de YouTube, de 3 a 5 minutos, debe ejecutar el programa, mostrar la tabla
+o resumen principal, demostrar un caso inválido y explicar una decisión del
+diseño. Puede ser no listado y no exige mostrar el rostro.
 
-## 9. Evidencia individual
+## Evidencia individual
 
-En papel: escribir una función que rechace tiempos no crecientes, proponer dos
-casos límite y explicar la diferencia entre `return` y `print` en el análisis.
+Cada estudiante escribe una función corta de validación, propone dos casos límite
+y explica la diferencia entre `return` y `print` en este análisis.

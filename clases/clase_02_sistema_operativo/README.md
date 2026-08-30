@@ -1,7 +1,8 @@
-# Material del 25 de agosto — Sistema operativo, procesos, archivos y WSL2
+# Clase del 2 de septiembre — Sistema operativo, procesos, archivos y WSL2
 
-- Fecha: martes 25 de agosto de 2026. Duración: 120 minutos. IA: nivel 1.
-- Material: `procesos.sh` y tres escenarios de error.
+- Fecha: miércoles 2 de septiembre de 2026. Duración: 120 minutos. IA: nivel 1.
+- Demo: [`demo_entorno.py`](demo_entorno.py).
+- Práctica: [`practica.md`](practica.md).
 
 ## Resultados
 

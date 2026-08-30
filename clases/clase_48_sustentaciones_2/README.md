@@ -13,8 +13,9 @@ sobre reproducibilidad, límites y posibles continuaciones.
 3. Cierre: qué puede el código, qué no demuestra y cómo continuaría el trabajo.
 4. Archivo de versiones evaluadas y declaraciones de autoría/IA.
 
-## Material
+## Comprobación
 
-[`comprobar_reproducibilidad.sh`](comprobar_reproducibilidad.sh) muestra una
-secuencia no destructiva que cada equipo adapta. La nota resulta de la rúbrica,
-la ejecución y las respuestas individuales, no del script.
+Cada equipo reproduce su trabajo siguiendo solamente las instrucciones de su
+repositorio y registra los comandos ejecutados, la versión evaluada y cualquier
+diferencia observada. La nota resulta de la rúbrica, la ejecución y las respuestas
+individuales, no de un archivo automatizado suministrado.
