@@ -2,9 +2,10 @@
 
 | Campo | Especificación |
 |---|---|
-| Fecha de realización/entrega | Martes 29 de septiembre de 2026 |
+| Apertura después de clase | Jueves 1 de octubre de 2026 |
+| Fecha de entrega | Martes 13 de octubre de 2026 |
 | Modalidad | Tarea; no reemplaza la clase regular de ese día |
-| Tiempo estimado | 120 minutos |
+| Trabajo autónomo estimado | 180 minutos, distribuidos hasta la entrega; incluye informe y video |
 | Trabajo | Parejas con evidencia individual |
 | Herramientas | Python 3.12 y biblioteca estándar |
 
@@ -15,6 +16,13 @@ Para movimiento vertical con aceleración constante y velocidad inicial nula,
 `gᵢ=2(h₀-hᵢ)/tᵢ²`. Los tiempos muy pequeños amplifican las perturbaciones.
 Una media resume valores, pero no basta para validar el modelo: también se deben
 revisar unidades, orden temporal, datos inválidos y sensibilidad.
+
+Para resumir N estimaciones se puede usar acumulación ya conocida:
+media = suma(gᵢ)/N; desviación poblacional = raíz(suma((gᵢ-media)²)/N).
+La raíz puede calcularse como potencia 0.5. Si usan desviación muestral con
+N-1, deben identificarla y comprobar N>1. El rango es máximo menos mínimo;
+error relativo = error absoluto / valor de referencia no nulo. No se exige
+aprender una biblioteca estadística nueva para realizar estos cálculos.
 
 ## Objetivos
 
@@ -27,7 +35,9 @@ revisar unidades, orden temporal, datos inválidos y sensibilidad.
 ## Requerimientos y límites
 
 - usar `datos/caida_libre_sintetica.csv` y conservarlo sin cambios;
-- emplear `csv`, `pathlib`, `statistics` y `math` según se necesiten;
+- utilizar `pathlib` y `with`; la separación manual de campos basta para este CSV
+  numérico. `csv`, `statistics` y `math` son opcionales si se explican sus usos;
+  también se permiten acumulación y fórmulas con Python nativo;
 - crear todo el código desde cero; no se suministra esqueleto ni nombres de
   funciones obligatorios;
 - no usar NumPy, Pandas, SciPy, `pytest` ni IA generativa;
@@ -46,14 +56,15 @@ revisar unidades, orden temporal, datos inválidos y sensibilidad.
 6. Obtengan media, desviación y rango. Comparen con el valor de referencia y
    definan qué significa «compatible» para el equipo.
 7. Comprueben como mínimo un caso calculable a mano, un archivo vacío, una fila
-   inválida, tiempos no crecientes y el límite `t=0`. Pueden usar llamadas y
-   `assert` sencillos.
+   inválida, tiempos no crecientes y el límite `t=0`. Pueden usar llamadas y resultados esperados a mano. `assert` es opcional;
+   no se exige una herramienta que no se haya explicado.
 8. Ejecuten el programa desde dos ubicaciones distintas para revisar el manejo de
    rutas y registren cualquier corrección necesaria.
 
 ## Resultados puntuales que deben obtener
 
-1. número de filas leídas, aceptadas y rechazadas;
+1. número de filas válidas del archivo original y registro de los casos inválidos
+   ensayados por separado; no es obligatorio continuar tras una fila inválida;
 2. tabla con `t`, `h` y cada `gᵢ`, incluyendo unidades;
 3. media, desviación, mínimo y máximo de las estimaciones válidas;
 4. diferencia absoluta y relativa frente al valor de referencia;

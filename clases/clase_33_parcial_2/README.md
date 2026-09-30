@@ -1,18 +1,12 @@
-# Clase 33 — Parcial 2 escrito
+# Parcial 2 — Alcance público vigente
 
-## Alcance público
+8 de octubre; corte del 1 de octubre. Python nativo, contratos,
+condicionales, ciclos, colecciones, archivos, rutas, validación, excepciones e
+importaciones básicas. Excluye pytest, empaquetado/pip, error y convergencia
+nuevos del 6–7 oct.; no incluye NumPy, Matplotlib ni POO.
 
-Evaluación individual en papel sobre contratos, pruebas, algoritmos, error
-numérico, POO, NumPy, Matplotlib y selección básica de SciPy/SymPy. Se evalúa
-lectura, trazado, diseño y explicación; no memoria de sintaxis excepcional.
-
-## Secuencia
-
-1. Instrucciones y declaración de integridad (10 min).
-2. Parcial escrito (90 min).
-3. Recolección y reflexión metacognitiva (20 min).
-
-## Preparación
-
-[`fragmentos_practica.py`](fragmentos_practica.py) ofrece material público para
-trazar. Preguntas, variantes, soluciones y rúbrica permanecen privadas.
+Prevalecen el [cronograma](../../programa/cronograma.md) y el corte de contenidos
+efectivamente practicados. Los fragmentos antiguos de esta carpeta pueden
+contener temas fuera del corte: no estudiar toda la carpeta como temario.
+La modalidad y duración son las anunciadas en el acta/actividad institucional.
+Banco, variantes, soluciones y claves se mantienen privadas.

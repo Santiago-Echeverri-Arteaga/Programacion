@@ -3,9 +3,10 @@
 | Competencia | Actividades principales | Evidencia protegida |
 |---|---|---|
 | Linux, Bash, Git y reproducibilidad | Guías iniciales, laboratorio 1, uso continuo del repositorio | Preguntas de trazado y comandos en parcial 1 |
-| Fundamentos de Python | Ejercicios, laboratorios 2 y 3 | Parciales 1 y 2 |
-| Lectura, depuración y pruebas | Clínicas de código, `pytest`, revisión por pares | Todos los parciales y sustentación del proyecto |
-| Modelado y validación física | Laboratorios 3 y 4; proyecto | Parciales 2 y 3, defensa individual |
+| Fundamentos de Python | Ejercicios, laboratorio 2 y biblioteca del curso | Parcial 2 según corte |
+| Lectura y depuración | Archivos, rutas y laboratorio 2 | Parcial 2 y sustentación |
+| Pruebas e instalación | Pytest, pyproject, wheel y laboratorio 3 | Parcial 3 y evidencia individual |
+| Error numérico y validación | Integración por puntos medios, laboratorios 3 y 4 | Parcial 3 y defensa individual |
 | NumPy y visualización | Demostraciones y laboratorio 4 | Parcial 3 y proyecto cuando aplique |
 | Datos y Pandas | Laboratorio 5 y proyecto | Parcial 3 |
 | Integración científica | Laboratorio 6 y ejecución limpia del proyecto | Sustentación y evidencia reproducible |

@@ -90,7 +90,7 @@ institucional pueden agruparse así:
 - Git y GitHub: estados, commits, remotos y publicación básica.
 - Organización reproducible de un proyecto científico.
 
-### Unidad 2 — Fundamentos de programación, 15 de septiembre–6 de octubre
+### Unidad 2 — Fundamentos de programación, 15 de septiembre–13 de octubre
 
 - Intérprete, scripts, notebooks y entornos virtuales.
 - Tipos, operadores, variables, entrada y salida.
@@ -99,8 +99,10 @@ institucional pueden agruparse así:
 - Cadenas y colecciones.
 - Archivos, rutas, excepciones, depuración, módulos y dependencias.
 - Pruebas, casos límite, algoritmos elementales y error numérico.
+- Biblioteca propia instalable: pyproject.toml, pip, instalación editable/normal
+  y wheel; publicación en TestPyPI/PyPI como demostración opcional.
 
-### Unidad 3 — Cómputo científico, 7–20 de octubre
+### Unidad 3 — Cómputo científico, 14–20 de octubre
 
 - NumPy: arreglos, formas, tipos, indexación, vistas, broadcasting y
   vectorización.

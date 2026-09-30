@@ -1,5 +1,13 @@
 # Clase 21 — Algoritmos, eficiencia y error numérico
 
+## Ruta vigente
+
+Seguir la [guía detallada](../../guias/05_error_distribucion.md) de 120 minutos y el
+[proyecto continuo](../../Codigos/07_modulos_entornos/proyecto_biblioteca/README.md).
+La secuencia siguiente pertenece al banco original; no se suma a la sesión
+reprogramada. El [cronograma](../../programa/cronograma.md) fija fechas y cortes.
+
+
 ## Propósitos
 
 - describir un algoritmo antes de implementarlo;

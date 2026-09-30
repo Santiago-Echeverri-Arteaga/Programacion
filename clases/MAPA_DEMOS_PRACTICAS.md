@@ -1,45 +1,53 @@
-# Mapa de demos y prácticas de la ruta de reanudación
+# Mapa de demos y prácticas
 
-Cada encuentro magistral tiene una demo reproducible y una práctica de apoyo.
-La demo se ejecuta y comenta durante la clase; la práctica pide predecir,
-modificar y comprobar. Cuando dos temas comparten fecha se usan fragmentos
-pequeños, no dos guiones completos.
+Fechas sincronizadas con el [cronograma](../programa/cronograma.md). Los
+parciales/entregas usan protocolos; no son temas nuevos. Una demo pública no
+es la solución de un laboratorio. Las fechas previas al ajuste son planeación.
 
-Los parciales, la entrega final y las sustentaciones usan sus protocolos de
-evaluación y no se presentan como clases magistrales. Las fechas de laboratorio
-aparecen aquí por el tema normal que se enseña ese mismo día.
-
-| Fecha | Tema magistral | Demo en el repositorio | Práctica de apoyo |
+| Fecha | Tema | Demo/protocolo | Práctica o guía |
 |---|---|---|---|
-| 1 sep. | Acta e inicio de sistema operativo si hay tiempo | [`clase_02_sistema_operativo/demo_entorno.py`](clase_02_sistema_operativo/demo_entorno.py) | [`clase_02_sistema_operativo/practica.md`](clase_02_sistema_operativo/practica.md), en la parte que alcance |
-| 2 sep. | Sistema operativo, procesos y WSL2 | [`clase_02_sistema_operativo/demo_entorno.py`](clase_02_sistema_operativo/demo_entorno.py) | [`clase_02_sistema_operativo/practica.md`](clase_02_sistema_operativo/practica.md) |
-| 3 sep. | Terminal, rutas y ayuda | [`clase_03_terminal_linux/demo_terminal.md`](clase_03_terminal_linux/demo_terminal.md) | [`clase_03_terminal_linux/practica.md`](clase_03_terminal_linux/practica.md) |
-| 8 sep. | Bash, scripts, tuberías y permisos | [`../laboratorios/lab01_estacion_reproducible/demo_contar_temperaturas.sh`](../laboratorios/lab01_estacion_reproducible/demo_contar_temperaturas.sh) | [`clase_04_bash_tuberias/practica.md`](clase_04_bash_tuberias/practica.md) |
-| 9 sep. | Git y GitHub | [`../Codigos/01_git_github/secuencia_comandos.md`](../Codigos/01_git_github/secuencia_comandos.md) | [`clase_05_git_github/practica_git.md`](clase_05_git_github/practica_git.md) |
-| 10 sep. | Intérprete, scripts, notebooks y entornos | [`clase_07_python_entornos/comparar_formatos.py`](clase_07_python_entornos/comparar_formatos.py) | [`clase_07_python_entornos/README.md`](clase_07_python_entornos/README.md) |
-| 15 sep. | Tipos, operadores y E/S | [`clase_08_tipos_operadores_io/conversion_unidades.py`](clase_08_tipos_operadores_io/conversion_unidades.py) | [`clase_08_tipos_operadores_io/README.md`](clase_08_tipos_operadores_io/README.md) |
-| 16 sep. | Funciones y contratos | [`clase_09_funciones_contratos/cinematica.py`](clase_09_funciones_contratos/cinematica.py) | [`clase_09_funciones_contratos/README.md`](clase_09_funciones_contratos/README.md) |
-| 22 sep. | Booleanos y condicionales | [`clase_10_condicionales/regimen.py`](clase_10_condicionales/regimen.py) | [`clase_10_condicionales/README.md`](clase_10_condicionales/README.md) |
-| 23 sep. | Ciclos, acumulación y colecciones | [`clase_11_ciclos_acumulacion/integracion_rectangulos.py`](clase_11_ciclos_acumulacion/integracion_rectangulos.py) y [`clase_12_colecciones_cadenas/catalogar_mediciones.py`](clase_12_colecciones_cadenas/catalogar_mediciones.py) | guías de [ciclos](clase_11_ciclos_acumulacion/README.md) y [colecciones](clase_12_colecciones_cadenas/README.md) |
-| 24 sep. | Archivos, rutas y excepciones | [`clase_13_archivos_excepciones/leer_mediciones.py`](clase_13_archivos_excepciones/leer_mediciones.py) | [`clase_13_archivos_excepciones/README.md`](clase_13_archivos_excepciones/README.md) |
-| 29 sep. | Módulos e importaciones | [`clase_16_modulos_dependencias/inspeccionar_imports.py`](clase_16_modulos_dependencias/inspeccionar_imports.py) | [`clase_16_modulos_dependencias/README.md`](clase_16_modulos_dependencias/README.md) |
-| 30 sep. | Pruebas y casos límite | [`clase_20_pruebas_pytest/modelo.py`](clase_20_pruebas_pytest/modelo.py) y [`clase_20_pruebas_pytest/test_modelo.py`](clase_20_pruebas_pytest/test_modelo.py) | [`clase_20_pruebas_pytest/README.md`](clase_20_pruebas_pytest/README.md) |
-| 1 oct. | Algoritmos, error y convergencia | [`clase_21_algoritmos_error/sumas.py`](clase_21_algoritmos_error/sumas.py) | [`clase_21_algoritmos_error/README.md`](clase_21_algoritmos_error/README.md) |
-| 6 oct. | Clases, objetos e invariantes | [`clase_22_clases_objetos/particula.py`](clase_22_clases_objetos/particula.py) | [`clase_22_clases_objetos/README.md`](clase_22_clases_objetos/README.md) |
-| 7 oct. | NumPy: arreglos | [`clase_27_numpy_arreglos/arreglos.py`](clase_27_numpy_arreglos/arreglos.py) | [`clase_27_numpy_arreglos/arreglos_guiados.ipynb`](clase_27_numpy_arreglos/arreglos_guiados.ipynb) |
-| 13 oct. | NumPy: vectorización y azar | [`clase_28_numpy_vectorizacion/vectorizacion.py`](clase_28_numpy_vectorizacion/vectorizacion.py) | [`clase_28_numpy_vectorizacion/README.md`](clase_28_numpy_vectorizacion/README.md) |
-| 14 oct. | Matplotlib OO | [`clase_29_matplotlib_oo/figura.py`](clase_29_matplotlib_oo/figura.py) | [`clase_29_matplotlib_oo/figura_guiada.ipynb`](clase_29_matplotlib_oo/figura_guiada.ipynb) |
-| 15 oct. | SciPy | [`clase_31_scipy_sympy/herramientas.py`](clase_31_scipy_sympy/herramientas.py) | [`clase_31_scipy_sympy/README.md`](clase_31_scipy_sympy/README.md) |
-| 20 oct. | Incertidumbre y procedencia | [`clase_37_incertidumbre_procedencia/propagar.py`](clase_37_incertidumbre_procedencia/propagar.py) | [`clase_37_incertidumbre_procedencia/README.md`](clase_37_incertidumbre_procedencia/README.md) |
-| 21 oct. | Pandas: lectura y auditoría | [`clase_34_lectura_datos/comparar_lecturas.py`](clase_34_lectura_datos/comparar_lecturas.py) | [`clase_34_lectura_datos/README.md`](clase_34_lectura_datos/README.md) |
-| 22 oct. | Pandas: limpieza | [`clase_35_pandas_limpieza/limpieza.py`](clase_35_pandas_limpieza/limpieza.py) | [`clase_35_pandas_limpieza/auditoria_guiada.ipynb`](clase_35_pandas_limpieza/auditoria_guiada.ipynb) |
-| 27 oct. | Pandas: agrupación y combinación | [`clase_36_pandas_agrupar_combinar/combinar.py`](clase_36_pandas_agrupar_combinar/combinar.py) | [`clase_36_pandas_agrupar_combinar/README.md`](clase_36_pandas_agrupar_combinar/README.md) |
-| 28 oct. | Proyecto, procedencia e IA crítica | [`clase_39_ia_agentes/auditar_codigo.py`](clase_39_ia_agentes/auditar_codigo.py) | [`../programa/proyecto_final.md`](../programa/proyecto_final.md) y [`clase_39_ia_agentes/auditoria.md`](clase_39_ia_agentes/auditoria.md) |
-| 3 nov. | IA y agentes de programación | [`clase_39_ia_agentes/auditar_codigo.py`](clase_39_ia_agentes/auditar_codigo.py) | [`clase_39_ia_agentes/README.md`](clase_39_ia_agentes/README.md) |
-| 4 nov. | PostgreSQL y SQL | [`clase_40_postgresql_sql/consultas.sql`](clase_40_postgresql_sql/consultas.sql) | [`clase_40_postgresql_sql/README.md`](clase_40_postgresql_sql/README.md) |
-| 5 nov. | Python con PostgreSQL | [`clase_41_postgresql_python_remoto/cliente.py`](clase_41_postgresql_python_remoto/cliente.py) | [`clase_41_postgresql_python_remoto/README.md`](clase_41_postgresql_python_remoto/README.md) |
-| 10 nov. | Docker y Compose | [`clase_42_docker/demo.py`](clase_42_docker/demo.py) y [`clase_42_docker/Dockerfile`](clase_42_docker/Dockerfile) | [`clase_42_docker/README.md`](clase_42_docker/README.md) |
-| 11 nov. | Integración y ejecución limpia | [`clase_44_flex_5/diagnostico.py`](clase_44_flex_5/diagnostico.py) | [`clase_44_flex_5/lista_cotejo.md`](clase_44_flex_5/lista_cotejo.md) |
+| 1 sep. | Acta e inicio de sistema operativo | [material](clase_02_sistema_operativo/demo_entorno.py) | [guía](clase_02_sistema_operativo/README.md) |
+| 2 sep. | Sistema operativo y WSL2 | [material](clase_02_sistema_operativo/demo_entorno.py) | [guía](clase_02_sistema_operativo/README.md) |
+| 3 sep. | Terminal, rutas y ayuda | [material](clase_03_terminal_linux/demo_terminal.md) | [guía](clase_03_terminal_linux/practica.md) |
+| 8 sep. | Bash y scripts | [material](clase_04_bash_tuberias/README.md) | [guía](clase_04_bash_tuberias/practica.md) |
+| 9 sep. | Git/GitHub | [material](clase_05_git_github/README.md) | [guía](clase_05_git_github/practica_git.md) |
+| 10 sep. | Intérprete y entornos; lab. 1 histórico | [material](clase_07_python_entornos/comparar_formatos.py) | [guía](clase_07_python_entornos/README.md) |
+| 15 sep. | Tipos y E/S | [material](clase_08_tipos_operadores_io/conversion_unidades.py) | [guía](clase_08_tipos_operadores_io/README.md) |
+| 16 sep. | Funciones y contratos | [material](clase_09_funciones_contratos/cinematica.py) | [guía](clase_09_funciones_contratos/README.md) |
+| 17 sep. | Registro original del parcial 1 | [material](clase_18_parcial_1/README.md) | [guía](clase_18_parcial_1/README.md) |
+| 22 sep. | Condicionales | [material](clase_10_condicionales/regimen.py) | [guía](clase_10_condicionales/README.md) |
+| 23 sep. | Ciclos y colecciones | [material](clase_11_ciclos_acumulacion/integracion_rectangulos.py) | [guía](clase_12_colecciones_cadenas/README.md) |
+| 24 sep. | Archivos previstos; refuerzo el 1 oct. | [material](clase_13_archivos_excepciones/leer_mediciones.py) | [guía](clase_13_archivos_excepciones/README.md) |
+| 29 sep. | Biblioteca propia e importaciones | [material](clase_16_modulos_dependencias/inspeccionar_imports.py) | [guía](clase_16_modulos_dependencias/README.md) |
+| 30 sep. | Continuación del ejemplo; pruebas reprogramadas | [material](../Codigos/07_modulos_entornos/proyecto_biblioteca/casos_defectuosos.py) | [guía](../guias/04_pruebas_instalacion.md) |
+| 1 oct. | Sesión 1: archivos/sys.path; apertura lab. 2 | [material](../Codigos/07_modulos_entornos/proyecto_biblioteca/analizar_temporal.py) | [guía](../guias/03_archivos_importaciones.md) |
+| 6 oct. | Sesión 2: pruebas e instalación | [material](../Codigos/07_modulos_entornos/proyecto_biblioteca/analizar.py) | [guía](../guias/04_pruebas_instalacion.md) |
+| 7 oct. | Sesión 3: error y distribución; apertura lab. 3 | [material](../Codigos/07_modulos_entornos/proyecto_biblioteca/experimento_integral.py) | [guía](../guias/05_error_distribucion.md) |
+| 8 oct. | Parcial 2, corte del 1 oct. | [material](clase_33_parcial_2/README.md) | [guía](clase_33_parcial_2/README.md) |
+| 13 oct. | Clínica Python; POO opcional; entrega lab. 2 | [material](clase_22_clases_objetos/particula.py) | [guía](clase_15_flex_1/README.md) |
+| 14 oct. | NumPy: arreglos | [material](clase_27_numpy_arreglos/arreglos.py) | [guía](clase_27_numpy_arreglos/arreglos_guiados.ipynb) |
+| 15 oct. | NumPy: vectorización y azar | [material](clase_28_numpy_vectorizacion/vectorizacion.py) | [guía](clase_28_numpy_vectorizacion/README.md) |
+| 20 oct. | Matplotlib OO; entrega lab. 3 y apertura lab. 4 | [material](clase_29_matplotlib_oo/figura.py) | [guía](clase_29_matplotlib_oo/figura_guiada.ipynb) |
+| 21 oct. | Pandas: lectura y auditoría | [material](clase_34_lectura_datos/comparar_lecturas.py) | [guía](clase_34_lectura_datos/README.md) |
+| 22 oct. | Pandas: limpieza; apertura lab. 5 | [material](clase_35_pandas_limpieza/limpieza.py) | [guía](clase_35_pandas_limpieza/auditoria_guiada.ipynb) |
+| 27 oct. | Pandas: agrupación/uniones | [material](clase_36_pandas_agrupar_combinar/combinar.py) | [guía](clase_36_pandas_agrupar_combinar/README.md) |
+| 28 oct. | Integración, procedencia e IA; apertura lab. 6 | [material](clase_39_ia_agentes/auditar_codigo.py) | [guía](../programa/proyecto_final.md) |
+| 29 oct. | Parcial 3, corte del 22 oct. | [material](clase_45_parcial_3/README.md) | [guía](clase_45_parcial_3/README.md) |
+| 3 nov. | Auditoría e IA; entrega lab. 4 | [material](clase_39_ia_agentes/auditar_codigo.py) | [guía](clase_39_ia_agentes/README.md) |
+| 4 nov. | SQL/PostgreSQL: demostración | [material](clase_40_postgresql_sql/consultas.sql) | [guía](../guias/14_postgresql.md) |
+| 5 nov. | Python/PostgreSQL: extensión; entrega lab. 5 | [material](clase_41_postgresql_python_remoto/cliente.py) | [guía](../guias/14_postgresql.md) |
+| 10 nov. | Ejecución limpia; Docker opcional; entrega lab. 6 | [material](clase_42_docker/demo.py) | [guía](../guias/15_docker.md) |
+| 11 nov. | Verificación y ensayo | [material](clase_44_flex_5/lista_cotejo.md) | [guía](clase_47_sustentaciones_1/README.md) |
+| 12 nov. | Entrega final del proyecto | [material](clase_46_evaluacion_integradora/README.md) | [guía](../programa/proyecto_final.md) |
+| 17 nov. | Sustentaciones I | [material](clase_47_sustentaciones_1/README.md) | [guía](clase_47_sustentaciones_1/README.md) |
+| 18 nov. | Sustentaciones II | [material](clase_48_sustentaciones_2/README.md) | [guía](clase_48_sustentaciones_2/README.md) |
+| 19 nov. | Sustentaciones III y cierre | [material](clase_48_sustentaciones_2/README.md) | [guía](clase_48_sustentaciones_2/README.md) |
 
-Las ocho recuperaciones tienen su propio conjunto de demos y prácticas en
-[`../recuperaciones/README.md`](../recuperaciones/README.md).
+Las tres sesiones centrales detallan bloques que suman 120 minutos. Para el
+13 oct.: clínica Python 70 min, demostración opcional POO 35 min y cierre 15 min.
+Para el 20 oct.: figura OO 75 min, lectura de unidades/variabilidad 30 min y
+cierre 15 min. Para el 28 oct.: procedencia e integración 60 min, auditoría de
+IA/proyecto 45 min y apertura del laboratorio 6/cierre 15 min.
+
+El 10 nov. prioriza ejecución limpia; la demo Docker es opcional y no condiciona
+la entrega del lab. 6. [Recuperaciones](../recuperaciones/README.md).

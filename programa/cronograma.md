@@ -1,60 +1,68 @@
-# Cronograma definitivo de reanudación
+# Cronograma de reanudación — actualización del 30 de septiembre de 2026
 
-La clase inicial sobre diagnóstico y funcionamiento del computador ya se
-realizó antes de la interrupción. El curso se reanuda el **martes 1 de septiembre
-de 2026** con la discusión del acta de concertación y termina, sin cambio, el
-**jueves 19 de noviembre de 2026**. Son 12 semanas con encuentros regulares los
-martes, miércoles y jueves: 36 sesiones de 120 minutos.
+Curso del 1 de septiembre al 19 de noviembre: encuentros martes, miércoles y
+jueves de 120 minutos. El historial anterior al 1 de octubre es el registro de
+planeación; este ajuste no certifica que todos los contenidos previstos se hayan
+completado ni modifica retroactivamente actividades realizadas.
 
-## Criterios del reajuste
+## Criterios del ajuste
 
-1. El 1 de septiembre se inicia con la lectura, discusión y concertación del
-   acta. Si el tiempo lo permite, se comienza el tema de sistema operativo
-   previsto para el encuentro siguiente.
-2. Las seis fechas de laboratorio son hitos de realización y entrega de trabajo
-   autónomo. **No reemplazan ni consumen una clase regular**: ese mismo día se
-   desarrolla el tema magistral indicado en el calendario.
-3. Cada laboratorio exige solo herramientas explicadas antes de su fecha. El
-   laboratorio 6 integra herramientas conocidas y no agrega requisitos al
-   proyecto final.
-4. Los tres parciales conservan cortes explícitos. Los temas posteriores al corte
-   quedan fuera del examen aunque ya se haya realizado otra clase.
-5. Las ocho recuperaciones se realizan durante septiembre y octubre, en espacios
-   adicionales y sin fecha fija. Sus temas amplían la ruta y no repiten los de
-   las clases regulares.
-6. Los requisitos del proyecto se congelan el 5 de noviembre. La semana del 17
-   al 19 de noviembre se reserva para sustentaciones y cierre.
+1. La biblioteca trabajada en el curso conecta tres sesiones: 1, 6 y 7 de octubre.
+   Se recuperan archivos/excepciones y se completa búsqueda de importaciones,
+   pruebas, instalación, error numérico y distribución.
+2. Cada laboratorio tiene apertura después de practicar prerrequisitos y entrega
+   posterior. Es trabajo autónomo; no reemplaza la clase regular. Los tiempos
+   incluyen implementación, comprobaciones, explicación y video, con variación
+   razonable según el equipo. El acompañamiento se organiza aparte.
+3. Las fechas de parciales 2 (8 oct.), 3 (29 oct.) y proyecto (12 nov.) se
+   conservan. El parcial 1 mantiene su registro histórico original; si su fecha
+   real fue distinta, el acta/actividad institucional prevalece.
+4. Los cortes son de contenidos efectivamente practicados. Reprogramar una clase
+   no autoriza evaluar anticipadamente su tema. Pytest, empaquetado y error
+   introducidos el 6–7 oct. quedan fuera del parcial 2.
+5. El laboratorio 3 usa puntos medios ya conocidos. El péndulo Euler-Cromer
+   anterior queda como extensión, no requisito autónomo nuevo.
+6. NumPy se trabaja el 14–15 oct. y Matplotlib el 20. SciPy/SymPy y POO propia
+   quedan como extensión. PostgreSQL y Docker no crean requisitos de laboratorio
+   ni del proyecto. TestPyPI/PyPI es demostración opcional; instalar un wheel
+   local sí se practica. No se exige cuenta pública ni publicación.
+7. Se congelan requisitos del proyecto el 5 nov.; el laboratorio 6 no agrega
+   ninguno. La semana 17–19 nov. se reserva para sustentaciones.
 
 ## Calendario de clases regulares
 
-La anotación «entrega de laboratorio» es un hito paralelo; la celda completa
-continúa siendo una sesión magistral, de demostración y práctica.
-
 | Semana | Martes | Miércoles | Jueves |
 |---:|---|---|---|
-| 1 | **1 sep.** — Discusión y concertación del acta; inicio de sistema operativo si hay tiempo | **2 sep.** — Sistema operativo, procesos, archivos, permisos y WSL2 | **3 sep.** — Terminal Linux: rutas, ayuda, creación y movimiento de archivos |
-| 2 | **8 sep.** — Bash: `grep`, tuberías, redirecciones, scripts y `chmod` | **9 sep.** — Git y GitHub: estados, commits, remotos y publicación | **10 sep.** — Python: intérprete, archivos `.py`, notebooks y entornos; **realización/entrega del laboratorio 1** |
-| 3 | **15 sep.** — Tipos, operadores, asignación y entrada/salida | **16 sep.** — Funciones, contratos, argumentos y descomposición | **17 sep.** — **Parcial 1**; alcance cerrado el 10 de septiembre |
-| 4 | **22 sep.** — Booleanos y condicionales | **23 sep.** — Ciclos, acumulación, cadenas y colecciones | **24 sep.** — Archivos, `pathlib`, `with`, excepciones y mensajes de error |
-| 5 | **29 sep.** — Módulos, importaciones y dependencias; **realización/entrega del laboratorio 2** | **30 sep.** — Casos límite, pruebas automatizadas y `pytest` | **1 oct.** — Algoritmos elementales, punto flotante, error y convergencia |
-| 6 | **6 oct.** — Clases, objetos, estado e invariantes; **realización/entrega del laboratorio 3** | **7 oct.** — NumPy: arreglos, formas, tipos e indexación | **8 oct.** — **Parcial 2**; alcance cerrado el 1 de octubre |
-| 7 | **13 oct.** — NumPy: ejes, broadcasting, vectorización y azar reproducible | **14 oct.** — Matplotlib orientado a objetos y figura científica | **15 oct.** — SciPy: integración, raíces, ajuste y verificación |
-| 8 | **20 oct.** — Incertidumbre, procedencia y comunicación científica; **realización/entrega del laboratorio 4** | **21 oct.** — Pandas: lectura, selección y auditoría inicial | **22 oct.** — Pandas: tipos, faltantes, duplicados y transformaciones |
-| 9 | **27 oct.** — Pandas: agrupación, combinación y validación | **28 oct.** — Proyecto, procedencia, reproducibilidad y uso crítico de IA | **29 oct.** — **Parcial 3**; alcance cerrado el 22 de octubre |
-| 10 | **3 nov.** — IA y agentes de programación: auditoría, pruebas y responsabilidad; **realización/entrega del laboratorio 5** | **4 nov.** — PostgreSQL y SQL: tablas, restricciones, filtros, uniones y agregaciones | **5 nov.** — Python con PostgreSQL: parámetros, entorno y conexión; **realización/entrega del laboratorio 6 y congelamiento del proyecto** |
-| 11 | **10 nov.** — Docker y Compose: imagen, contenedor, volumen, red y reproducibilidad | **11 nov.** — Integración, ejecución limpia y ensayo de sustentación | **12 nov.** — **Entrega final del proyecto** y comprobación de reproducibilidad |
-| 12 | **17 nov.** — **Sustentaciones I** | **18 nov.** — **Sustentaciones II** | **19 nov.** — **Sustentaciones III y cierre** |
+| 1 | **1 sep.** — Acta; inicio de sistema operativo | **2 sep.** — Sistema operativo, procesos y WSL2 | **3 sep.** — Terminal, rutas y ayuda |
+| 2 | **8 sep.** — Bash: tuberías, scripts y permisos | **9 sep.** — Git y GitHub | **10 sep.** — Python: intérprete y entornos; entrega histórica lab. 1 |
+| 3 | **15 sep.** — Tipos, operadores y E/S | **16 sep.** — Funciones y contratos | **17 sep.** — Parcial 1; registro de planeación original |
+| 4 | **22 sep.** — Booleanos y condicionales | **23 sep.** — Ciclos, acumulación y colecciones | **24 sep.** — Archivos y excepciones previstos; pendientes reforzados el 1 oct. |
+| 5 | **29 sep.** — Biblioteca propia: módulos, subpaquetes e importaciones | **30 sep.** — Continuación del ejemplo de biblioteca; pruebas reprogramadas al 6 oct. | **1 oct.** — Sesión 1: archivos, validación, excepciones y sys.path; apertura lab. 2 |
+| 6 | **6 oct.** — Sesión 2: contratos, pytest, pyproject.toml e instalación con pip | **7 oct.** — Sesión 3: error, convergencia, wheel y publicación opcional; apertura lab. 3 | **8 oct.** — Parcial 2; corte el 1 oct., excluye temas nuevos del 6–7 |
+| 7 | **13 oct.** — Clínica de Python e integración; demo opcional de clases/objetos; entrega lab. 2 | **14 oct.** — NumPy: arreglos, formas, tipos e indexación | **15 oct.** — NumPy: ejes, broadcasting, vectorización y azar reproducible |
+| 8 | **20 oct.** — Matplotlib OO, etiquetas, unidades y lectura de variabilidad; entrega lab. 3 y apertura lab. 4 | **21 oct.** — Pandas: lectura, selección y auditoría | **22 oct.** — Pandas: tipos, faltantes, duplicados y limpieza; apertura lab. 5 |
+| 9 | **27 oct.** — Pandas: agrupación y combinación | **28 oct.** — Integración, procedencia, proyecto e IA crítica; apertura lab. 6 | **29 oct.** — Parcial 3; corte el 22 oct., excluye temas nuevos del 27–28 |
+| 10 | **3 nov.** — Auditoría de código y agentes de programación; entrega lab. 4 | **4 nov.** — Demostración de PostgreSQL y SQL, sin requisito nuevo de laboratorio | **5 nov.** — Python con PostgreSQL como extensión; entrega lab. 5 y congelamiento del proyecto |
+| 11 | **10 nov.** — Ejecución limpia; Docker/Compose como extensión; entrega lab. 6 | **11 nov.** — Verificación y ensayo de sustentación | **12 nov.** — Entrega final del proyecto; sin examen adicional |
+| 12 | **17 nov.** — Sustentaciones I | **18 nov.** — Sustentaciones II | **19 nov.** — Sustentaciones III y cierre |
 
-## Fechas de los laboratorios como tareas
+## Laboratorios como tareas
 
-| Lab. | Fecha de realización/entrega | Prerrequisito cerrado antes de la fecha | Clase regular que ocurre ese día |
-|---:|---|---|---|
-| 1 | Jueves 10 sep. | Bash y Git, 9 sep. | Python: entornos, scripts y notebooks |
-| 2 | Martes 29 sep. | Archivos y excepciones, 24 sep. | Módulos e importaciones |
-| 3 | Martes 6 oct. | Pruebas y algoritmos, 1 oct. | Clases y objetos |
-| 4 | Martes 20 oct. | NumPy y Matplotlib, 14 oct. | Incertidumbre y procedencia |
-| 5 | Martes 3 nov. | Pandas y validación, 27 oct. | IA y agentes de programación |
-| 6 | Jueves 5 nov. | Integración científica, 28 oct. | Python con PostgreSQL |
+| Lab. | Apertura después de clase | Entrega | Prerrequisitos practicados | Trabajo estimado | Peso |
+|---:|---|---|---|---|---:|
+| [1](../laboratorios/lab01_estacion_reproducible/README.md) | 10 sep. | 10 sep. | Linux, Bash y Git | histórico | 3,5 % |
+| [2](../laboratorios/lab02_python_nativo/README.md) | 1 oct. | 13 oct. | Python nativo, archivos, rutas y excepciones | 3 h | 3,5 % |
+| [3](../laboratorios/lab03_modelo_verificable/README.md) | 7 oct. | 20 oct. | Módulos, pytest, puntos medios y pip/build | 4 h | 3,5 % |
+| [4](../laboratorios/lab04_numpy_matplotlib/README.md) | 20 oct. | 3 nov. | NumPy, vectorización, azar y Matplotlib OO | 4 h | 3,5 % |
+| [5](../laboratorios/lab05_pandas/README.md) | 22 oct. | 5 nov. | Pandas: lectura, selección, auditoría y limpieza | 4 h | 3,5 % |
+| [6](../laboratorios/lab06_integracion_cientifica/README.md) | 28 oct. | 10 nov. | Integración, trazabilidad, pruebas y ejecución limpia | 3 h | 3,5 % |
+
+La fecha de entrega no es una sesión adicional ni presupone un horario nocturno
+específico. El docente anuncia el canal/hora de recepción. Si un prerrequisito
+no se practica, simplificar o mover la tarea; no convertirlo en autoaprendizaje
+obligatorio. El lab. 2 no exige pytest ni instalación; el lab. 3 no exige PyPI.
+Lab. 4 y 5 pueden iniciarse con los contenidos del corte del 22 oct.; ninguno
+exige agrupación/uniones explicadas el 27. Lab. 6 usa herramientas anteriores.
 
 ## Ocho clases de recuperación en los dos primeros meses
 
@@ -78,21 +86,24 @@ SymPy, NetworkX, SimPy, xarray, scikit-image y scikit-learn no se desarrollan en
 las clases regulares. Las recuperaciones son complementarias y no amplían el
 alcance de parciales, laboratorios ni proyecto.
 
+
 ## Cortes de contenido
 
-| Hito | Fecha | Incluye como máximo | Excluye aunque ya haya ocurrido |
+| Hito | Fecha | Incluye como máximo | Excluye |
 |---|---|---|---|
-| Parcial 1 | Jueves 17 de septiembre | Jueves 10 de septiembre: Linux, Bash, Git/GitHub, laboratorio 1 y entornos de Python | 15 y 16 de septiembre |
-| Parcial 2 | Jueves 8 de octubre | Jueves 1 de octubre: Python nativo, archivos, laboratorio 2, módulos, pruebas y error numérico | 6 y 7 de octubre |
-| Parcial 3 | Jueves 29 de octubre | Jueves 22 de octubre: clases y objetos, laboratorio 3, NumPy, Matplotlib, SciPy, laboratorio 4, incertidumbre y Pandas hasta transformaciones | 27 y 28 de octubre |
-| Proyecto final | Jueves 12 de noviembre | Requisitos y herramientas cerrados el jueves 5 de noviembre | Las recuperaciones y cualquier tema posterior no agregan requisitos |
+| Parcial 1 | Registro original: 17 sep. | Corte original del 10 sep.; acta institucional prevalece | Temas posteriores al corte anunciado |
+| Parcial 2 | 8 oct. | Python nativo, contratos, condicionales, ciclos, colecciones, archivos, rutas, validación, excepciones e importaciones básicas hasta el 1 oct. | Pytest, pip/pyproject/wheel/publicación y error/convergencia nuevos del 6–7; NumPy/Matplotlib/POO |
+| Parcial 3 | 29 oct. | Contenidos obligatorios practicados hasta el 22 oct.: pruebas, instalación local, error numérico, NumPy, Matplotlib y Pandas hasta limpieza | Agrupación/uniones del 27, IA/proyecto del 28, SciPy/SymPy, POO propia, PostgreSQL/Docker y cuentas/publicación PyPI |
+| Proyecto final | 12 nov. | Requisitos cerrados el 5 nov. | Extensiones/recuperaciones y requisitos posteriores |
 
 ## Hitos del proyecto
 
-- 17 de septiembre: publicación de líneas y criterios de alcance.
-- 8 de octubre: elección de pregunta y fuente de datos o modelo.
-- 28 de octubre: propuesta breve, criterio de validación y uso previsto de IA.
-- 5 de noviembre: cierre de requisitos y primera verificación reproducible.
-- 12 de noviembre: entrega definitiva; después de esta fecha no cambia el código
-  evaluable, salvo una modificación solicitada durante la sustentación.
-- 17–19 de noviembre: demostraciones y sustentaciones individuales.
+- 8 oct.: elección de pregunta y fuente/modelo.
+- 28 oct.: propuesta, criterio de validación y uso previsto de IA.
+- 5 nov.: cierre de requisitos y primera ejecución limpia.
+- 12 nov.: entrega definitiva; después no cambia el código evaluable salvo una
+  modificación solicitada en sustentación.
+- 17–19 nov.: demostración, autenticación individual y cierre.
+
+Material detallado: [guías 03–05](../guias/README.md),
+[mapa de clases](../clases/README.md) y [laboratorios](../laboratorios/README.md).

@@ -1,24 +1,11 @@
-# Clase 24 — Laboratorio 3
+# Material de apoyo — Laboratorio 3
 
-## Propósito
+Apertura: 7 oct.; entrega: 20 oct. de 2026. Trabajo autónomo estimado: 4 h.
+No reserva una sesión regular ni reemplaza su clase. Seguir el
+[enunciado vigente](../../laboratorios/lab03_modelo_verificable/README.md) y el
+[cronograma](../../programa/cronograma.md).
 
-Construir y verificar un modelo físico modular aplicando contratos, pruebas y
-organización de código.
-
-## Antes de la sesión
-
-Leer la [guía completa](../../laboratorios/lab03_modelo_verificable/README.md) y
-formular al menos dos predicciones físicas comprobables.
-
-## Secuencia (120 min)
-
-1. Control de preparación individual (15 min).
-2. Diseño del modelo y casos de validación (25 min).
-3. Implementación y pruebas (45 min).
-4. Interpretación de resultados (20 min).
-5. Ejercicio individual y respaldo (15 min).
-
-## Material
-
-[`verificar_modelo.py`](verificar_modelo.py) muestra comprobaciones mínimas. El
-informe debe defender validez física, no limitarse a afirmar que el código corre.
+Distribuir el trabajo en predicción/diseño, implementación, comprobación,
+interpretación y documentación/video. La estructura y código son decisiones
+del equipo. No se entrega un esqueleto ni solución. Las comprobaciones del banco
+son apoyo conceptual; no son validadores oficiales ni garantizan la nota.

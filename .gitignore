@@ -16,3 +16,8 @@ _docente_privado/
 datos/generados/
 resultados/
 *.log
+
+# Distribuciones generadas al practicar empaquetado.
+build/
+dist/
+*.egg-info/

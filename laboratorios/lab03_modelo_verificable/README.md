@@ -1,79 +1,73 @@
-# Laboratorio 3 — Péndulo modular y verificable
+# Laboratorio 3 — Biblioteca de integración verificable e instalable
 
 | Campo | Especificación |
 |---|---|
-| Fecha de realización/entrega | Martes 6 de octubre de 2026 |
-| Modalidad | Tarea; no reemplaza la clase regular de ese día |
-| Tiempo estimado | 120 minutos |
+| Apertura después de clase | Miércoles 7 de octubre de 2026 |
+| Entrega | Martes 20 de octubre de 2026 |
+| Trabajo autónomo estimado | 240 minutos distribuidos; incluye pruebas, informe y video |
 | Trabajo | Parejas con evidencia individual |
-| Herramientas | Python, `pytest` y biblioteca estándar |
+| Herramientas | Python 3.12, biblioteca estándar, pytest, pip y build |
 
 ## Teoría breve
 
-El péndulo ideal sin amortiguamiento satisface
-`θ''=-(g/L) sin(θ)`. Para ángulos pequeños, `sin(θ)≈θ` y
-`T₀=2π√(L/g)`. Euler-Cromer actualiza primero la velocidad angular y luego
-el ángulo. El resultado depende del paso temporal: comparar varios pasos permite
-distinguir comportamiento físico de error numérico.
+Una integral acumula contribuciones. En puntos medios se divide [a,b] en n
+subintervalos iguales, se evalúa la función en cada centro y se suma su valor
+por el ancho. El error de discretización se estudia comparando n, 2n y 4n con
+una referencia conocida. Un resultado distinto de la referencia no implica por
+sí solo un defecto del programa. Una biblioteca separa cálculo y presentación;
+una distribución permite instalarla en otro entorno.
 
 ## Objetivos
 
-- traducir una ecuación diferencial a un algoritmo suministrado en clase;
-- organizar el modelo en funciones y módulos con responsabilidades claras;
-- comprobar signos, entradas, límites conocidos y sensibilidad temporal;
-- comparar el periodo simulado con la aproximación de ángulo pequeño;
-- comunicar qué parte del error procede del modelo y cuál del método.
+- implementar el algoritmo de puntos medios practicado en clase;
+- definir contratos y pruebas de resultados, límites y entradas inválidas;
+- medir error absoluto/relativo y costo cualitativo al refinar;
+- organizar una biblioteca propia, configurar pyproject.toml y construir wheel;
+- demostrar instalación normal y uso desde un entorno limpio externo al proyecto.
 
 ## Requerimientos y límites
 
-- usar Python nativo, `math` y `pytest`;
-- trabajar internamente en radianes y unidades SI;
-- implementar el paso Euler-Cromer practicado en clase;
-- crear la organización y el código desde cero, sin esqueleto suministrado;
-- no usar NumPy, SciPy, SymPy, clases, herencia ni `dataclass`;
-- no usar variables globales para parámetros del modelo.
+- escribir solución y arquitectura propias, sin copiar el proyecto de apoyo;
+- usar funciones y módulos, sin NumPy, SciPy, Pandas ni clases propias;
+- seleccionar dos integrandos polinómicos sencillos con primitivas conocidas,
+  uno distinto de x²; declarar límites y referencia analítica de cada uno;
+- el algoritmo puede recibir una función como argumento solo si se explicó;
+  también son válidas dos funciones específicas sin esa abstracción;
+- preparar un nombre de distribución propio, README y versión;
+- instalar/construir localmente; no exigir cuenta, publicación, token ni licencia
+  pública como condición de aprobación;
+- no usar Euler-Cromer ni estimación de periodos: el
+  [péndulo anterior](extension_pendulo.md) es una extensión posterior.
 
 ## Procedimiento
 
-1. Deriven el sistema de primer orden y predigan qué ocurre con el periodo si se
-   duplica la longitud.
-2. Decidan cómo separar validación de parámetros, aceleración angular, paso
-   numérico, simulación y análisis.
-3. Implementen Euler-Cromer para la ecuación no lineal y conserven tiempo,
-   ángulo y velocidad angular.
-4. Definan un criterio reproducible para estimar el periodo y compruébenlo a
-   amplitud pequeña frente a `T₀`.
-5. Repitan para tres amplitudes iniciales y tres pasos temporales razonables.
-6. Calculen la energía cinética y potencial y midan su variación relativa.
-7. Escriban pruebas para entradas inválidas, signo de aceleración, tendencia con
-   la longitud, un valor analítico y una propiedad de la salida temporal.
-8. Ejecuten las pruebas y el análisis desde instrucciones escritas por el equipo.
+1. Escriban el algoritmo y calculen a mano un caso con un subintervalo.
+2. Definan contratos: número entero positivo de subintervalos, límites válidos
+   y significado de las entradas/salidas. Las anotaciones no son validación.
+3. Separen cálculo, experimento y presentación; no impriman desde el núcleo de cálculo.
+4. Estudien al menos cuatro valores crecientes de n para ambos integrandos.
+5. Calculen referencias, errores absolutos y relativos (cuando la referencia
+   no sea cero), razones de error y número de iteraciones esperado.
+6. Escriban al menos cinco pruebas pertinentes: caso manual, entrada inválida,
+   caso límite, otro intervalo y una propiedad esperada. Usen tolerancias razonadas.
+7. Configuren el proyecto instalable y prueben instalación editable durante desarrollo.
+8. Construyan wheel e instálenlo normalmente en otro entorno, desde una carpeta
+   que no contenga la fuente. Ejecuten un cliente que importe la biblioteca.
+9. Registren instrucciones, versiones, pruebas, ruta del módulo importado y commit.
 
-## Resultados puntuales que deben obtener
+## Resultados puntuales
 
-1. historial de tiempo, ángulo y velocidad para una configuración identificada;
-2. tabla con amplitud, paso, periodo simulado, `T₀` y diferencia relativa;
-3. comparación de al menos tres pasos temporales;
-4. variación relativa de la energía para cada paso;
-5. suite de pruebas con casos identificables y resultado de ejecución;
-6. criterio cuantitativo que diga cuándo la aproximación es adecuada;
-7. conclusión que diferencie error de modelo y error numérico.
+1. tabla de ambos integrandos con n, aproximación, referencia y errores;
+2. explicación de costo y tendencia del error, sin atribuir todo a redondeo;
+3. resultado visible de la suite y un defecto que una prueba detectaría;
+4. código propio, pyproject.toml, README y wheel de la versión entregada;
+5. evidencia de instalación limpia y llamada desde un cliente externo;
+6. una limitación y un caso donde su implementación no debería utilizarse.
 
-La guía no impone nombres de archivos o funciones ni anticipa los resultados
-numéricos. Esas decisiones deben poder justificarse.
+## Explicación escrita, video y evidencia individual
 
-## Explicación escrita y video
-
-El texto debe desarrollar la transformación a primer orden, justificar la
-separación del programa, explicar el criterio de periodo, interpretar la
-sensibilidad al paso y responder cómo se detectaría un signo incorrecto sin leer
-la implementación.
-
-El video de YouTube, de 3 a 5 minutos, debe mostrar una ejecución, una prueba, la
-comparación de periodos y el efecto de cambiar el paso. Ambas personas deben
-explicar una parte. Puede ser no listado y no exige mostrar el rostro.
-
-## Evidencia individual
-
-Cada estudiante predice el efecto de duplicar la longitud, traza a mano un paso
-del algoritmo y explica una prueba que detecte el signo incorrecto.
+El informe justifica algoritmo, contratos, tolerancias, referencias y separación
+de responsabilidades. El video de 3–5 min muestra una prueba, una tabla de error
+y el uso de la biblioteca instalada; no publica nada. Cada estudiante traza un
+paso de puntos medios, explica una prueba y distingue `pip install` de `import`.
+La [rúbrica común](../README.md) conserva el peso del laboratorio.

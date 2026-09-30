@@ -1,5 +1,13 @@
 # Clase 13 — Archivos, rutas, excepciones y depuración
 
+## Ruta vigente
+
+Seguir la [guía detallada](../../guias/03_archivos_importaciones.md) de 120 minutos y el
+[proyecto continuo](../../Codigos/07_modulos_entornos/proyecto_biblioteca/README.md).
+La secuencia siguiente pertenece al banco original; no se suma a la sesión
+reprogramada. El [cronograma](../../programa/cronograma.md) fija fechas y cortes.
+
+
 ## Propósitos
 
 - manejar rutas con `pathlib` y archivos con `with`;

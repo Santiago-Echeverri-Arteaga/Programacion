@@ -5,24 +5,27 @@ enunciado y, solo cuando hace falta, datos de entrada. No se suministran
 plantillas de informe, esqueletos de código ni archivos parcialmente resueltos:
 cada equipo debe decidir cómo organizar su solución y justificarla.
 
-## Fechas de realización y sincronización
+## Aperturas, entregas y sincronización
 
-Los laboratorios son tareas con fecha de realización/entrega. No ocupan el
-encuentro regular: en cada una de esas fechas se desarrolla también la clase
-magistral indicada en el cronograma.
+Los laboratorios son tareas fuera de la clase regular. Apertura significa que
+ya se practicaron los prerrequisitos; entrega es una fecha posterior. La hora y
+el canal los anuncia el docente. El laboratorio 1 conserva su registro histórico.
 
-| Lab. | Fecha de realización/entrega | Contenido disponible antes | Clase regular de ese día | Peso |
-|---:|---|---|---|---:|
-| 1 | Jueves 10 sep. | Linux, Bash y Git | Python: entornos, scripts y notebooks | 3,5 % |
-| 2 | Martes 29 sep. | Python nativo hasta archivos y excepciones | Módulos e importaciones | 3,5 % |
-| 3 | Martes 6 oct. | Módulos, pruebas y algoritmo numérico guiado | Clases y objetos | 3,5 % |
-| 4 | Martes 20 oct. | NumPy y Matplotlib | Incertidumbre y procedencia | 3,5 % |
-| 5 | Martes 3 nov. | Pandas y validación | IA y agentes de programación | 3,5 % |
-| 6 | Jueves 5 nov. | Python, NumPy, Matplotlib y Pandas | Python con PostgreSQL | 3,5 % |
+| Lab. | Apertura después de clase | Entrega | Prerrequisitos practicados | Trabajo estimado | Peso |
+|---:|---|---|---|---|---:|
+| [1](lab01_estacion_reproducible/README.md) | 10 sep. | 10 sep. | Linux, Bash y Git | histórico | 3,5 % |
+| [2](lab02_python_nativo/README.md) | 1 oct. | 13 oct. | Python nativo, archivos, rutas y excepciones | 3 h | 3,5 % |
+| [3](lab03_modelo_verificable/README.md) | 7 oct. | 20 oct. | Módulos, pytest, puntos medios y pip/build | 4 h | 3,5 % |
+| [4](lab04_numpy_matplotlib/README.md) | 20 oct. | 3 nov. | NumPy, vectorización, azar y Matplotlib OO | 4 h | 3,5 % |
+| [5](lab05_pandas/README.md) | 22 oct. | 5 nov. | Pandas: lectura, selección, auditoría y limpieza | 4 h | 3,5 % |
+| [6](lab06_integracion_cientifica/README.md) | 28 oct. | 10 nov. | Integración, trazabilidad, pruebas y ejecución limpia | 3 h | 3,5 % |
 
-Si una clase necesaria no se alcanza a realizar, el laboratorio correspondiente
-se simplifica o se mueve; el tema no queda como aprendizaje autónomo obligatorio.
-Las clases de recuperación tampoco crean prerrequisitos nuevos.
+El trabajo estimado incluye código, validación, informe, video y comprobación
+individual; se puede distribuir entre varios días. Si falta una clase necesaria,
+se simplifica o mueve la tarea. No se exigen temas futuros ni de recuperaciones.
+Lab. 2: sin pytest/empaquetado. Lab. 3: instalación local, sin publicación ni
+Euler-Cromer. Lab. 4 y 5: sin agrupaciones/uniones futuras obligatorias. Lab. 6:
+sin SQL/Docker ni requisitos nuevos del proyecto. Ver [cronograma](../programa/cronograma.md).
 
 ## Estructura común de las guías
 

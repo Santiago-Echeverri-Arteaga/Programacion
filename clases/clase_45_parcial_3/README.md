@@ -1,18 +1,12 @@
-# Clase 45 — Parcial 3 escrito
+# Parcial 3 — Alcance público vigente
 
-## Alcance público
+29 de octubre; corte del 22 de octubre. Python, pruebas, instalación
+local, error numérico, NumPy, Matplotlib y Pandas hasta limpieza. Excluye
+agrupación/uniones del 27, temas del 28, publicación PyPI, POO propia,
+SciPy/SymPy, PostgreSQL y Docker.
 
-Evaluación individual en papel sobre lectura y transformación de datos, Pandas,
-incertidumbre, SQL, conexiones y Docker. Puede incluir interpretación de tablas,
-consultas y archivos de configuración. No se permite IA ni equipo electrónico.
-
-## Secuencia
-
-1. Instrucciones y declaración de integridad (10 min).
-2. Parcial escrito (90 min).
-3. Recolección y reflexión metacognitiva (20 min).
-
-## Preparación
-
-[`consultas_practica.sql`](consultas_practica.sql) ofrece ejemplos públicos del
-nivel de lectura. Banco, variantes, soluciones y rúbrica analítica son privados.
+Prevalecen el [cronograma](../../programa/cronograma.md) y el corte de contenidos
+efectivamente practicados. Los fragmentos antiguos de esta carpeta pueden
+contener temas fuera del corte: no estudiar toda la carpeta como temario.
+La modalidad y duración son las anunciadas en el acta/actividad institucional.
+Banco, variantes, soluciones y claves se mantienen privadas.

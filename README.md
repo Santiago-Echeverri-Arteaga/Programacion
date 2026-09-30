@@ -33,6 +33,14 @@ archivos y la forma de uso. El material histórico que no pertenece a la nueva
 ruta pública se conserva de forma recuperable en el archivo docente ignorado por
 Git.
 
+## Secuencia actualizada de biblioteca y laboratorios
+
+Las sesiones del 1, 6 y 7 de octubre conectan archivos, importaciones, pruebas,
+instalación con pip, error y construcción de un wheel. Ver [guías 03–05](guias/README.md)
+y [proyecto de apoyo](Codigos/07_modulos_entornos/proyecto_biblioteca/README.md).
+El [cronograma](programa/cronograma.md) separa apertura/entrega de laboratorios
+y explicita los cortes de parciales. Publicar en PyPI es opcional.
+
 ## Preparación del entorno
 
 Python 3.12 es la versión de referencia del curso. Se requieren además Git y una

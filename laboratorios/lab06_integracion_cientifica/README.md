@@ -2,9 +2,10 @@
 
 | Campo | Especificación |
 |---|---|
-| Fecha de realización/entrega | Jueves 5 de noviembre de 2026 |
+| Apertura después de clase | Miércoles 28 de octubre de 2026 |
+| Fecha de entrega | Martes 10 de noviembre de 2026 |
 | Modalidad | Tarea; no reemplaza la clase regular de ese día |
-| Tiempo estimado | 120 minutos |
+| Trabajo autónomo estimado | 180 minutos, distribuidos hasta la entrega; incluye informe y video |
 | Trabajo | Parejas con comprobación individual |
 | Herramientas | Python, NumPy, Pandas, Matplotlib, `pytest` y Git |
 

@@ -24,6 +24,13 @@ Si el sistema institucional exige cuatro cortes de 25 %, los componentes se
 registran en el corte administrativo correspondiente sin cambiar estos pesos. La
 fecha de registro de una nota no amplía el temario de un parcial.
 
+La actualización del 30 de septiembre mueve contenidos, no fechas de parciales:
+el parcial 2 excluye pytest, empaquetado e instalación y error numérico nuevos
+del 6–7 oct.; el parcial 3 excluye agrupación/uniones del 27, publicación pública
+y extensiones. Véanse los cortes explícitos del [cronograma](cronograma.md).
+Las aperturas/entregas de laboratorios se separan y el laboratorio 3 pasa a
+integración por puntos medios e instalación local. No se cambian ponderaciones.
+
 ## Parciales escritos y fecha de corte
 
 Los parciales se realizan en papel, sin dispositivos conectados. El docente puede
@@ -50,15 +57,8 @@ Los laboratorios pueden realizarse en parejas, con rotación de roles. Cada uno
 termina con una evidencia individual breve y sin IA. La tabla de prerrequisitos y
 fechas está en [`../laboratorios/README.md`](../laboratorios/README.md).
 
-Rúbrica común de 100 puntos:
-
-- pregunta, fundamento y predicciones: 10;
-- procedimiento, código y cumplimiento técnico: 25;
-- resultados y calidad de figuras/tablas: 15;
-- validación, pruebas y tratamiento del error: 20;
-- discusión física o algorítmica: 15;
-- reproducibilidad, Git y documentación: 10;
-- evidencia individual: 5.
+La [rúbrica común de laboratorios](../laboratorios/README.md) es la referencia
+de 100 puntos, incluidos informe, video y evidencia individual.
 
 ## Proyecto final y suficiencia individual
 

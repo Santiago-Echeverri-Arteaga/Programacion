@@ -1,64 +1,63 @@
-# Banco de clases y mapa de reanudación
+# Banco de clases y mapa vigente
 
-Esta carpeta conserva los encuentros preparados antes de la interrupción. Los
-números de carpeta identifican materiales del banco; no corresponden al orden ni
-a las fechas definitivas. La clase 01 ya se realizó. El calendario vigente es
-[`../programa/cronograma.md`](../programa/cronograma.md).
+Los números de carpeta identifican el banco original; no son fechas ni orden
+definitivo. El [cronograma](../programa/cronograma.md) del 30 de septiembre es
+la fuente de fechas, cortes y aperturas/entregas. Los laboratorios son tareas
+fuera de clase, aunque coincidan con encuentros regulares. El historial anterior
+al 1 de octubre no certifica que todo lo previsto se haya completado.
 
-| Fecha | Tema | Material principal del banco |
+| Fecha | Tema | Material principal |
 |---|---|---|
-| Mar. 1 sep. | Discusión y concertación del acta | acta institucional; sin contenido evaluable |
-| Mié. 2 sep. | Sistema operativo, archivos, WSL2 y navegación | `clase_02_sistema_operativo`, `clase_03_terminal_linux` y guía 01 |
-| Jue. 3 sep. | Terminal y Bash | `clase_04_bash_tuberias`, adaptada sin archivos `.sh` |
-| Mar. 8 sep. | Bash aplicado, ejecución de Python y Git básico | `clase_04_bash_tuberias`, `clase_05_git_github` y guía 02 |
-| Mié. 9 sep. | Taller Git/GitHub | ejercicios seleccionados de clases 03–05 |
-| Jue. 10 sep. | Laboratorio 1 | `clase_06_laboratorio_1` y guía actualizada |
-| Mar. 15 sep. | Python, tipos, operadores y E/S | clases 07–08 |
-| Mié. 16 sep. | Funciones y contratos | `clase_09_funciones_contratos` |
-| Jue. 17 sep. | Parcial 1 | adaptar `clase_18_parcial_1` al corte del 10 de septiembre |
-| Mar. 22 sep. | Condicionales, ciclos y colecciones | selección de clases 10–12 |
-| Mié. 23 sep. | Archivos, rutas, excepciones y errores | `clase_13_archivos_excepciones` y fragmentos de clase 17 |
-| Jue. 24 sep. | Integración con Python nativo | clases 09–13, sin contenido nuevo |
-| Mar. 29 sep. | Laboratorio 2 | `clase_14_laboratorio_2` |
-| Mié. 30 sep. | Módulos, dependencias, casos límite y `pytest` | clases 16 y 20 |
-| Jue. 1 oct. | Algoritmos numéricos y práctica | `clase_21_algoritmos_error`, sin requisito nuevo |
-| Mar. 6 oct. | Laboratorio 3 | `clase_24_laboratorio_3` |
-| Mié. 7 oct. | NumPy: arreglos | `clase_27_numpy_arreglos` |
-| Jue. 8 oct. | Parcial 2 | adaptar `clase_33_parcial_2` al corte del 1 de octubre |
-| Mar. 13 oct. | NumPy: vectorización y azar | `clase_28_numpy_vectorizacion` |
-| Mié. 14 oct. | Matplotlib OO | `clase_29_matplotlib_oo` |
-| Jue. 15 oct. | Simulación y preparación | clases 28–29; sin tema nuevo |
-| Mar. 20 oct. | Laboratorio 4 | `clase_30_laboratorio_4` |
-| Mié. 21 oct. | Pandas: lectura y auditoría | `clase_34_lectura_datos` |
-| Jue. 22 oct. | Pandas: limpieza y transformaciones | `clase_35_pandas_limpieza` |
-| Mar. 27 oct. | Proyecto, procedencia e IA crítica | `clase_39_ia_agentes` y guía 13 |
-| Mié. 28 oct. | Comparación y validación | selección de `clase_36_pandas_agrupar_combinar` |
-| Jue. 29 oct. | Parcial 3 | adaptar `clase_45_parcial_3` al corte del 22 de octubre |
-| Mar. 3 nov. | Laboratorio 5 | `clase_38_laboratorio_5` |
-| Mié. 4 nov. | Integración científica reproducible | selección de clases 35, 37 y 44 |
-| Jue. 5 nov. | Laboratorio 6 y congelamiento | guía actualizada y lista de cotejo de clase 44 |
-| Mar. 10 nov. | Verificación y ejecución limpia | selección de clases 44 y 47 |
-| Mié. 11 nov. | Ensayo de sustentación | selección de clases 44 y 47 |
-| Jue. 12 nov. | Entrega final y prueba reproducible | materiales de clases 46–47, sin examen adicional |
-| Mar. 17 nov. | Sustentaciones I | `clase_47_sustentaciones_1` |
-| Mié. 18 nov. | Sustentaciones II | protocolo de clases 47–48 |
-| Jue. 19 nov. | Sustentaciones III y cierre | protocolo de clases 47–48 |
+| 1 sep. | Acta e inicio de sistema operativo | [guía](clase_02_sistema_operativo/README.md) |
+| 2 sep. | Sistema operativo y WSL2 | [guía](clase_02_sistema_operativo/README.md) |
+| 3 sep. | Terminal, rutas y ayuda | [guía](clase_03_terminal_linux/practica.md) |
+| 8 sep. | Bash y scripts | [guía](clase_04_bash_tuberias/practica.md) |
+| 9 sep. | Git/GitHub | [guía](clase_05_git_github/practica_git.md) |
+| 10 sep. | Intérprete y entornos; lab. 1 histórico | [guía](clase_07_python_entornos/README.md) |
+| 15 sep. | Tipos y E/S | [guía](clase_08_tipos_operadores_io/README.md) |
+| 16 sep. | Funciones y contratos | [guía](clase_09_funciones_contratos/README.md) |
+| 17 sep. | Registro original del parcial 1 | [guía](clase_18_parcial_1/README.md) |
+| 22 sep. | Condicionales | [guía](clase_10_condicionales/README.md) |
+| 23 sep. | Ciclos y colecciones | [guía](clase_12_colecciones_cadenas/README.md) |
+| 24 sep. | Archivos previstos; refuerzo el 1 oct. | [guía](clase_13_archivos_excepciones/README.md) |
+| 29 sep. | Biblioteca propia e importaciones | [guía](clase_16_modulos_dependencias/README.md) |
+| 30 sep. | Continuación del ejemplo; pruebas reprogramadas | [guía](../guias/04_pruebas_instalacion.md) |
+| 1 oct. | Sesión 1: archivos/sys.path; apertura lab. 2 | [guía](../guias/03_archivos_importaciones.md) |
+| 6 oct. | Sesión 2: pruebas e instalación | [guía](../guias/04_pruebas_instalacion.md) |
+| 7 oct. | Sesión 3: error y distribución; apertura lab. 3 | [guía](../guias/05_error_distribucion.md) |
+| 8 oct. | Parcial 2, corte del 1 oct. | [guía](clase_33_parcial_2/README.md) |
+| 13 oct. | Clínica Python; POO opcional; entrega lab. 2 | [guía](clase_15_flex_1/README.md) |
+| 14 oct. | NumPy: arreglos | [guía](clase_27_numpy_arreglos/arreglos_guiados.ipynb) |
+| 15 oct. | NumPy: vectorización y azar | [guía](clase_28_numpy_vectorizacion/README.md) |
+| 20 oct. | Matplotlib OO; entrega lab. 3 y apertura lab. 4 | [guía](clase_29_matplotlib_oo/figura_guiada.ipynb) |
+| 21 oct. | Pandas: lectura y auditoría | [guía](clase_34_lectura_datos/README.md) |
+| 22 oct. | Pandas: limpieza; apertura lab. 5 | [guía](clase_35_pandas_limpieza/auditoria_guiada.ipynb) |
+| 27 oct. | Pandas: agrupación/uniones | [guía](clase_36_pandas_agrupar_combinar/README.md) |
+| 28 oct. | Integración, procedencia e IA; apertura lab. 6 | [guía](../programa/proyecto_final.md) |
+| 29 oct. | Parcial 3, corte del 22 oct. | [guía](clase_45_parcial_3/README.md) |
+| 3 nov. | Auditoría e IA; entrega lab. 4 | [guía](clase_39_ia_agentes/README.md) |
+| 4 nov. | SQL/PostgreSQL: demostración | [guía](../guias/14_postgresql.md) |
+| 5 nov. | Python/PostgreSQL: extensión; entrega lab. 5 | [guía](../guias/14_postgresql.md) |
+| 10 nov. | Ejecución limpia; Docker opcional; entrega lab. 6 | [guía](../guias/15_docker.md) |
+| 11 nov. | Verificación y ensayo | [guía](clase_47_sustentaciones_1/README.md) |
+| 12 nov. | Entrega final del proyecto | [guía](../programa/proyecto_final.md) |
+| 17 nov. | Sustentaciones I | [guía](clase_47_sustentaciones_1/README.md) |
+| 18 nov. | Sustentaciones II | [guía](clase_48_sustentaciones_2/README.md) |
+| 19 nov. | Sustentaciones III y cierre | [guía](clase_48_sustentaciones_2/README.md) |
 
-## Material que pasa a extensión o recuperación
+## Uso del material
 
-Las carpetas 19, 22, 23, 25, 26, 31, 40, 41, 42 y 43 no son prerrequisitos del
-curso reajustado. Se conservan para consulta sobre funciones avanzadas, POO,
-recursividad, SciPy, SymPy, PostgreSQL o Docker. NumPy, Matplotlib, Pandas, SciPy,
-SimPy y scikit-learn también aparecen en las ocho recuperaciones sin fecha fija
-descritas en el cronograma.
+Las sesiones 1–3 del 1, 6 y 7 oct. se desarrollan sobre el mismo
+[proyecto](../Codigos/07_modulos_entornos/proyecto_biblioteca/README.md).
+Las guías indican qué explicar, qué archivos construir, qué comandos ejecutar
+y cómo comprobar. Los ejemplos públicos son demostraciones de clase; los
+laboratorios requieren una solución propia, sin esqueletos ni respuestas.
 
-La evaluación integradora original de la carpeta 46 queda retirada; el 12 de
-noviembre solo se usa su material técnico de comprobación y la autenticación
-individual ocurre en las sustentaciones del 17 al 19.
+POO propia, herencia, SciPy/SymPy, SimPy, scikit-learn, PostgreSQL y Docker son
+extensiones. El parcial 2 excluye temas nuevos del 6–7 oct.; el 3 excluye los
+del 27–28 oct. La publicación en PyPI no se exige. Las carpetas de laboratorio
+del banco ofrecen apoyo y no reservan sesiones regulares. La carpeta 46 no
+introduce un examen integrador adicional.
 
-## Uso docente
-
-Antes de cada encuentro se seleccionan solamente los fragmentos indicados. El
-docente registra qué partes se realizaron y publica el corte de cada parcial.
-Los bancos de preguntas, soluciones y resultados esperados de calificación
-permanecen en `_docente_privado/`.
+Preguntas de evaluación, soluciones y claves se mantienen en
+`_docente_privado/`, excluido de Git. [Mapa de demos](MAPA_DEMOS_PRACTICAS.md).

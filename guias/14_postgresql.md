@@ -2,8 +2,8 @@
 
 ## Ficha
 
-- Realización: martes 3 de noviembre y primera parte del miércoles 4 de noviembre
-  de 2026.
+- Demostración opcional: miércoles 4 de noviembre (SQL) y jueves 5 de noviembre
+  (cliente Python), según el cronograma actualizado. No es prerrequisito de laboratorio.
 - Duración: hasta 180 minutos.
 - Nivel de IA: 1.
 - Resultados: RA 4, RA 8 y RA 10.

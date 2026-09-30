@@ -1,5 +1,13 @@
 # Clase 20 — Pruebas, casos límite y pytest
 
+## Ruta vigente
+
+Seguir la [guía detallada](../../guias/04_pruebas_instalacion.md) de 120 minutos y el
+[proyecto continuo](../../Codigos/07_modulos_entornos/proyecto_biblioteca/README.md).
+La secuencia siguiente pertenece al banco original; no se suma a la sesión
+reprogramada. El [cronograma](../../programa/cronograma.md) fija fechas y cortes.
+
+
 ## Propósitos
 
 - convertir un contrato en casos de prueba;

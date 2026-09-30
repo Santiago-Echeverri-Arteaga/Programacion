@@ -1,7 +1,9 @@
 # Clase 44 — FLEX 5: retroalimentación y recuperación
 
 Última reserva sin contenido obligatorio. Se utiliza para recuperar una clase,
-terminar el Laboratorio 6 o atender brechas antes del Parcial 3.
+revisar la ejecución limpia y preparar sustentaciones el 11 de noviembre.
+El laboratorio 6 se entrega el 10; este espacio no cambia su fecha ni agrega
+requisitos posteriores al congelamiento del proyecto.
 
 ## Ruta si no hay recuperación pendiente
 

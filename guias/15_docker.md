@@ -2,8 +2,9 @@
 
 ## Ficha
 
-- Realización: segunda parte del miércoles 4 y práctica del jueves 5 de noviembre
-  de 2026.
+- Extensión opcional: martes 10 de noviembre, después de priorizar ejecución
+  limpia. La práctica completa puede realizarse en recuperación; no condiciona
+  la entrega del laboratorio 6 ni el proyecto.
 - Duración: 60 minutos de conceptos y hasta 120 minutos de práctica guiada.
 - Nivel de IA: 1.
 - Resultados: RA 1 y RA 10.

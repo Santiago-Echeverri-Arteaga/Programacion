@@ -1,24 +1,11 @@
-# Clase 30 — Laboratorio 4
+# Material de apoyo — Laboratorio 4
 
-## Propósito
+Apertura: 20 oct.; entrega: 3 nov. de 2026. Trabajo autónomo estimado: 4 h.
+No reserva una sesión regular ni reemplaza su clase. Seguir el
+[enunciado vigente](../../laboratorios/lab04_numpy_matplotlib/README.md) y el
+[cronograma](../../programa/cronograma.md).
 
-Simular un proceso con NumPy y presentar un resultado científicamente legible con
-Matplotlib orientado a objetos.
-
-## Antes de la sesión
-
-Leer la [guía completa](../../laboratorios/lab04_numpy_matplotlib/README.md),
-predecir el comportamiento esperado y definir la semilla aleatoria.
-
-## Secuencia (120 min)
-
-1. Predicción y control de preparación (15 min).
-2. Diseño vectorizado y prueba pequeña (25 min).
-3. Simulación y análisis (40 min).
-4. Construcción y crítica de la figura (25 min).
-5. Ejercicio individual (15 min).
-
-## Material
-
-[`verificar_caminata.py`](verificar_caminata.py) ilustra pruebas de forma y
-reproducibilidad; no reemplaza el análisis estadístico ni físico.
+Distribuir el trabajo en predicción/diseño, implementación, comprobación,
+interpretación y documentación/video. La estructura y código son decisiones
+del equipo. No se entrega un esqueleto ni solución. Las comprobaciones del banco
+son apoyo conceptual; no son validadores oficiales ni garantizan la nota.
