@@ -99,10 +99,10 @@ institucional pueden agruparse así:
 - Cadenas y colecciones.
 - Archivos, rutas, excepciones, depuración, módulos y dependencias.
 - Pruebas, casos límite, algoritmos elementales y error numérico.
-- Biblioteca propia instalable: pyproject.toml, pip, instalación editable/normal
-  y wheel; publicación en TestPyPI/PyPI como demostración opcional.
+- Biblioteca propia instalable: pyproject.toml, pip e instalación editable/normal.
+  Construcción manual de wheel y publicación en TestPyPI/PyPI como extensión opcional.
 
-### Unidad 3 — Cómputo científico, 14–20 de octubre
+### Unidad 3 — Cómputo científico, 14–22 de octubre
 
 - NumPy: arreglos, formas, tipos, indexación, vistas, broadcasting y
   vectorización.
@@ -114,7 +114,7 @@ Clases y objetos, herencia, SciPy, SymPy, SimPy y scikit-learn permanecen como
 extensiones o recuperaciones y no se evalúan en los parciales del calendario
 reducido.
 
-### Unidad 4 — Datos e integración responsable, 21 de octubre–12 de noviembre
+### Unidad 4 — Datos e integración responsable, 27 de octubre–5 de noviembre
 
 - Lectura de datos con Python nativo, NumPy y Pandas.
 - Selección, tipos, faltantes, duplicados, agrupación y combinación.
@@ -139,10 +139,10 @@ Los notebooks se usan para exploración y comunicación; los componentes
 reutilizables se desarrollan en archivos Python y se prueban por separado. Git se
 usa durante todo el semestre, no únicamente como tema inicial.
 
-Se programan seis laboratorios acumulativos. Cada uno exige solamente contenidos
-ya explicados y practicados. Además se planean ocho clases de recuperación sin
-fecha fija sobre NumPy, Matplotlib, Pandas, SciPy, SimPy, scikit-learn e
-integración. Son espacios de apoyo y no amplían el temario evaluable. La última
+Se conservan seis laboratorios, con cinco pendientes (2–6), inicios acompañados y
+entregas posteriores. Código e informe deben subirse a GitHub en cada laboratorio.
+Cada uno exige solamente contenidos ya explicados y practicados. Las ocho
+recuperaciones complementarias se describen en el cronograma; no se asumen realizadas. Son espacios de apoyo y no amplían el temario evaluable. La última
 semana, del 17 al 19 de noviembre, se dedica completa a sustentaciones y no
 introduce contenidos ni entregables nuevos.
 
@@ -217,3 +217,8 @@ consolidar por sí misma toda la competencia computacional del físico.
 
 - Borrador de rediseño integral: 2026-II.
 - Próxima revisión: al cierre del primer semestre de implementación.
+
+
+## Vigencia del ajuste del 2 de octubre
+
+Parcial 2 el 21 oct. y parcial 3 el 12 nov., sin clase en esas fechas. Entrega de proyecto reprogramada al 16 nov.; exposiciones 17–19 nov. Los cortes, laboratorios y carga se rigen por [cronograma.md](cronograma.md). Se priorizan Python, validación numérica, NumPy, Matplotlib, Pandas y reproducibilidad. SQL/Docker son extensiones y no sustituyen las clínicas finales.

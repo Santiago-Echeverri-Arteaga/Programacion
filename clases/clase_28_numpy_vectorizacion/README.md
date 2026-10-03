@@ -5,8 +5,9 @@
 Ruta vigente: 15 de octubre. Seguir `vectorizacion.py` y después
 [`pasos_1d.py`](pasos_1d.py): esta demo 1D enseña `Generator.integers`, formas,
 ejes, `cumsum`, posición inicial, media de cuadrados y comprobación de pasos.
-No resuelve la caminata 2D del laboratorio. Explicar estas operaciones antes
-de abrir el laboratorio el 20 de octubre; si falta una, simplificar su requisito.
+Es una demostración pequeña; el laboratorio exige diseño propio, comparación de
+configuraciones, pruebas e interpretación. Practicar antes de abrirlo el 22 de
+octubre; si falta una operación, simplificar el requisito.
 
 Distribución de 120 min: formas/vistas 20, broadcasting 25, vectorización 20,
 demo 1D y repetibilidad 35, práctica/cierre 20. Cambiar la semilla, comparar

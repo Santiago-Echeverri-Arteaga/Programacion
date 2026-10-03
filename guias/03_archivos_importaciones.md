@@ -115,12 +115,9 @@ Conservar `datos/mediciones.csv`. El programa principal captura
 datos inválidos; termina con código 1. No silencia fallos de programación ni
 salta filas que podrían alterar la interpretación física.
 
-## Evidencia y apertura del laboratorio 2
+## Evidencia y continuidad
 
-Explicar por qué el archivo funciona desde dos carpetas y por qué no se utilizó
-`except Exception`. Abrir el [laboratorio 2](../laboratorios/lab02_python_nativo/README.md)
-al terminar esta clase: Python nativo y comprobaciones manuales. No requiere
-`pytest`, empaquetado, instalación ni publicación. Entrega: 13 de octubre.
+Explicar por qué el archivo funciona desde dos carpetas y por qué no se utilizó `except Exception`. El [laboratorio 2](../laboratorios/lab02_python_nativo/README.md) se inicia en clase el jueves 8 oct. y se entrega el 15. Exige Python nativo y comprobaciones; pytest es opcional. No requiere empaquetado ni instalación.
 
 Referencias: [módulos](https://docs.python.org/3.12/tutorial/modules.html),
 [pathlib](https://docs.python.org/3.12/library/pathlib.html),

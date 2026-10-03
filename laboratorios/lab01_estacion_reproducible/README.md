@@ -163,3 +163,12 @@ Sin equipo ni IA, cada estudiante interpreta una tubería, predice dónde termin
 la salida de una orden con `1>>` y `2>>`, explica qué cambia con `chmod u+x`,
 distingue `bash archivo.sh` de `./archivo.sh`, interpreta un `git status` sencillo
 y dice cómo ejecutaría un archivo `.py` desde la terminal.
+
+
+## Entrega en GitHub
+
+Aclaración de formato para consulta: el laboratorio 1 conserva su evaluación histórica; este ajuste no exige volver a entregar ni completar evidencias retroactivamente.
+
+Deben **subir el código y el informe a GitHub**. Entregar URL del repositorio y commit evaluable. El README debe enlazar el informe Markdown o PDF e indicar comandos, dependencias y versiones para reproducirlo. Incluir datos permitidos o su fuente, resultados solicitados, evidencia de comprobaciones y enlace al video de 3–5 minutos. El informe responde las preguntas de esta guía, interpreta resultados y reconoce limitaciones; no es una colección de capturas. Cada integrante identifica su contribución. Si el repositorio es privado, habilitar acceso al docente antes de entregar.
+
+Se aplica la [rúbrica común](../README.md). No subir `.venv`, cachés ni credenciales. Comprobar que código, informe y resultados son visibles en GitHub, no solo en el computador.

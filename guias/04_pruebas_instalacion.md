@@ -2,7 +2,7 @@
 
 Fecha: martes 6 de octubre de 2026. Duración: 120 minutos.
 Continuación de la [guía 03](03_archivos_importaciones.md). Estos contenidos
-nuevos quedan fuera del parcial 2 del 8 de octubre.
+se consolidan el 13 oct. y forman parte del corte del parcial 2 del 21 de octubre; no se evalúa memorización de metadatos.
 
 ## Objetivos
 
@@ -10,16 +10,21 @@ Convertir contratos en casos normales, límites e inválidos; distinguir `assert
 de validación; probar resultados/excepciones con `pytest`; describir módulos y
 dependencias; instalar el proyecto con `pip` y utilizarlo fuera de su carpeta.
 
+## Preparación para poder probar antes de explicar el empaquetado
+
+En la copia de trabajo de la guía 03, con el entorno activo, usar la configuración suministrada por el docente: `python -m pip install pytest` y `python -m pip install -e ./biblioteca`. Es preparación guiada, no construcción autónoma de metadatos. Así `from Libreria import velocidad` funciona durante el bloque de pruebas; el bloque de instalación explica después lo que se hizo. No ejecutar la suite antes de preparar este entorno.
+
 ## Secuencia
 
 | Minutos | Explicación y demo | Práctica |
 |---|---|---|
-| 0–15 | Ejecutar `casos_defectuosos.py` y leer `AssertionError` | Predecir primo 1 y factorial negativo antes de ejecutar |
-| 15–30 | Revisar contratos, `return`/`print`, importaciones explícitas y relativas | Reemplazar un `import *` en una copia del ejemplo previo |
-| 30–60 | Crear `pyproject.toml`, README y realizar instalación editable | Importar el paquete desde otra carpeta |
-| 60–90 | Crear dos pruebas simples y una de excepción | Introducir un signo u operación incorrecta y detectarlo |
-| 90–110 | Probar lectura con `tmp_path` y datos creados por la prueba | Añadir encabezado incorrecto o archivo sin mediciones |
-| 110–120 | Verificación individual | Explicar entorno, instalación y una prueba |
+| 0–25 | Contratos y fallos de `2026-2/` y `casos_defectuosos.py` | Predecir primo 1 y división por cero; ordenar validación antes del cálculo |
+| 25–70 | Crear pruebas normales, de frontera y de excepción | Comparación con tolerancia y defecto intencional detectado |
+| 70–95 | Revisar pyproject.toml e instalar en modo editable | Distinguir instalación de importación; comprobar ruta del módulo |
+| 95–110 | Prueba CSV con datos pequeños | Encabezado inválido o archivo vacío; `tmp_path` guiado |
+| 110–120 | Cierre individual | Explicar prueba y contrato; registrar dificultad pendiente |
+
+Se estudian las pruebas antes de la configuración. El proyecto de apoyo incluye la configuración necesaria para ejecutar pruebas; la parametrización y los detalles del backend no son objetivos de memorización. `tmp_path` se trabaja de forma guiada; si no alcanza el tiempo, queda como ampliación opcional. La instalación local se consolida en 25 min el 13 oct.; el taller del 7 y el lab. 2 admiten comprobaciones manuales.
 
 ## Comprobaciones antes de instalar
 
@@ -58,7 +63,7 @@ cd practica_biblioteca
 distribución; `import` carga un módulo/paquete. El nombre de distribución
 `fisica-uq-ejemplo` no tiene que coincidir con el nombre importable `Libreria`.
 La instalación editable permite desarrollar sobre la fuente; una instalación
-normal se comprueba con el wheel en la tercera clase. Después de modificar
+normal se comprueba el 13 oct. instalando desde la carpeta del proyecto, sin wheel obligatorio. Después de modificar
 metadatos se reinstala. Usar un proceso nuevo para observar cambios de código.
 
 `analizar.py` ya no modifica `sys.path`. No desinstalar ni modificar el entorno
@@ -114,9 +119,13 @@ Cada estudiante explica una prueba que detecta un defecto real y la diferencia
 entre instalar e importar. `pytest` es una herramienta de desarrollo, no una
 dependencia requerida para llamar a `velocidad`. Los módulos estándar no se
 instalan con pip. La publicación en PyPI no es necesaria para instalación local.
-El laboratorio 3 se abre después de la siguiente clase, cuando también se haya
-practicado convergencia y construcción del wheel.
+El laboratorio 3 se abre el 15 oct., tras practicar convergencia y consolidar instalación local el 13. El jueves 8 se inicia el laboratorio 2.
 
 Referencias: [instalación local](https://pip.pypa.io/en/stable/topics/local-project-installs/),
 [pytest](https://docs.pytest.org/en/stable/getting-started.html),
 [pyproject.toml](https://packaging.python.org/en/latest/guides/writing-pyproject-toml/).
+
+
+## Consolidación del 13 de octubre
+
+En un entorno limpio, instalar normalmente desde la ruta local del proyecto con `python -m pip install /ruta/al/proyecto/biblioteca` (sustituir por la ruta real; entre comillas si tiene espacios). Ejecutar desde una carpeta distinta: `python -c "import Libreria; print(Libreria.__file__)"`. Verificar que el módulo proviene del entorno instalado. No confundir esta prueba con la instalación editable del 6 oct.; el modo editable enlaza la fuente de desarrollo. No se necesita publicar ni construir manualmente un wheel.

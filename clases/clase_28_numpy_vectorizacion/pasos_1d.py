@@ -1,6 +1,6 @@
 """Práctica del 15 oct.: generador, ejes y acumulación de pasos en 1D.
 
-La demo no resuelve el laboratorio de difusión bidimensional.
+La demo ilustra operaciones; el laboratorio añade comparación, pruebas e interpretación.
 """
 
 import numpy as np

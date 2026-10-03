@@ -5,27 +5,20 @@ enunciado y, solo cuando hace falta, datos de entrada. No se suministran
 plantillas de informe, esqueletos de código ni archivos parcialmente resueltos:
 cada equipo debe decidir cómo organizar su solución y justificarla.
 
-## Aperturas, entregas y sincronización
+## Calendario vigente
 
-Los laboratorios son tareas fuera de la clase regular. Apertura significa que
-ya se practicaron los prerrequisitos; entrega es una fecha posterior. La hora y
-el canal los anuncia el docente. El laboratorio 1 conserva su registro histórico.
+Quedan cinco laboratorios (2–6). El lab. 1 conserva su registro histórico y no se reabre. Los inicios acompañados ocupan clase; el resto se termina de forma autónoma. Fechas de 2026; hora de recepción anunciada por el docente.
 
-| Lab. | Apertura después de clase | Entrega | Prerrequisitos practicados | Trabajo estimado | Peso |
-|---:|---|---|---|---|---:|
-| [1](lab01_estacion_reproducible/README.md) | 10 sep. | 10 sep. | Linux, Bash y Git | histórico | 3,5 % |
-| [2](lab02_python_nativo/README.md) | 1 oct. | 13 oct. | Python nativo, archivos, rutas y excepciones | 3 h | 3,5 % |
-| [3](lab03_modelo_verificable/README.md) | 7 oct. | 20 oct. | Módulos, pytest, puntos medios y pip/build | 4 h | 3,5 % |
-| [4](lab04_numpy_matplotlib/README.md) | 20 oct. | 3 nov. | NumPy, vectorización, azar y Matplotlib OO | 4 h | 3,5 % |
-| [5](lab05_pandas/README.md) | 22 oct. | 5 nov. | Pandas: lectura, selección, auditoría y limpieza | 4 h | 3,5 % |
-| [6](lab06_integracion_cientifica/README.md) | 28 oct. | 10 nov. | Integración, trazabilidad, pruebas y ejecución limpia | 3 h | 3,5 % |
+| Lab. | Inicio | Entrega | Prerrequisitos | Dedicación estimada por estudiante |
+|---|---|---|---|---|
+| [1](lab01_estacion_reproducible/README.md) | 10 sep. | 10 sep. | Linux, Bash y Git | histórico |
+| [2](lab02_python_nativo/README.md) | 8 oct. | 15 oct. | Python, funciones, archivos y validación | 2 h acompañadas + 3–4 h autónomas |
+| [3](lab03_modelo_verificable/README.md) | 15 oct. | 27 oct. | Puntos medios, pytest, módulos e instalación local (13 oct.) | 4–5 h autónomas |
+| [4](lab04_numpy_matplotlib/README.md) | 22 oct. | 3 nov. | NumPy, azar y Matplotlib (20 oct.) | 2 h acompañadas + 3–4 h autónomas |
+| [5](lab05_pandas/README.md) | 29 oct. | 10 nov. | Pandas: lectura y limpieza (28 oct.) | 75 min acompañados + 3–4 h autónomas |
+| [6](lab06_integracion_cientifica/README.md) | 3 nov. | 11 nov. | Validación y ejecución limpia; trabajo previo | 45 min acompañados + 1,5–2 h autónomas |
 
-El trabajo estimado incluye código, validación, informe, video y comprobación
-individual; se puede distribuir entre varios días. Si falta una clase necesaria,
-se simplifica o mueve la tarea. No se exigen temas futuros ni de recuperaciones.
-Lab. 2: sin pytest/empaquetado. Lab. 3: instalación local, sin publicación ni
-Euler-Cromer. Lab. 4 y 5: sin agrupaciones/uniones futuras obligatorias. Lab. 6:
-sin SQL/Docker ni requisitos nuevos del proyecto. Ver [cronograma](../programa/cronograma.md).
+Cada laboratorio vale 3,5 %. Los tiempos incluyen código, comprobaciones, informe y video; son estimaciones por estudiante. Si falta un prerrequisito, se reduce el alcance o se mueve la actividad. No se exige PyPI, wheel, SQL, Docker ni métodos de recuperaciones. El lab. 6 audita un laboratorio previo con evidencia nueva; no exige otro proyecto.
 
 ## Estructura común de las guías
 
@@ -49,17 +42,18 @@ pensar y explicar.
 - Roles de conductor y revisor rotan durante la sesión.
 - Cada estudiante conserva un registro individual de predicciones, decisiones y
   errores encontrados.
-- El trabajo se desarrolla fuera del encuentro magistral, con el tiempo y los
-  canales de acompañamiento anunciados por el docente.
+- El trabajo combina inicio acompañado y desarrollo autónomo según el calendario.
 - Cada laboratorio finaliza con una comprobación individual sin IA.
 
 ## Entrega común
 
-Cada equipo entrega un repositorio propio que contenga el código, los datos
+Cada equipo debe **subir el código y el informe a GitHub**, en un repositorio propio que contenga también los datos
 permitidos, los resultados y una explicación escrita en Markdown o PDF. No hay
 una estructura predeterminada: el documento debe permitir comprender la pregunta,
 el procedimiento, las decisiones, las comprobaciones, los resultados y las
 limitaciones sin depender de una explicación oral.
+
+Se entrega la URL del repositorio y el identificador del commit evaluable. El README enlaza el informe (Markdown o PDF), explica instalación y ejecución, y permite localizar datos, resultados, pruebas y video. Un repositorio privado es válido si el docente tiene acceso. No basta un archivo ZIP, una captura o un enlace al video. No subir entornos virtuales, cachés ni credenciales. Verificar que los resultados solicitados no quedaron excluidos por `.gitignore`.
 
 Además se entrega un enlace a un video de **3 a 5 minutos en YouTube**, público o
 no listado. Deben participar las dos personas del equipo mediante voz o

@@ -1,20 +1,22 @@
-# Guía 05 — Error numérico y distribución de la biblioteca
+# Guía 05 — Error numérico; distribución como extensión
 
-Fecha: miércoles 7 de octubre de 2026. Duración: 120 minutos.
-Continuación de la [guía 04](04_pruebas_instalacion.md). Los contenidos nuevos
-de esta sesión no entran en el parcial 2 del 8 de octubre.
+Fecha: martes 13 de octubre de 2026. Bloque de error: 75 minutos; clase completa: 120 minutos. El 7 oct. se reemplaza por el [taller individual](taller_07_octubre_integracion/README.md).
+Continuación de la [guía 04](04_pruebas_instalacion.md). El núcleo de error y convergencia
+forma parte del parcial 2 del 21 oct. La construcción de wheel y publicación son extensiones no evaluables.
 
 ## Secuencia
 
 | Minutos | Explicación y ejecución | Práctica |
 |---|---|---|
-| 0–15 | `0.1 + 0.2`, igualdad y `math.isclose` | Distinguir valor almacenado y salida formateada |
-| 15–40 | `experimento_integral.py`: puntos medios, error y costo | Predecir y explicar la razón de errores |
-| 40–55 | Prueba manual, reducción de error y entradas inválidas | Separar defecto del código, error del método y redondeo |
-| 55–75 | README, versión, licencia y `python -m build` | Inspeccionar wheel y distribución fuente |
-| 75–100 | Instalación normal del wheel en un entorno externo nuevo | Intercambiar paquete y reproducir un ejemplo |
-| 100–115 | Demostración de TestPyPI y explicación de PyPI | Identificar pasos y autenticación |
-| 115–120 | Cierre y apertura del laboratorio 3 | Explicar evidencia y alcance |
+| 0–10 | Punto flotante, igualdad y tolerancia | Distinguir redondeo de formato |
+| 10–30 | Recuperar puntos medios ya presentes en `2026-2/` | Trazar un subintervalo y comprobar su valor |
+| 30–55 | Tabla de aproximaciones y errores | Comparar n, 2n y 4n con una referencia |
+| 55–75 | Pruebas y diagnóstico | Distinguir defecto, discretización y redondeo; caso inválido |
+| 75–100 | Consolidación de instalación local según guía 04 | Ejecutar cliente desde otra carpeta |
+| 100–110 | Pregunta y fuente del proyecto | Registrar elección breve |
+| 110–120 | Cierre individual | Explicar una comprobación y registrar pendientes |
+
+El bloque numérico reutiliza funciones ya conocidas, sin escribir otro algoritmo desde cero. Si un prerrequisito no se alcanza, reducir el alcance del lab. 3 y del corte del parcial; no trasladarlo a autoaprendizaje obligatorio. Las secciones de distribución siguientes son opcionales y quedan fuera de estos 120 minutos.
 
 ## Experimento numérico
 
@@ -47,7 +49,7 @@ para una aproximación por puntos medios. Ejecutar:
 python -m pytest -q
 ```
 
-## Construcción y prueba como usuario
+## Extensión opcional — construcción y prueba como usuario
 
 Primero revisar documentación, unidades, versión y límites. Elegir licencia y
 reconocer autoría antes de una publicación pública. El nombre docente es
@@ -117,12 +119,9 @@ Si falla cuenta/red/autenticación, explicar el flujo con la documentación y
 terminar la prueba local del wheel. Nadie necesita una cuenta pública para
 aprobar. No convertir la sesión en diagnóstico de servicios.
 
-## Apertura del laboratorio 3
+## Continuidad con los laboratorios
 
-Abrir el [laboratorio 3](../laboratorios/lab03_modelo_verificable/README.md)
-al terminar: biblioteca propia de integración, pruebas, tabla de convergencia
-y wheel instalable. No exige publicar ni una EDO no practicada. Entrega: 20 de
-octubre. El péndulo Euler-Cromer anterior se conserva como extensión opcional.
+El jueves 8 oct. se inicia el [laboratorio 2](../laboratorios/lab02_python_nativo/README.md), con Python nativo y archivos. El [laboratorio 3](../laboratorios/lab03_modelo_verificable/README.md) se abre el 15 oct. y se entrega el 27: puntos medios, pruebas, error e instalación local después de la consolidación del 13. No exige wheel, publicación ni una EDO no practicada. El péndulo se conserva como extensión opcional.
 
 Referencias: [empaquetado](https://packaging.python.org/en/latest/tutorials/packaging-projects/),
 [TestPyPI](https://packaging.python.org/en/latest/guides/using-testpypi/),

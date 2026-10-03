@@ -2,10 +2,10 @@
 
 | Campo | Especificación |
 |---|---|
-| Apertura después de clase | Jueves 1 de octubre de 2026 |
-| Fecha de entrega | Martes 13 de octubre de 2026 |
-| Modalidad | Tarea; no reemplaza la clase regular de ese día |
-| Trabajo autónomo estimado | 180 minutos, distribuidos hasta la entrega; incluye informe y video |
+| Inicio | Jueves 8 de octubre de 2026 |
+| Entrega | Jueves 15 de octubre de 2026 |
+| Modalidad | Inicio acompañado y continuación autónoma |
+| Dedicación por estudiante | 2 horas acompañadas + 3–4 horas autónomas; incluye informe y video |
 | Trabajo | Parejas con evidencia individual |
 | Herramientas | Python 3.12 y biblioteca estándar |
 
@@ -34,13 +34,13 @@ aprender una biblioteca estadística nueva para realizar estos cálculos.
 
 ## Requerimientos y límites
 
-- usar `datos/caida_libre_sintetica.csv` y conservarlo sin cambios;
+- usar [caida_libre_sintetica.csv](../../datos/caida_libre_sintetica.csv) y conservarlo sin cambios; tomar h₀ = 10,00 m y g de referencia = 9,81 m/s². La columna incertidumbre_m expresa incertidumbre de altura; describirla, sin exigir propagación formal;
 - utilizar `pathlib` y `with`; la separación manual de campos basta para este CSV
   numérico. `csv`, `statistics` y `math` son opcionales si se explican sus usos;
   también se permiten acumulación y fórmulas con Python nativo;
 - crear todo el código desde cero; no se suministra esqueleto ni nombres de
   funciones obligatorios;
-- no usar NumPy, Pandas, SciPy, `pytest` ni IA generativa;
+- no usar NumPy, Pandas, SciPy ni IA generativa (nivel 1); pytest es opcional, pues se introduce el 6 oct.;
 - no ocultar errores mediante `except Exception` sin tratamiento específico.
 
 ## Procedimiento
@@ -51,7 +51,7 @@ aprender una biblioteca estadística nueva para realizar estos cálculos.
 3. Lean el CSV y conviertan sus campos a tipos numéricos. Un dato inválido debe
    producir un mensaje que permita localizar la fila.
 4. Validen archivo no vacío, columnas necesarias, tiempos estrictamente
-   crecientes y valores compatibles con el diccionario de datos.
+   crecientes, valores finitos, alturas entre 0 y h₀ e incertidumbres positivas. Para t=0 conservar la fila inicial, sin calcular gᵢ ni incluirla en el resumen de g.
 5. Calculen `gᵢ` solo para tiempos positivos y conserven cada estimación.
 6. Obtengan media, desviación y rango. Comparen con el valor de referencia y
    definan qué significa «compatible» para el equipo.
@@ -88,3 +88,24 @@ diseño. Puede ser no listado y no exige mostrar el rostro.
 
 Cada estudiante escribe una función corta de validación, propone dos casos límite
 y explica la diferencia entre `return` y `print` en este análisis.
+
+
+## Entrega en GitHub
+
+Deben **subir el código y el informe a GitHub**. Entregar URL del repositorio y commit evaluable. El README debe enlazar el informe Markdown o PDF e indicar comandos, dependencias y versiones para reproducirlo. Incluir datos permitidos o su fuente, resultados solicitados, evidencia de comprobaciones y enlace al video de 3–5 minutos. El informe responde las preguntas de esta guía, interpreta resultados y reconoce limitaciones; no es una colección de capturas. Cada integrante identifica su contribución. Si el repositorio es privado, habilitar acceso al docente antes de entregar.
+
+Se aplica la [rúbrica común](../README.md). No subir `.venv`, cachés ni credenciales. Comprobar que código, informe y resultados son visibles en GitHub, no solo en el computador.
+
+
+## Inicio en clase — jueves 8 de octubre, 120 minutos
+
+| Minutos | Producto de trabajo |
+|---|---|
+| 0–15 | Pregunta física, unidades, predicción y lectura del CSV |
+| 15–35 | Diseño en funciones y definición de casos de comprobación |
+| 35–65 | Lectura y validación; ejecutar un archivo normal y otro defectuoso |
+| 65–95 | Calcular g por fila y un resumen provisional |
+| 95–110 | Caso manual, t=0 y revisión entre integrantes |
+| 110–120 | Primer commit y lista de pendientes para el 15 oct. |
+
+El taller individual del miércoles 7 practica funciones, colecciones, módulos, rutas, lectura y excepciones mediante ejercicios independientes. El laboratorio aplica esas habilidades a un problema físico completo. El laboratorio no requiere NumPy ni empaquetado. El hito de salida del jueves 8 es lector funcional y un cálculo comprobado, no el informe terminado. Distribución autónoma orientativa: 90 min de implementación, 45 de comprobaciones y 45–105 de informe, video y publicación.

@@ -2,10 +2,10 @@
 
 | Campo | Especificación |
 |---|---|
-| Apertura después de clase | Jueves 22 de octubre de 2026 |
-| Fecha de entrega | Jueves 5 de noviembre de 2026 |
-| Modalidad | Tarea; no reemplaza la clase regular de ese día |
-| Trabajo autónomo estimado | 240 minutos, distribuidos hasta la entrega; incluye informe y video |
+| Inicio | Jueves 29 de octubre de 2026 |
+| Entrega | Martes 10 de noviembre de 2026 |
+| Modalidad | Inicio acompañado y continuación autónoma |
+| Dedicación por estudiante | 75 minutos acompañados + 3–4 horas autónomas; incluye informe y video |
 | Trabajo | Parejas con evidencia individual |
 | Herramientas | Pandas, NumPy y Matplotlib |
 
@@ -27,7 +27,7 @@ acción debe quedar justificada y los datos crudos deben permanecer intactos.
 
 ## Requerimientos y límites
 
-- usar `datos/enfriamiento_sintetico_sucio.csv` sin sobrescribirlo;
+- usar [enfriamiento_sintetico_sucio.csv](../../datos/enfriamiento_sintetico_sucio.csv) sin sobrescribirlo;
 - emplear Pandas, NumPy y Matplotlib con operaciones ya vistas;
 - crear el análisis desde cero, sin notebook o código inicial;
 - no exigir `groupby`, uniones, ajustes de curvas ni SciPy;
@@ -83,3 +83,17 @@ alternativa. Puede ser no listado y no exige mostrar el rostro.
 
 Cada estudiante analiza una regla propuesta por otra persona, identifica un
 sesgo posible y señala qué evidencia necesitaría para aceptarla.
+
+
+## Entrega en GitHub
+
+Deben **subir el código y el informe a GitHub**. Entregar URL del repositorio y commit evaluable. El README debe enlazar el informe Markdown o PDF e indicar comandos, dependencias y versiones para reproducirlo. Incluir datos permitidos o su fuente, resultados solicitados, evidencia de comprobaciones y enlace al video de 3–5 minutos. El informe responde las preguntas de esta guía, interpreta resultados y reconoce limitaciones; no es una colección de capturas. Cada integrante identifica su contribución. Si el repositorio es privado, habilitar acceso al docente antes de entregar.
+
+Se aplica la [rúbrica común](../README.md). No subir `.venv`, cachés ni credenciales. Comprobar que código, informe y resultados son visibles en GitHub, no solo en el computador.
+
+
+## Inicio y alcance prudente
+
+Inicio el 29 oct., después de lectura y limpieza del 27–28: 15 min de pregunta y auditoría, 25 de reglas y trazabilidad, 25 de transformación y 10 de commit. Continuar con 60 min de limpieza, 45–60 de comparación, 45–60 de informe y 30–60 de video y ejecución limpia. Basta una figura comparativa y dos reglas para una sola incidencia incierta. Agrupación y uniones no son obligatorias; no se exige ajustar la ley de enfriamiento ni estimar parámetros.
+
+IA nivel 1 hasta la práctica crítica del 4 nov.; después se permite nivel 2 únicamente para revisar trabajo propio, documentándolo en `AI_USAGE.md`. También es válido declarar que no se usó IA. Evidencia individual sin IA.

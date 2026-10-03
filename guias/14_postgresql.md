@@ -2,8 +2,8 @@
 
 ## Ficha
 
-- Demostración opcional: miércoles 4 de noviembre (SQL) y jueves 5 de noviembre
-  (cliente Python), según el cronograma actualizado. No es prerrequisito de laboratorio.
+- Extensión opcional sin fecha en la ruta regular. El 4–5 nov. se dedica a
+  Pandas y proyecto. No es prerrequisito de laboratorio ni de proyecto.
 - Duración: hasta 180 minutos.
 - Nivel de IA: 1.
 - Resultados: RA 4, RA 8 y RA 10.

@@ -15,14 +15,16 @@ una nota individual de sustentación y debe poder explicar el sistema completo.
 | Hito | Fecha |
 |---|---|
 | Publicación de líneas y criterios | Jueves 17 de septiembre de 2026 |
-| Elección de pregunta y fuente de datos o modelo | Jueves 8 de octubre |
-| Propuesta y criterio de validación | Martes 27 de octubre |
+| Elección de pregunta y fuente de datos o modelo | Martes 13 de octubre |
+| Propuesta y criterio de validación | Miércoles 28 de octubre |
 | Congelamiento de requisitos y primera ejecución limpia | Jueves 5 de noviembre |
-| Entrega definitiva y versión congelada | Jueves 12 de noviembre |
+| Entrega definitiva y versión congelada | Lunes 16 de noviembre |
 | Sustentaciones | Martes 17, miércoles 18 y jueves 19 de noviembre |
 
-La semana de sustentaciones no se usa para completar el producto. Después del 12
+La semana de sustentaciones no se usa para completar el producto. Después del 16
 de noviembre solo se admite la modificación breve solicitada durante la defensa.
+
+El traslado de entrega al 16 nov. forma parte de este rediseño para evitar coincidencia con el parcial 3 del 12 nov.; no agrega clase. El docente anuncia hora y turnos. El alcance obligatorio usa herramientas practicadas: no exige wheel/PyPI, SQL, Docker, POO propia ni SciPy.
 
 ## Modalidades
 
@@ -67,7 +69,7 @@ siguientes elementos y siempre incluir validación:
 ## Entregables
 
 1. Propuesta de máximo dos páginas.
-2. Repositorio Git con hitos identificables.
+2. Repositorio en GitHub con código e informe, hitos identificables y commit final evaluable.
 3. Programa ejecutable desde instrucciones limpias.
 4. Datos permitidos o instrucciones verificables para obtenerlos.
 5. Pruebas automatizadas y comprobaciones científicas.

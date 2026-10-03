@@ -2,9 +2,8 @@
 
 ## Ficha
 
-- Extensión opcional: martes 10 de noviembre, después de priorizar ejecución
-  limpia. La práctica completa puede realizarse en recuperación; no condiciona
-  la entrega del laboratorio 6 ni el proyecto.
+- Extensión opcional sin fecha en la ruta regular. El 10 nov. se prioriza repaso
+  y ejecución limpia. No condiciona la entrega del laboratorio 6 ni el proyecto.
 - Duración: 60 minutos de conceptos y hasta 120 minutos de práctica guiada.
 - Nivel de IA: 1.
 - Resultados: RA 1 y RA 10.

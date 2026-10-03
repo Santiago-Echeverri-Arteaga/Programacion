@@ -1,11 +1,7 @@
-# Material de apoyo — Laboratorio 4
+# Apoyo al laboratorio 4
 
-Apertura: 20 oct.; entrega: 3 nov. de 2026. Trabajo autónomo estimado: 4 h.
-No reserva una sesión regular ni reemplaza su clase. Seguir el
-[enunciado vigente](../../laboratorios/lab04_numpy_matplotlib/README.md) y el
-[cronograma](../../programa/cronograma.md).
+Inicio: 22 oct.; entrega: 3 nov. de 2026. Dedicación por estudiante: 2 h acompañadas + 3–4 h autónomas.
 
-Distribuir el trabajo en predicción/diseño, implementación, comprobación,
-interpretación y documentación/video. La estructura y código son decisiones
-del equipo. No se entrega un esqueleto ni solución. Las comprobaciones del banco
-son apoyo conceptual; no son validadores oficiales ni garantizan la nota.
+La [guía vigente](../../laboratorios/lab04_numpy_matplotlib/README.md) define problema, inicio acompañado, resultados, pruebas y rúbrica. Deben subir código e informe a GitHub e identificar el commit evaluable. Prerrequisitos: NumPy, azar y Matplotlib (20 oct.).
+
+Esta carpeta pertenece al banco original; sus ejemplos no amplían el alcance obligatorio. Prevalece el [cronograma](../../programa/cronograma.md).

@@ -1,7 +1,7 @@
 # Clase 46 — Evaluación integradora individual escrita
 
 > **Material retirado del cronograma 2026-II.** No se realizará esta evaluación.
-> Los fragmentos pueden usarse el 12 de noviembre para comprobar la entrega, pero
+> Los fragmentos pueden usarse en el ensayo del 11 de noviembre, sin examen adicional;
 > la autenticación individual ocurre en las sustentaciones del 17 al 19.
 
 ## Propósito

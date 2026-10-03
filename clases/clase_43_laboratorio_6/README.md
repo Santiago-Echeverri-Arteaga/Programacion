@@ -1,11 +1,7 @@
-# Material de apoyo — Laboratorio 6
+# Apoyo al laboratorio 6
 
-Apertura: 28 oct.; entrega: 10 nov. de 2026. Trabajo autónomo estimado: 3 h.
-No reserva una sesión regular ni reemplaza su clase. Seguir el
-[enunciado vigente](../../laboratorios/lab06_integracion_cientifica/README.md) y el
-[cronograma](../../programa/cronograma.md).
+Inicio: 3 nov.; entrega: 11 nov. de 2026. Dedicación por estudiante: 45 min acompañados + 1,5–2 h autónomas.
 
-Distribuir el trabajo en predicción/diseño, implementación, comprobación,
-interpretación y documentación/video. La estructura y código son decisiones
-del equipo. No se entrega un esqueleto ni solución. Las comprobaciones del banco
-son apoyo conceptual; no son validadores oficiales ni garantizan la nota.
+La [guía vigente](../../laboratorios/lab06_integracion_cientifica/README.md) define problema, inicio acompañado, resultados, pruebas y rúbrica. Deben subir código e informe a GitHub e identificar el commit evaluable. Prerrequisitos: Validación y ejecución limpia; trabajo previo.
+
+Esta carpeta pertenece al banco original; sus ejemplos no amplían el alcance obligatorio. Prevalece el [cronograma](../../programa/cronograma.md).

@@ -15,3 +15,6 @@ Estos documentos constituyen la base para actualizar el sílabo institucional.
 La versión final del sílabo deberá conservar los campos administrativos exigidos
 por la Universidad y reemplazar los contenidos, resultados y evaluación del
 borrador anterior.
+
+
+Actualización vigente: [diagnóstico del 2 de octubre](ajuste_octubre_2026.md) y [cronograma](cronograma.md).

@@ -9,7 +9,7 @@ Es una demostración de clase, no una solución de los laboratorios.
 |---|---|---|
 | 1 oct. | [03: archivos e importaciones](../../../guias/03_archivos_importaciones.md) | `ejemplo_importacion.py`, `explorar_archivo.py`, `Libreria/lectura.py`, `analizar_temporal.py` |
 | 6 oct. | [04: pruebas e instalación](../../../guias/04_pruebas_instalacion.md) | `casos_defectuosos.py`, `biblioteca/pyproject.toml`, `tests/`, `analizar.py` |
-| 7 oct. | [05: error y distribución](../../../guias/05_error_distribucion.md) | `experimento_integral.py`, documentación y wheel |
+| 13 oct. | [05: error y distribución](../../../guias/05_error_distribucion.md) | `experimento_integral.py` y pruebas; wheel opcional |
 
 Desde esta carpeta, sin instalar:
 
@@ -39,7 +39,7 @@ proyecto que pip instala. `pytest.ini` selecciona los tests locales. No añadir
 solo admite CSV pequeños numéricos sin campos entrecomillados; `csv.reader`
 sería adecuado para formatos CSV más generales.
 
-Construir desde `biblioteca` con `python -m build` y probar el wheel desde otra
+Como extensión opcional, construir desde `biblioteca` con `python -m build` y probar el wheel desde otra
 carpeta y otro entorno. La [guía 05](../../../guias/05_error_distribucion.md)
 detalla publicación opcional, licencia y nombres disponibles. Las mediciones
 del cliente no son recursos incluidos en el paquete.

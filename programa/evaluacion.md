@@ -1,13 +1,8 @@
 # Sistema de evaluación ajustado
 
-La evaluación conserva tres parciales, seis laboratorios y un proyecto final. Los
-tres parciales se separan por tres semanas; el proyecto conserva la fecha final
-institucional indicada en [`cronograma.md`](cronograma.md). Los laboratorios se
-realizan después de enseñar y practicar sus prerrequisitos.
+La evaluación conserva tres parciales, seis laboratorios (cinco pendientes: 2–6) y un proyecto final, sin cambiar pesos. El registro histórico del parcial 1 y laboratorio 1 se conserva; prevalece el acta institucional.
 
-Los hitos mayores son: parcial 1 el 17 de septiembre, parcial 2 el 8 de octubre,
-parcial 3 el 29 de octubre y entrega final del proyecto el 12 de noviembre. La
-entrega final se conserva aunque el periodo de reanudación se haya reducido.
+**Parcial 2: 21 de octubre, sin clase. Parcial 3: 12 de noviembre, sin clase.** La entrega de proyecto se reprograma al lunes 16 de noviembre y las exposiciones se realizan del 17 al 19. Véase el [cronograma](cronograma.md).
 
 | Componente | Peso en el curso |
 |---|---:|
@@ -24,12 +19,7 @@ Si el sistema institucional exige cuatro cortes de 25 %, los componentes se
 registran en el corte administrativo correspondiente sin cambiar estos pesos. La
 fecha de registro de una nota no amplía el temario de un parcial.
 
-La actualización del 30 de septiembre mueve contenidos, no fechas de parciales:
-el parcial 2 excluye pytest, empaquetado e instalación y error numérico nuevos
-del 6–7 oct.; el parcial 3 excluye agrupación/uniones del 27, publicación pública
-y extensiones. Véanse los cortes explícitos del [cronograma](cronograma.md).
-Las aperturas/entregas de laboratorios se separan y el laboratorio 3 pasa a
-integración por puntos medios e instalación local. No se cambian ponderaciones.
+El ajuste del 2 de octubre se basa en el avance real reportado y los códigos de `2026-2/`. Se reservan inicios acompañados de laboratorios. Construir wheel y publicar en PyPI pasan a extensión; instalar localmente se practica antes de exigirlo en el lab. 3.
 
 ## Parciales escritos y fecha de corte
 
@@ -37,9 +27,7 @@ Los parciales se realizan en papel, sin dispositivos conectados. El docente pued
 suministrar una hoja breve de referencia con firmas o fragmentos de
 documentación; el objetivo no es memorizar APIs.
 
-La regla de alcance es obligatoria: cada parcial cubre únicamente lo enseñado
-hasta el jueves de la semana anterior, siete días antes. Lo visto después del
-corte publicado queda excluido. Las clases de recuperación no amplían el examen.
+Solo se evalúa lo efectivamente practicado dentro del corte publicado: **13 oct. para el parcial 2** (antes de NumPy) y **5 nov. para el parcial 3**. No se aplica una regla automática de siete días ni una separación fija de tres semanas. Las extensiones y recuperaciones no amplían el examen. El [cronograma](cronograma.md) enumera inclusiones y exclusiones.
 
 Estructura recomendada:
 
@@ -71,3 +59,6 @@ Si la normativa institucional lo permite, para aprobar la asignatura el promedio
 ponderado de parciales y sustentación individual debe ser al menos 3,0 sobre 5,0.
 Este requisito debe anunciarse desde la reanudación y ser aprobado por la
 instancia académica correspondiente.
+
+
+El taller individual del 7 oct. es formativo, se realiza y entrega en 120 minutos y no modifica los pesos ni el número de laboratorios. Permite apuntes y ejemplos, sin IA generativa. Su evidencia son respuestas numeradas y fragmentos de código en GitHub: nueve ejercicios independientes de análisis, contraejemplos, corrección e integración de los contenidos ya trabajados, incluida recursividad y puntos medios. No distribuye el tiempo entre ejercicios. No exige informe, video ni una aplicación completa.
