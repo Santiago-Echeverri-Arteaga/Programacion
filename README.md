@@ -39,6 +39,10 @@ Ajuste del **2 de octubre de 2026**, basado en los códigos de clase de `2026-2/
 
 El **jueves 8 oct. inicia en clase el laboratorio 2**. Quedan cinco laboratorios (2–6), todos con código e informe en GitHub. [Calendario y entregables](laboratorios/README.md). Parcial 2: **21 oct.**; parcial 3: **12 nov.**, sin clase esos días. Proyecto: **16 nov.**; exposiciones: **17–19 nov.** El [cronograma](programa/cronograma.md) fija cortes y fechas.
 
+## De las matemáticas al código
+
+[Siete guías de algoritmos matemáticos](guias/algoritmos_matematicos/README.md) muestran cómo traducir reglas dadas a funciones, ciclos y validaciones: raíces, derivadas, integrales, evolución y recurrencias. Se basan en ejemplos de Métodos Numéricos, con explicaciones para quienes aún no han cursado esa materia. Son material complementario.
+
 ## Preparación del entorno
 
 Python 3.12 es la versión de referencia del curso. Se requieren además Git y una

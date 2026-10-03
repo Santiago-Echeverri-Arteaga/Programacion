@@ -19,3 +19,7 @@ práctica, errores previsibles y evidencia de salida.
 La numeración representa módulos, no necesariamente una sola sesión. Las guías 03–05 recorren un proyecto continuo de Python, pruebas e instalación.
 Los demás ejemplos del banco se seleccionan según el cronograma vigente.
 
+
+## Algoritmos matemáticos como ejercicios de programación
+
+[De una regla matemática a un programa](algoritmos_matematicos/README.md): siete guías basadas en ejemplos del repositorio de Métodos Numéricos. Explican propósito, regla proporcionada, estado, pseudocódigo, lectura del original y comprobaciones pequeñas. Material complementario; no agrega requisitos al taller ni a las evaluaciones.

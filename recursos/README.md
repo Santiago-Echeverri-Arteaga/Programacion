@@ -25,3 +25,7 @@
 
 Los enlaces a las presentaciones institucionales existentes se incorporarán aquí
 después de revisar permisos, vigencia y correspondencia con el nuevo cronograma.
+
+## Puente entre matemáticas y programación
+
+[Guías de algoritmos matemáticos](../guias/algoritmos_matematicos/README.md), con trazas, pseudocódigo y enlaces a una selección de programas atribuidos a Alex Gezerlis en el repositorio docente de Métodos Numéricos. La procedencia y la versión consultada están en el índice.
