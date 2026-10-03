@@ -2,6 +2,26 @@
 
 Código de referencia: [ivp_one.py](https://github.com/Santiago-Echeverri-Arteaga/Metodos_Numericos_Uniquindio/blob/a5c583075e984c3cc248afe5585200ca7cbfb5b9/examples/book_original/ivp_one.py). Autor del original: Alex Gezerlis, *Numerical Methods in Physics with Python*, segunda edición, 2023. La explicación y los ejemplos pequeños son material didáctico elaborado para Programación.
 
+## Implementación documentada
+
+Archivo: [euler.py](euler.py).
+
+```python
+euler(f, a, b, n, y_inicial)
+```
+
+Devuelve una lista de n pares (t,y). Realiza exactamente n−1 evaluaciones de pendiente, conserva la condición inicial y valida resultados finitos. La demostración usa y′=−y, y(0)=2 con variables normalizadas. Los tipos y el contrato completo están en la firma y el docstring.
+
+Ejecuta desde la raíz del repositorio:
+
+```bash
+python guias/algoritmos_matematicos/euler.py
+```
+
+La demostración guarda la imagen sin abrir ventanas. Opciones: `--mostrar`, `--sin-grafica` y `--salida ruta`.
+
+![Resultado de la demostración](figuras/06_euler.png)
+
 ## Para qué sirve
 
 A veces no conocemos una magnitud en cualquier instante, pero sí cómo cambia según su estado. Si f(t,y) da ese ritmo, una regla sencilla para avanzar h es:

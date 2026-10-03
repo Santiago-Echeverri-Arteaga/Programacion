@@ -2,6 +2,22 @@
 
 Código de referencia: [recforw.py](https://github.com/Santiago-Echeverri-Arteaga/Metodos_Numericos_Uniquindio/blob/a5c583075e984c3cc248afe5585200ca7cbfb5b9/examples/book_original/recforw.py). Autor del original: Alex Gezerlis, *Numerical Methods in Physics with Python*, segunda edición, 2023. La explicación y los ejemplos pequeños son material didáctico elaborado para Programación.
 
+## Implementación documentada
+
+Archivo: [recurrencia.py](recurrencia.py).
+
+```python
+integrales_recurrentes(cantidad)
+```
+
+Devuelve una lista de pares (índice, aproximación). Separa la función de la impresión. La tabla marca fallos de positividad y descenso, sin corregir ni ocultar los valores inestables. Superar esas comprobaciones no demuestra exactitud. Los tipos y el contrato completo están en la firma y el docstring.
+
+Ejecuta desde la raíz del repositorio:
+
+```bash
+python guias/algoritmos_matematicos/recurrencia.py
+```
+
 ## Qué se intenta calcular
 
 El programa genera aproximaciones de una familia de integrales:

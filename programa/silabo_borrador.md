@@ -161,7 +161,7 @@ Se adopta el sistema descrito en [`evaluacion.md`](evaluacion.md):
   modificación explicada (8 %), y reproducibilidad, Git y declaración de IA (5 %).
 
 Los parciales se realizan en papel. Las hojas de
-referencia suministradas por el docente reducen la dependencia de memorización de
+referencia incluidas en el material de clase reducen la dependencia de memorización de
 APIs y permiten evaluar trazado, diagnóstico, diseño, pruebas e interpretación.
 Cada parcial incluye como máximo lo visto el jueves de la semana anterior y
 excluye los temas del martes y miércoles de la semana del examen, como se detalla

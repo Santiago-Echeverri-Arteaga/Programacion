@@ -35,7 +35,7 @@ Git.
 
 ## Secuencia actualizada de biblioteca y laboratorios
 
-Ajuste del **2 de octubre de 2026**, basado en los códigos de clase de `2026-2/` y el reporte docente. El 6 oct. se trabajan pruebas; el **miércoles 7 hay un [taller individual de dos horas](guias/taller_07_octubre_integracion/README.md)** con nueve ejercicios por tema, de lectura/corrección de código y de integración de lo ya visto. Error numérico se traslada al 13 oct.; wheel/PyPI quedan opcionales. Ver [guías 03–05](guias/README.md) y [diagnóstico del ajuste](programa/ajuste_octubre_2026.md).
+Ajuste del **2 de octubre de 2026**, basado en los códigos de clase de `2026-2/` y el registro de avance. El 6 oct. se trabajan pruebas; el **miércoles 7 hay un [taller individual de dos horas](guias/taller_07_octubre_integracion/README.md)** con nueve ejercicios por tema, de lectura/corrección de código y de integración de lo ya visto. Error numérico se traslada al 13 oct.; wheel/PyPI quedan opcionales. Ver [guías 03–05](guias/README.md) y [diagnóstico del ajuste](programa/ajuste_octubre_2026.md).
 
 El **jueves 8 oct. inicia en clase el laboratorio 2**. Quedan cinco laboratorios (2–6), todos con código e informe en GitHub. [Calendario y entregables](laboratorios/README.md). Parcial 2: **21 oct.**; parcial 3: **12 nov.**, sin clase esos días. Proyecto: **16 nov.**; exposiciones: **17–19 nov.** El [cronograma](programa/cronograma.md) fija cortes y fechas.
 

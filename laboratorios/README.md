@@ -7,7 +7,7 @@ cada equipo debe decidir cómo organizar su solución y justificarla.
 
 ## Calendario vigente
 
-Quedan cinco laboratorios (2–6). El lab. 1 conserva su registro histórico y no se reabre. Los inicios acompañados ocupan clase; el resto se termina de forma autónoma. Fechas de 2026; hora de recepción anunciada por el docente.
+Quedan cinco laboratorios (2–6). El lab. 1 conserva su registro histórico y no se reabre. Los inicios acompañados ocupan clase; el resto se termina de forma autónoma. Fechas de 2026; hora de recepción anunciada en clase.
 
 | Lab. | Inicio | Entrega | Prerrequisitos | Dedicación estimada por estudiante |
 |---|---|---|---|---|
@@ -53,7 +53,7 @@ una estructura predeterminada: el documento debe permitir comprender la pregunta
 el procedimiento, las decisiones, las comprobaciones, los resultados y las
 limitaciones sin depender de una explicación oral.
 
-Se entrega la URL del repositorio y el identificador del commit evaluable. El README enlaza el informe (Markdown o PDF), explica instalación y ejecución, y permite localizar datos, resultados, pruebas y video. Un repositorio privado es válido si el docente tiene acceso. No basta un archivo ZIP, una captura o un enlace al video. No subir entornos virtuales, cachés ni credenciales. Verificar que los resultados solicitados no quedaron excluidos por `.gitignore`.
+Se entrega la URL del repositorio y el identificador del commit evaluable. El README enlaza el informe (Markdown o PDF), explica instalación y ejecución, y permite localizar datos, resultados, pruebas y video. Un repositorio privado es válido si permite el acceso para su revisión. No basta un archivo ZIP, una captura o un enlace al video. No subir entornos virtuales, cachés ni credenciales. Verificar que los resultados solicitados no quedaron excluidos por `.gitignore`.
 
 Además se entrega un enlace a un video de **3 a 5 minutos en YouTube**, público o
 no listado. Deben participar las dos personas del equipo mediante voz o

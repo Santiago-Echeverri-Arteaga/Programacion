@@ -2,19 +2,19 @@
 
 ## Evidencia revisada
 
-Se actualizó el repositorio por fast-forward a `8ed5859` y se comparó la planeación del 30 de septiembre con la carpeta local `2026-2/` y el reporte docente. La carpeta es evidencia de trabajo en clase, no una biblioteca de referencia validada; se conserva sin corregir sus originales.
+Se actualizó el repositorio por fast-forward a `8ed5859` y se comparó la planeación del 30 de septiembre con la carpeta local `2026-2/` y el registro de avance. La carpeta es evidencia de trabajo en clase, no una biblioteca de referencia validada; se conserva sin corregir sus originales.
 
 | Evidencia | Qué permite continuar | Qué conviene comprobar |
 |---|---|---|
 | `funciones_contrato.py` | Funciones, listas, copia, `zip`, `*args` | Valida el intervalo después de dividir: usar el caso cero para discutir orden de validación. Un comentario sobre causalidad no justifica restringir x₀ a 50 m. |
-| Reporte docente de cierre de colecciones y args/kwargs | Reanudar sin repetir todo Python básico | Una función corta que distinga argumentos posicionales y nombrados; no se exige usarlos artificialmente en laboratorios. |
+| Registro de avance de cierre de colecciones y args/kwargs | Reanudar sin repetir todo Python básico | Una función corta que distinga argumentos posicionales y nombrados; no se exige usarlos artificialmente en laboratorios. |
 | `importar_datos.py` | Path, ruta desde `__file__`, `with`, CSV, conversiones y errores de fila | El docstring dice tiempo_m pero el encabezado usa tiempo_s; comprobar unidades, archivo vacío, tiempo repetido y valores no finitos antes del análisis. |
 | `biblioteca/Libreria/cinematica/codigo.py` | Módulos, contratos y `integrar_cuadrado` por puntos medios | `primos(1)` y n no entero son casos de discusión; separar `print` y cálculo. No asumir pruebas automatizadas dominadas. |
 | `ejemplo.py` e inicializadores | `sys.path`, `__file__`, importaciones relativas y reexportación | Contrastar con instalación local; explicar `import *` antes de sustituirlo por nombres explícitos. |
 | `recursividad.py`, `condicionales.py` y scripts iniciales | Casos base, flujo y entrada/salida | Recursión no agrega requisitos de laboratorio; entradas negativas son casos de revisión. En `edad.py`, reemplazar `eval(input(...))` por conversión explícita en una copia didáctica; `script.sh` requiere revisar activación del entorno. |
 | Guías 03–05 y proyecto de biblioteca del repositorio | Continuidad de archivos → pruebas → error numérico | El ejemplo terminado no acredita que se haya trabajado completo. |
 
-El 24 sep. estaba planeado para archivos, pero el docente reporta cierre de colecciones y funciones. La semana 29 sep.–1 oct. se registra por avance conjunto: lectura e importaciones, no pytest ni empaquetado acreditados.
+El 24 sep. estaba planeado para archivos, pero se completó el cierre de colecciones y funciones. La semana 29 sep.–1 oct. se registra por avance conjunto: lectura e importaciones, no pytest ni empaquetado acreditados.
 
 ## Por qué este orden
 
@@ -24,7 +24,7 @@ Los cinco pendientes son labs. 2–6, con progresión: archivo validado → algo
 
 Se mantienen resultados del curso: escribir, depurar y explicar Python; resolver una pregunta física; contrastar resultados; procesar datos; comunicar con Git y reproducibilidad. Los temas avanzados siguen disponibles sin convertir su lectura autónoma en requisito de aprobación.
 
-El 21 oct. y el 12 nov. se reservan para exámenes. La nueva entrega de proyecto del 16 nov. es una decisión de este rediseño, no una fecha institucional suministrada por el docente. Las exposiciones conservan el 17–19. Pesos y registro histórico del lab. 1 no cambian.
+El 21 oct. y el 12 nov. se reservan para exámenes. La nueva entrega de proyecto del 16 nov. es una decisión de este rediseño, no una fecha institucional previamente establecida. Las exposiciones conservan el 17–19. Pesos y registro histórico del lab. 1 no cambian.
 
 
 ## Revisión de cobertura del taller del 7 de octubre
@@ -37,7 +37,7 @@ La versión de ejercicios básicos no representaba suficientemente el avance: om
 | `funciones_contrato.py` y reporte de colecciones | Ej. 2: listas, tuplas, diccionarios, copia, alias y estado compartido |
 | `primos` en `codigo.py` | Ej. 3: rango, módulo, búsqueda, `break`, `for…else` y casos límite |
 | `recursividad.py` | Ej. 4: Euclides, factorial, caso base, progreso y retorno de llamadas |
-| `funciones_contrato.py` y reporte docente sobre kwargs | Ej. 5: `*args`, `**kwargs`, desempaquetado, `zip`, contratos y validación |
+| `funciones_contrato.py` y registro de avance sobre kwargs | Ej. 5: `*args`, `**kwargs`, desempaquetado, `zip`, contratos y validación |
 | `ejemplo.py` y los dos `__init__.py` | Ej. 6: paquetes, importaciones relativas, reexportación, `sys.path`, `__file__`, `__name__` y `Path` |
 | `importar_datos.py` | Ej. 7: `with`, encabezado, cadenas, conversión, enumeración, excepciones específicas y datos omitidos |
 | `integrar_cuadrado` en `codigo.py` | Ej. 8: descomposición, centro del intervalo, acumulación y contraste manual |

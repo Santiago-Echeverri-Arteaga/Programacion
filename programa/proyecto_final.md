@@ -24,7 +24,7 @@ una nota individual de sustentación y debe poder explicar el sistema completo.
 La semana de sustentaciones no se usa para completar el producto. Después del 16
 de noviembre solo se admite la modificación breve solicitada durante la defensa.
 
-El traslado de entrega al 16 nov. forma parte de este rediseño para evitar coincidencia con el parcial 3 del 12 nov.; no agrega clase. El docente anuncia hora y turnos. El alcance obligatorio usa herramientas practicadas: no exige wheel/PyPI, SQL, Docker, POO propia ni SciPy.
+El traslado de entrega al 16 nov. forma parte de este rediseño para evitar coincidencia con el parcial 3 del 12 nov.; no agrega clase. La hora y los turnos se anunciarán en clase. El alcance obligatorio usa herramientas practicadas: no exige wheel/PyPI, SQL, Docker, POO propia ni SciPy.
 
 ## Modalidades
 
@@ -90,7 +90,7 @@ Todo proyecto debe incluir:
 
 ## Autenticación
 
-Durante la sustentación el docente puede solicitar:
+Durante la sustentación se puede solicitar:
 
 - explicar una función o consulta elegida al azar;
 - predecir el efecto de cambiar una entrada;

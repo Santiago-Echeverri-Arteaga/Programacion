@@ -9,7 +9,7 @@
 - Nivel de IA permitido:
 - Archivos asociados:
 
-## Preparación del docente
+## Preparación de la clase
 
 - Verificar:
 - Preparar:

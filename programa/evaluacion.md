@@ -23,7 +23,7 @@ El ajuste del 2 de octubre se basa en el avance real reportado y los códigos de
 
 ## Parciales escritos y fecha de corte
 
-Los parciales se realizan en papel, sin dispositivos conectados. El docente puede
+Los parciales se realizan en papel, sin dispositivos conectados. Se puede
 suministrar una hoja breve de referencia con firmas o fragmentos de
 documentación; el objetivo no es memorizar APIs.
 

@@ -52,7 +52,7 @@ git push -u origin main
 
 No se requieren ramas adicionales, `merge`, conflictos, `rebase`, `reset` ni
 reescritura de historial. `clone` y `pull` se introducen después, cuando exista un
-repositorio remoto preparado por el docente.
+repositorio remoto preparado para la clase.
 
 ## Criterios de commits
 

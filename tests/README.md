@@ -15,3 +15,5 @@ de `clases/` son material didáctico y se ejecutan desde su clase correspondient
 
 Las pruebas verifican comportamientos concretos; aprobarlas no demuestra por sí
 solo corrección física, calidad de análisis o cumplimiento de una guía.
+
+Los ejemplos de `guias/algoritmos_matematicos/` se comprueban con `python -m pytest tests/test_algoritmos_matematicos.py -q`: referencias analíticas, casos límite, agotamiento, errores de dominio e importación sin efectos secundarios. Las demostraciones también funcionan sin Matplotlib usando `--sin-grafica` donde corresponda.

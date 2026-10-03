@@ -2,6 +2,22 @@
 
 Código de referencia: [fixedpoint.py](https://github.com/Santiago-Echeverri-Arteaga/Metodos_Numericos_Uniquindio/blob/a5c583075e984c3cc248afe5585200ca7cbfb5b9/examples/book_original/fixedpoint.py). Autor del original: Alex Gezerlis, *Numerical Methods in Physics with Python*, segunda edición, 2023. La explicación y los ejemplos pequeños son material didáctico elaborado para Programación.
 
+## Implementación documentada
+
+Archivo: [punto_fijo.py](punto_fijo.py).
+
+```python
+punto_fijo(g, inicial, tolerancia=1e-8, max_iter=100)
+```
+
+Devuelve resultado e historial. La versión ejecutable refuerza el pseudocódigo: exige cambio y residuo de punto fijo menores o iguales a la tolerancia. Evalúa g también en el nuevo punto; por eso requiere una función sin efectos secundarios. Los tipos y el contrato completo están en la firma y el docstring.
+
+Ejecuta desde la raíz del repositorio:
+
+```bash
+python guias/algoritmos_matematicos/punto_fijo.py
+```
+
 ## Qué problema resuelve
 
 Un punto fijo es un número que no cambia al aplicar una función: x=g(x). Algunas ecuaciones pueden escribirse así. Por ejemplo, `g(x)=(x+2)/2` tiene como punto fijo 2.

@@ -2,6 +2,26 @@
 
 Código de referencia: [finitediff.py](https://github.com/Santiago-Echeverri-Arteaga/Metodos_Numericos_Uniquindio/blob/a5c583075e984c3cc248afe5585200ca7cbfb5b9/examples/book_original/finitediff.py). Autor del original: Alex Gezerlis, *Numerical Methods in Physics with Python*, segunda edición, 2023. La explicación y los ejemplos pequeños son material didáctico elaborado para Programación.
 
+## Implementación documentada
+
+Archivo: [derivadas.py](derivadas.py).
+
+```python
+derivada(f, x, h, metodo="centrada")
+```
+
+Devuelve un float. También admite metodo="adelantada". Rechaza h no positivo, valores no finitos y pasos que no permiten distinguir los puntos en float. La demostración compara la función del original con su derivada analítica. Los tipos y el contrato completo están en la firma y el docstring.
+
+Ejecuta desde la raíz del repositorio:
+
+```bash
+python guias/algoritmos_matematicos/derivadas.py
+```
+
+La demostración guarda la imagen sin abrir ventanas. Opciones: `--mostrar`, `--sin-grafica` y `--salida ruta`.
+
+![Resultado de la demostración](figuras/04_derivadas.png)
+
 ## Para qué sirve
 
 La derivada describe el ritmo de cambio de una función. Si x(t) es una posición, su derivada describe velocidad. Cuando podemos evaluar una función pero no usamos su derivada simbólica, se pueden combinar evaluaciones cercanas.

@@ -12,7 +12,7 @@ dependencias; instalar el proyecto con `pip` y utilizarlo fuera de su carpeta.
 
 ## Preparación para poder probar antes de explicar el empaquetado
 
-En la copia de trabajo de la guía 03, con el entorno activo, usar la configuración suministrada por el docente: `python -m pip install pytest` y `python -m pip install -e ./biblioteca`. Es preparación guiada, no construcción autónoma de metadatos. Así `from Libreria import velocidad` funciona durante el bloque de pruebas; el bloque de instalación explica después lo que se hizo. No ejecutar la suite antes de preparar este entorno.
+En la copia de trabajo de la guía 03, con el entorno activo, usar la configuración incluida en el material de clase: `python -m pip install pytest` y `python -m pip install -e ./biblioteca`. Es preparación guiada, no construcción autónoma de metadatos. Así `from Libreria import velocidad` funciona durante el bloque de pruebas; el bloque de instalación explica después lo que se hizo. No ejecutar la suite antes de preparar este entorno.
 
 ## Secuencia
 
@@ -111,7 +111,7 @@ python -m pytest -k intervalo -q
 ```
 
 La configuración local está en `practica_biblioteca/pytest.ini`. Desde la raíz
-del repositorio docente, `pytest.ini` selecciona otra suite; no confundirlas.
+del repositorio del curso, `pytest.ini` selecciona otra suite; no confundirlas.
 
 ## Cierre
 

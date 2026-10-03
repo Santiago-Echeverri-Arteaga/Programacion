@@ -87,7 +87,7 @@ python ../Codigos/15_sql_postgresql/conexion_postgresql.py
 
 ### Base remota
 
-El docente suministra una cuenta temporal y de solo lectura. La conexión debe
+Se proporciona una cuenta temporal y de solo lectura. La conexión debe
 exigir TLS:
 
 ```text

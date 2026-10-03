@@ -10,7 +10,7 @@ comprobación individual de autoría y comprensión.
 1. Entrega del identificador de versión congelada.
 2. Ejecución desde entorno limpio y datos identificados.
 3. Pregunta física, método, validación y resultado principal.
-4. Cambio pequeño solicitado por el docente.
+4. Cambio pequeño solicitado durante la sustentación.
 5. Preguntas individuales sobre fragmentos y decisiones.
 
 ## Criterio de continuidad

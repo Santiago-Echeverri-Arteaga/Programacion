@@ -2,6 +2,26 @@
 
 Código de referencia: [bisection.py](https://github.com/Santiago-Echeverri-Arteaga/Metodos_Numericos_Uniquindio/blob/a5c583075e984c3cc248afe5585200ca7cbfb5b9/examples/book_original/bisection.py). Autor del original: Alex Gezerlis, *Numerical Methods in Physics with Python*, segunda edición, 2023. La explicación y los ejemplos pequeños son material didáctico elaborado para Programación.
 
+## Implementación documentada
+
+Archivo: [biseccion.py](biseccion.py).
+
+```python
+biseccion(f, a, b, tolerancia=1e-8, max_iter=100)
+```
+
+Devuelve resultado e historial. Valida signos, datos finitos y raíces exactas; se detiene por ancho absoluto. Si la precisión de float impide reducir más sin satisfacer la parada, devuelve None. Los tipos y el contrato completo están en la firma y el docstring.
+
+Ejecuta desde la raíz del repositorio:
+
+```bash
+python guias/algoritmos_matematicos/biseccion.py
+```
+
+La demostración guarda la imagen sin abrir ventanas. Opciones: `--mostrar`, `--sin-grafica` y `--salida ruta`.
+
+![Resultado de la demostración](figuras/01_biseccion.png)
+
 ## Qué problema resuelve
 
 Encontrar una raíz significa hallar r tal que f(r)=0. Para calcular √2 puedes buscar un cero de `f(x)=x**2-2`. f(1) es negativo y f(2) positivo: la solución positiva está entre esos números.

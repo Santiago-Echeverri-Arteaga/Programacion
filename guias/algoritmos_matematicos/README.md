@@ -16,7 +16,43 @@ Son material complementario de Programación. No sustituyen el taller del 7 de o
 | [6. Euler](06_euler.md) · `ivp_one.py`, función `euler` | Construir una evolución desde su ritmo de cambio | Actualizar y guardar una trayectoria |
 | [7. Recurrencia](07_recurrencia.md) · `recforw.py` | Obtener integrales reutilizando la anterior | Transportar un resultado entre iteraciones |
 
-Integración y Euler explican el papel de NumPy en el original y ofrecen pseudocódigo con ciclos y listas. Se pueden estudiar antes de aprender arreglos; ejecutar los originales sí requiere sus dependencias. En `newtoncotes.py` se explican las tres reglas; en `ivp_one.py` solo se desarrolla Euler y se identifica RK4 como otra regla para estudio posterior.
+Las implementaciones locales usan ciclos y listas de Python; no requieren NumPy. Matplotlib se usa únicamente para las figuras. Las guías también explican el papel de NumPy en los originales, que mantienen sus propias dependencias. En `newtoncotes.py` se explican las tres reglas; en `ivp_one.py` solo se desarrolla Euler y se identifica RK4 como otra regla para estudio posterior.
+
+## Código junto a las guías
+
+| Guía | Implementación local | Salida al ejecutar |
+|---|---|---|
+| [Bisección](01_biseccion.md) | [biseccion.py](biseccion.py) | Tabla de iteraciones y gráfica del intervalo |
+| [Punto fijo](02_punto_fijo.md) | [punto_fijo.py](punto_fijo.py) | Tablas de convergencia y agotamiento |
+| [Secante](03_secante.md) | [secante.py](secante.py) | Aproximaciones, cambios y residuos |
+| [Derivadas](04_derivadas.md) | [derivadas.py](derivadas.py) | Comparación de reglas y gráfica del error |
+| [Integración](05_integracion.md) | [integracion.py](integracion.py) | Tres reglas y representación de trapecios |
+| [Euler](06_euler.md) | [euler.py](euler.py) | Trayectoria y comparación gráfica con referencia |
+| [Recurrencia](07_recurrencia.md) | [recurrencia.py](recurrencia.py) | Valores y diagnóstico de pérdida de propiedades |
+
+Desde la raíz del repositorio, por ejemplo:
+
+```bash
+python guias/algoritmos_matematicos/biseccion.py
+python guias/algoritmos_matematicos/punto_fijo.py
+python guias/algoritmos_matematicos/secante.py
+python guias/algoritmos_matematicos/derivadas.py
+python guias/algoritmos_matematicos/integracion.py
+python guias/algoritmos_matematicos/euler.py
+python guias/algoritmos_matematicos/recurrencia.py
+```
+
+Para las cuatro demostraciones gráficas instala Matplotlib en tu entorno con `python -m pip install matplotlib`. Por defecto guardan PNG en `figuras/` junto a estas guías, sin abrir ventanas. Admiten `--mostrar` para abrir la figura, `--salida ruta` para cambiar su carpeta o `--sin-grafica` para ejecutar solo las tablas sin Matplotlib. Punto fijo, secante y recurrencia solo necesitan la biblioteca estándar y muestran tablas.
+
+Las figuras de ejemplo están incluidas en las guías. Se regeneran ejecutando sus programas. Los algoritmos no imprimen ni abren ventanas al importarlos: `main()` se ocupa de la demostración. [_apoyo.py](_apoyo.py) concentra validación, tablas y guardado de imágenes. Si copias un ejemplo a otra carpeta, conserva este archivo a su lado.
+
+### Cómo leer tipos y contratos
+
+`float` representa un real de precisión finita; los parámetros reales aceptan también enteros, pero no booleanos. `int` se usa para conteos. `Callable[[float], float]` describe una función que recibe y devuelve un real. `list[tuple[float, float]]` representa una lista de pares, como una trayectoria.
+
+Las anotaciones no validan por sí solas: cada función comprueba las precondiciones indicadas en su docstring. Se documentan entradas, salida, significado de las unidades, errores y efectos secundarios. `ValueError` indica una entrada o evaluación inválida; `None` en los buscadores indica que se agotó el límite sin satisfacer su criterio. El historial sigue disponible para analizar lo ocurrido.
+
+Bisección, punto fijo y secante devuelven `(resultado, historial)`. Cada fila del historial contiene `(iteración, aproximación, medida, residuo)`: en bisección la medida es el ancho anterior a reducir; en los otros dos es el cambio absoluto. El residuo es `abs(f(x))` para raíces y `abs(g(x)-x)` para punto fijo. No equivale al error respecto a una solución exacta.
 
 ## Del enunciado al algoritmo
 
@@ -59,8 +95,8 @@ No necesitas estudiar toda la teoría del error para observar diferencias, pero 
 
 ## Procedencia
 
-Se revisaron los archivos del [repositorio indicado por el docente](https://github.com/Santiago-Echeverri-Arteaga/Metodos_Numericos_Uniquindio/blob/a5c583075e984c3cc248afe5585200ca7cbfb5b9/examples/book_original/README.md), en el commit `a5c583075e984c3cc248afe5585200ca7cbfb5b9`. Su índice atribuye los programas a Alex Gezerlis, *Numerical Methods in Physics with Python*, segunda edición (Cambridge University Press, 2023).
+Se revisaron los archivos del [repositorio de Métodos Numéricos](https://github.com/Santiago-Echeverri-Arteaga/Metodos_Numericos_Uniquindio/blob/a5c583075e984c3cc248afe5585200ca7cbfb5b9/examples/book_original/README.md), en el commit `a5c583075e984c3cc248afe5585200ca7cbfb5b9`. Su índice atribuye los programas a Alex Gezerlis, *Numerical Methods in Physics with Python*, segunda edición (Cambridge University Press, 2023).
 
-Los enlaces fijan esa versión para que la explicación corresponda al código consultado. No se copian aquí programas completos ni se modifican los originales. Reglas, trazas y pseudocódigos se presentan como material explicativo propio con atribución de la referencia.
+Los enlaces fijan esa versión para que la explicación corresponda al código consultado. Junto a cada guía se incluye una implementación didáctica revisada, con atribución del programa de referencia. Las funciones matemáticas originales siguen enlazadas en su versión consultada; los archivos locales aplican las validaciones y cambios de contrato descritos en cada guía.
 
 Los controles numéricos se contrastaron con las funciones originales usando problemas pequeños. Esto comprueba los ejemplos, no demuestra convergencia general ni que el original valide cualquier entrada.

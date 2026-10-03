@@ -27,7 +27,7 @@ Elijan su laboratorio 3 o 4 ya entregado. Registren el commit original y conserv
 
 ## Resultados y entrega en GitHub
 
-Deben **subir el código y el informe a GitHub**, incluyendo la versión corregida, prueba nueva, datos necesarios, dependencias e instrucciones. Entregar URL y commits original/final; verificar acceso del docente.
+Deben **subir el código y el informe a GitHub**, incluyendo la versión corregida, prueba nueva, datos necesarios, dependencias e instrucciones. Entregar URL y commits original/final; verificar que el acceso permita la revisión.
 
 El informe breve (aproximadamente 1–2 páginas o Markdown equivalente) incluye: resultado auditado, protocolo de ejecución limpia, incidencias, comprobación independiente con valor esperado, defecto detectado, comparación antes/después y una limitación. Enlazar la tabla o figura reproducida y un video de 3–5 min que muestre ejecución, prueba y explicación de ambos integrantes. No repetir el informe completo del laboratorio original.
 

@@ -22,4 +22,4 @@ Los demás ejemplos del banco se seleccionan según el cronograma vigente.
 
 ## Algoritmos matemáticos como ejercicios de programación
 
-[De una regla matemática a un programa](algoritmos_matematicos/README.md): siete guías basadas en ejemplos del repositorio de Métodos Numéricos. Explican propósito, regla proporcionada, estado, pseudocódigo, lectura del original y comprobaciones pequeñas. Material complementario; no agrega requisitos al taller ni a las evaluaciones.
+[De una regla matemática a un programa](algoritmos_matematicos/README.md): siete guías con implementaciones Python documentadas, tablas y gráficas, basadas en ejemplos del repositorio de Métodos Numéricos. Explican propósito, regla proporcionada, estado, pseudocódigo, lectura del original y comprobaciones pequeñas. Material complementario; no agrega requisitos al taller ni a las evaluaciones.

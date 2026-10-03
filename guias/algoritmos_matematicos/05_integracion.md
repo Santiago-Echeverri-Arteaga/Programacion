@@ -2,6 +2,26 @@
 
 Código de referencia: [newtoncotes.py](https://github.com/Santiago-Echeverri-Arteaga/Metodos_Numericos_Uniquindio/blob/a5c583075e984c3cc248afe5585200ca7cbfb5b9/examples/book_original/newtoncotes.py). Autor del original: Alex Gezerlis, *Numerical Methods in Physics with Python*, segunda edición, 2023. La explicación y los ejemplos pequeños son material didáctico elaborado para Programación.
 
+## Implementación documentada
+
+Archivo: [integracion.py](integracion.py).
+
+```python
+integrar(f, a, b, n, metodo="trapecios")
+```
+
+Devuelve un float; n cuenta puntos. Admite rectangulos, trapecios y simpson, con validación de paridad para Simpson. Usa funciones escalares, ciclos y acumulación, sin NumPy. Los tipos y el contrato completo están en la firma y el docstring.
+
+Ejecuta desde la raíz del repositorio:
+
+```bash
+python guias/algoritmos_matematicos/integracion.py
+```
+
+La demostración guarda la imagen sin abrir ventanas. Opciones: `--mostrar`, `--sin-grafica` y `--salida ruta`.
+
+![Resultado de la demostración](figuras/05_integracion.png)
+
 ## Qué problema resuelve
 
 Una integral acumula contribuciones: área con signo, desplazamiento a partir de velocidad o energía a partir de potencia. Se aproxima evaluando una función en posiciones elegidas, multiplicando por pesos y sumando.

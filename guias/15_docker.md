@@ -69,7 +69,7 @@ Cada instrucción debe responder una pregunta:
 
 ## Plan de contingencia
 
-Si la sala no puede descargar imágenes, el docente usa imágenes precargadas y una
+Si la sala no puede descargar imágenes, se usan imágenes precargadas y una
 captura de los pasos de construcción. Los estudiantes aún deben interpretar el
 Dockerfile, la red y el volumen. La clase no debe convertirse en dos horas de
 diagnóstico de instalaciones.

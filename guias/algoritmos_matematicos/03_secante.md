@@ -2,6 +2,22 @@
 
 Código de referencia: [secant.py](https://github.com/Santiago-Echeverri-Arteaga/Metodos_Numericos_Uniquindio/blob/a5c583075e984c3cc248afe5585200ca7cbfb5b9/examples/book_original/secant.py). Autor del original: Alex Gezerlis, *Numerical Methods in Physics with Python*, segunda edición, 2023. La explicación y los ejemplos pequeños son material didáctico elaborado para Programación.
 
+## Implementación documentada
+
+Archivo: [secante.py](secante.py).
+
+```python
+secante(f, anterior, actual, tolerancia=1e-8, max_iter=100)
+```
+
+Devuelve resultado e historial. Reconoce raíces cero y rechaza el denominador nulo. Refuerza la parada del pseudocódigo: exige cambio y residuo pequeños, o una raíz exacta. La f del ejemplo se define localmente, sin importar biseccion.py. Los tipos y el contrato completo están en la firma y el docstring.
+
+Ejecuta desde la raíz del repositorio:
+
+```bash
+python guias/algoritmos_matematicos/secante.py
+```
+
 ## Qué problema resuelve
 
 Se busca una raíz de f(x)=0. La secante usa dos evaluaciones para formar conceptualmente una recta y proponer dónde corta el eje horizontal. Con f(x)=x²−2 se vuelve a buscar √2.

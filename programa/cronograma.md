@@ -4,25 +4,25 @@ Curso de Programación científica para Física. Encuentros martes, miércoles y
 
 ## Punto de partida y decisiones
 
-- El docente informa que el encuentro previsto para archivos del jueves anterior se dedicó a cerrar colecciones y funciones con `*args` y `**kwargs`; se registra como 24 de septiembre, fecha inferida del calendario, sin certificar asistencia.
+- El registro de avance indica que el encuentro previsto para archivos del jueves anterior se dedicó a cerrar colecciones y funciones con `*args` y `**kwargs`; se registra como 24 de septiembre, fecha inferida del calendario, sin certificar asistencia.
 - Los códigos de `2026-2/` muestran funciones, módulos/subpaquetes, puntos medios y lectura CSV con `pathlib`, `with` y excepciones. El avance de la semana 29 sep.–1 oct. se considera conjunto: los archivos no acreditan el día exacto ni el dominio individual. Véase [diagnóstico](ajuste_octubre_2026.md).
 - Sesión 2: 6 oct., contratos y pruebas. El 7 oct. se realiza un [taller individual autogestionado de 120 minutos](../guias/taller_07_octubre_integracion/README.md) con nueve ejercicios independientes de análisis y corrección: ciclos, colecciones, recursividad, argumentos, paquetes, archivos, puntos medios, entorno y Git. Usa contenidos ya trabajados hasta el 1 oct., sin exigir las novedades del martes ni construir una aplicación completa. La sesión 3 de error numérico se traslada al 13 oct. (75 min), junto con instalación local (25 min), pregunta del proyecto (10 min) y cierre (10 min). Construir wheel y publicar en PyPI son extensiones, no requisitos evaluables.
 - Quedan **cinco laboratorios: 2–6**. Se conserva el registro del lab. 1 y los pesos; no se presupone que los labs. 2 y 3 se hayan abierto en sus antiguas fechas.
 - El jueves **8 de octubre** se dedica a iniciar el lab. 2. También habrá acompañamiento para los siguientes; una apertura no exige entrega el mismo día.
 - **21 de octubre: parcial 2, sin clase. 12 de noviembre: parcial 3, sin clase. Exposiciones: 17–19 de noviembre.**
-- Se propone entrega del proyecto el **lunes 16 de noviembre**, sin sesión adicional, para separar producto y parcial. Requisitos congelados el 5. Hora de recepción y turnos individuales se anuncian por el docente.
+- Se propone entrega del proyecto el **lunes 16 de noviembre**, sin sesión adicional, para separar producto y parcial. Requisitos congelados el 5. La hora de recepción y los turnos individuales se anunciarán en clase.
 - SQL/PostgreSQL, Docker, POO propia y SciPy permanecen como materiales opcionales. Se priorizan fundamentos, cómputo científico, tratamiento de datos, validación y comunicación; no se agregan herramientas obligatorias al final.
 
 ## Calendario
 
-Las semanas 1–3 son registro de planeación, no certificación de ejecución. Las correcciones de septiembre se basan en el reporte docente.
+Las semanas 1–3 son registro de planeación, no certificación de ejecución. Las correcciones de septiembre se basan en el registro de avance.
 
 | Semana | Martes | Miércoles | Jueves |
 |---|---|---|---|
 | 1 | **1 sep.** — Acta; inicio de sistema operativo | **2 sep.** — Sistema operativo, procesos y WSL2 | **3 sep.** — Terminal, rutas y ayuda |
 | 2 | **8 sep.** — Bash: tuberías, scripts y permisos | **9 sep.** — Git y GitHub | **10 sep.** — Python: intérprete y entornos; entrega histórica lab. 1 |
 | 3 | **15 sep.** — Tipos, operadores y E/S | **16 sep.** — Funciones y contratos | **17 sep.** — Parcial 1; registro de planeación original |
-| 4 | **22 sep.** — Booleanos y condicionales | **23 sep.** — Ciclos, acumulación y colecciones | **24 sep.** — Cierre de colecciones y funciones con `*args` y `**kwargs` (reporte docente) |
+| 4 | **22 sep.** — Booleanos y condicionales | **23 sep.** — Ciclos, acumulación y colecciones | **24 sep.** — Cierre de colecciones y funciones con `*args` y `**kwargs` (registro de avance) |
 | 5 | **29 sep.** — Biblioteca propia: módulos, subpaquetes e importaciones | **30 sep.** — Continuación del ejemplo de biblioteca; pruebas reprogramadas al 6 oct. | **1 oct.** — Sesión 1: archivos, validación, excepciones y sys.path; práctica de la guía 03 |
 | 6 | **6 oct.** — Sesión 2: contratos, casos límite, pytest e instalación editable | **7 oct.** — Taller individual: ejercicios por tema, lectura/corrección de código e integración (120 min) | **8 oct.** — Taller de inicio del laboratorio 2: lectura y análisis con Python |
 | 7 | **13 oct.** — Sesión 3: error y convergencia; instalación local y pregunta del proyecto | **14 oct.** — NumPy: arreglos, formas, tipos, indexación y vistas | **15 oct.** — NumPy: ejes, vectorización y azar; entrega lab. 2 y apertura lab. 3 |
