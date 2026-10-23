@@ -1,6 +1,6 @@
 # Laboratorio 4 — Análisis de enfriamiento y auditoría reproducible con Pandas
 
-Unifica los anteriores laboratorios 5 (datos imperfectos) y 6 (auditoría). La auditoría se aplica al mismo análisis de Pandas: no hay que rehacer otro laboratorio ni elaborar un segundo informe.
+Analicen datos de enfriamiento con Pandas, documenten las decisiones de limpieza y comparen dos zonas. Verifiquen la trazabilidad de las transformaciones y la reproducibilidad del análisis mediante una auditoría.
 
 | Campo | Especificación |
 |---|---|
@@ -9,7 +9,7 @@ Unifica los anteriores laboratorios 5 (datos imperfectos) y 6 (auditoría). La a
 | Dedicación por estudiante | 6–7 horas totales, incluidos 45 minutos acompañados |
 | Trabajo | Máximo dos estudiantes; evidencia individual escrita |
 | Herramientas | Pandas, NumPy, Matplotlib y pytest |
-| Evaluación | Sin sustentación oral ni video; rúbrica escrita de los laboratorios integrados |
+| Evaluación | Sin sustentación oral ni video; rúbrica de evaluación |
 
 ## Pregunta y fundamento
 
@@ -46,9 +46,9 @@ Usen [enfriamiento_sintetico_sucio.csv](../../datos/enfriamiento_sintetico_sucio
 3. En una copia temporal introduzcan **un** defecto (conversión incorrecta, clave duplicada o pérdida de una fila). Guarden la salida que demuestra que una comprobación falla y expliquen por qué. Restáurenlo y registren que la suite final pasa. No dejen defectos intencionales activos en la entrega.
 4. Comparen el resultado auditado antes y después de las correcciones. Cuantifiquen el cambio, o documenten igualdad si no cambió. Registren commits inicial/final, comandos, versiones, incidencias y limitaciones.
 
-## Entrega única y preguntas del informe
+## Entrega y preguntas del informe
 
-Entreguen URL de GitHub y commit final. Incluyan datos crudos con procedencia, código, dependencias, pruebas, tablas derivadas, registro de incidencias/exclusiones, figura y **un solo informe** Markdown o PDF con una sección de auditoría. El README debe permitir reconstruir todo desde cero, sin rutas personales ni pasos manuales ocultos. Los resultados evaluables deben estar versionados y ser visibles aunque una regla general de `.gitignore` ignore datos generados.
+Entreguen URL de GitHub y commit final. Incluyan datos crudos con procedencia, código, dependencias, pruebas, tablas derivadas, registro de incidencias/exclusiones, figura y un informe Markdown o PDF con una sección de auditoría. El README debe permitir reconstruir todo desde cero, sin rutas personales ni pasos manuales ocultos. Los resultados evaluables deben estar versionados y ser visibles aunque una regla general de `.gitignore` ignore datos generados.
 
 Respondan en el informe:
 
@@ -64,4 +64,4 @@ Cada integrante añade una nota propia sobre una decisión, su sesgo posible y l
 
 ## Tiempo y evaluación
 
-Auditoría inicial 45 min; limpieza trazable 75; agrupación/unión/cambio de forma 75; comparación y figura 45; pruebas y ejecución limpia 60; informe y revisión 60–120. Total 6–7 h, incluido el acompañamiento. Distribuyan el trabajo respetando el parcial del 12 y el proyecto del 16; no se añaden entregas intermedias obligatorias. La fecha del 19 corresponde a entrega, no a sustentación del laboratorio. Se aplica la [rúbrica integrada](../README.md#rúbrica-de-los-laboratorios-integrados-3-y-4).
+Auditoría inicial 45 min; limpieza trazable 75; agrupación/unión/cambio de forma 75; comparación y figura 45; pruebas y ejecución limpia 60; informe y revisión 60–120. Total 6–7 h, incluido el acompañamiento. Planifiquen el trabajo teniendo en cuenta el parcial del 12 de noviembre, la entrega del proyecto del 16 y la entrega de este laboratorio el 19. La entrega se evalúa según la [rúbrica de los laboratorios 3 y 4](../README.md#rúbrica-de-los-laboratorios-integrados-3-y-4).
