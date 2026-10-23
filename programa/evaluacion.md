@@ -19,7 +19,7 @@ Si el sistema institucional exige cuatro cortes de 25 %, los componentes se
 registran en el corte administrativo correspondiente sin cambiar estos pesos. La
 fecha de registro de una nota no amplía el temario de un parcial.
 
-El ajuste del 2 de octubre se basa en el avance real reportado y los códigos de `2026-2/`. Se reservan inicios acompañados de laboratorios. Construir wheel y publicar en PyPI pasan a extensión; instalar localmente se practica antes de exigirlo en el lab. 3.
+El ajuste del 2 de octubre se basa en el avance real reportado y los códigos de `2026-2/`. Se reservan inicios acompañados de laboratorios. Construir wheel y publicar en PyPI pasan a extensión; la instalación local se conserva en las guías. El laboratorio 3 replanteado exige ejecución en entorno limpio, pero no empaquetar ni instalar una biblioteca propia.
 
 ## Parciales escritos y fecha de corte
 

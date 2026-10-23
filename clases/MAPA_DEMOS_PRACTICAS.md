@@ -10,7 +10,7 @@ Las fechas y materiales por encuentro están en el [mapa vigente](README.md); lo
 | 13 oct. | Error y convergencia 75; instalación local 25; pregunta del proyecto 10; cierre 10 |
 | 14–15 oct. | Conceptos NumPy 30; demo 30; práctica 45; cierre y comprobación 15, cada día |
 | 20 oct. | Figura OO 60; unidades/variabilidad 30; práctica 20; cierre 10 |
-| 22 oct. | Inicio lab. 3 integrado: referencia y contratos 30; formas/ejes 20; simulación 40; verificación 20; commit 10 |
+| 22 oct. | Inicio lab. 3 integrado: modelo y conceptos matriciales 45; formas y reconstrucción 45; orientación sobre identidades y verificación 30 |
 | 27–28 oct. | Pandas: conceptos 30; demo 30; práctica 45; cierre 15, cada día |
 | 29 oct. | Limpieza 35; agrupación y cambio de forma 40; práctica Pandas 35; cierre 10 |
 | 3 nov. | Integración y auditoría 45; práctica de validación 45; consultas lab. 3 y cierre 30 |

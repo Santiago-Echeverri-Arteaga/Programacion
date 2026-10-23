@@ -1,6 +1,6 @@
-# Laboratorio 3 — Cálculo y simulación verificables con NumPy
+# Laboratorio 3 — Reconstrucción de señales y sensibilidad con NumPy
 
-Unifica los anteriores laboratorios 3 (biblioteca verificable) y 4 (caminata aleatoria). Es una sola entrega con un informe y una suite de pruebas; no son dos laboratorios completos concatenados.
+Replanteamiento de la entrega que integra los antiguos laboratorios 3 y 4. Conserva programación modular, verificación y simulación, y refuerza el álgebra lineal de NumPy vista superficialmente. Sustituye los experimentos de puntos medios y caminatas; no añade un tercer experimento.
 
 | Campo | Especificación |
 |---|---|
@@ -8,71 +8,105 @@ Unifica los anteriores laboratorios 3 (biblioteca verificable) y 4 (caminata ale
 | Entrega | Jueves 5 de noviembre de 2026 |
 | Dedicación por estudiante | 6–7 horas totales, incluidas 2 horas acompañadas |
 | Trabajo | Máximo dos estudiantes; evidencia individual escrita |
-| Herramientas | Python, NumPy, Matplotlib, pytest y pip |
-| Evaluación | Sin sustentación oral ni video; rúbrica escrita de los laboratorios integrados |
+| Herramientas | Python, NumPy, Matplotlib y pytest |
+| Evaluación | Sin sustentación oral ni video; rúbrica de laboratorios integrados |
 
-## Pregunta y fundamento
+## Problema único
 
-¿Cómo distinguir un error de programación, un error de discretización y una fluctuación estadística? Construyan una pequeña biblioteca con dos experimentos que permitan responderlo.
+Dos sensores mezclan las componentes de una señal física. En unidades normalizadas, el modelo es
 
-Para puntos medios, se divide [a,b] en n intervalos iguales y se aproxima la integral sumando el valor en cada centro multiplicado por el ancho. En una caminata unidimensional, cada paso independiente vale −1 o +1 con igual probabilidad. Para caminantes que parten de cero, en el paso k se cumple E[x]=0 y E[x²]=k. Son predicciones de conjunto, no igualdades exactas de una muestra finita. Usen cantidades adimensionales en ambos experimentos.
+```text
+b = A(c) x + ε,       A(c) = [[1, c],
+                             [c, 1]]
+```
 
-## Alcance y objetivos
+Aquí x contiene las dos componentes reales, b las dos lecturas y ε el ruido de medición. El parámetro c describe cuánto influye la otra componente en cada sensor.
 
-- Integrar funciones, módulos, contratos, pruebas e instalación local con arreglos, ejes, vectorización y azar reproducible.
-- Usar el NumPy trabajado en clase: formas, indexación, operaciones por ejes y máscaras; justificar vistas/copias cuando intervengan. No es necesario utilizar toda la API vista para demostrar dominio.
-- Comparar resultados con referencias independientes y comunicar error y variabilidad.
-- Se permiten clases propias si ayudan a organizar el código; no son obligatorias. No se exige álgebra lineal avanzada (QR, SVD o autovalores), SciPy, Pandas, EDO, publicación en PyPI ni wheel.
+**Pregunta:** ¿por qué dos sistemas que se resuelven con un residuo pequeño pueden reconstruir las señales con errores muy diferentes?
 
-## Reto 1. Una referencia determinista breve
+Comparen únicamente **c=0.2 y c=0.99**, usando las mismas señales y el mismo ruido. El caso c=1 se reserva para discutir y comprobar singularidad, sin simularlo como una tercera configuración.
 
-1. Elijan **un** polinomio de grado 2 o 3, un intervalo con a < b y una integral exacta distinta de cero. Obtengan y documenten la referencia analítica y el cálculo manual con n=1.
-2. Implementen puntos medios con Python y con NumPy. Pueden adaptar su función propia desarrollada en clase, identificando su procedencia. La segunda versión debe evaluar y sumar arreglos sin ciclos sobre subintervalos.
-3. Definan contratos: n entero positivo (rechacen booleanos), límites numéricos finitos y a < b. Se admiten funciones específicas para el polinomio elegido; no se exige una interfaz genérica.
-4. Comparen ambas versiones para n=10, 20, 40 y 80: aproximación, referencia, error absoluto y relativo. Justifiquen una tolerancia para comparar implementaciones. Calculen las razones de error sucesivas; si el denominador es cero, reporten «no aplicable».
+## Material de partida y apoyo conceptual
 
-**Incluyan:** una tabla compacta, referencia independiente y explicación de la tendencia del error. **Eviten:** un segundo integrando, benchmarks extensos o atribuir todo desacuerdo al redondeo.
+Se proporciona el modelo anterior y las siguientes relaciones, no un programa ni resultados calculados:
 
-## Reto 2. Simulación de un conjunto de caminantes
+- Resolver A x = b significa encontrar x; multiplicación elemento a elemento y producto matricial son operaciones diferentes.
+- Un autovector cumple A v = λ v. Su dirección permite identificar una combinación de señales amplificada o atenuada por la medición.
+- QR expresa A = Q R, con Q ortogonal y R triangular superior.
+- SVD expresa A = U Σ Vᵀ. Los valores singulares describen factores de amplificación; para una matriz invertible, κ₂ = σmáx/σmín mide sensibilidad relativa en el peor caso.
+- El residuo de la reconstrucción es A x̂ − b; el error de reconstrucción es x̂ − x. En este experimento sintético conocen x y pueden calcular ambos.
+- Un valor grande de κ₂ indica posibilidad de amplificación del error relativo; no significa que cada perturbación alcance esa amplificación.
+- Para matrices reales simétricas pueden consultar `numpy.linalg.eigh`; QR y SVD se calculan con NumPy, sin implementar sus algoritmos.
 
-1. Definan los ejes y formas antes de programar. Simulen 200 pasos por caminante para N=100 y N=1000, con semillas 7 y 21: **cuatro configuraciones**.
-2. Usen `numpy.random.default_rng` y operaciones vectorizadas; no recorran caminante por caminante. Incluyan la posición inicial. Se permiten ciclos sobre las cuatro configuraciones.
-3. Obtengan por tiempo la posición media y el desplazamiento cuadrático medio. Construyan una tabla con N, semilla, media final, media cuadrática final y una medida de discrepancia respecto a E[x²]=k. Definan su fórmula y eviten divisiones por k=0.
-4. Exporten **una figura de dos paneles** con Matplotlib OO: unas pocas trayectorias de una configuración y las cuatro curvas de media cuadrática junto con la predicción. Indiquen ejes, leyendas y qué configuración se usa para las trayectorias.
-5. Interpreten el efecto de N y la semilla. Dos semillas permiten comparar realizaciones, pero no demostrar una ley estadística ni garantizar que cada resultado mejore al aumentar N.
+Consulten los apuntes y las referencias oficiales al final. El acompañamiento inicial dedica tiempo a las relaciones menos trabajadas. No se exigen demostraciones generales, algoritmos de factorización escritos a mano, mínimos cuadrados, regularización ni teoría de PCA.
 
-**Incluyan:** formas y tipos de arreglos, semillas y significado físico de las reducciones por eje. **Eviten:** caminatas en 2D, ajustes de difusión o condiciones aleatorias arbitrarias que hagan fallar las pruebas ocasionalmente.
+## Reto 1. Construcción y recuperación de las señales
 
-## Reto 3. Verificación y entrega reproducible
+1. Generen una malla de 21 × 21 combinaciones de componentes entre −1 y 1 mediante `meshgrid`. Organicen esas señales en un arreglo y documenten qué representa cada eje. Elijan y mantengan una convención de filas o columnas.
+2. Generen una única realización de ruido normal con `default_rng(7)`, media cero y desviación estándar 0.01. Debe haber un ruido por lectura y señal. Reutilicen exactamente ese arreglo para los dos valores de c.
+3. Calculen las lecturas mediante producto matricial y adición vectorizada. Eviten ciclos por señal; se permite un ciclo sobre las dos configuraciones. Expliquen las formas antes y después de cada operación principal.
+4. Recuperen las señales con `numpy.linalg.solve`, resolviendo varias columnas de términos independientes en una llamada según la convención elegida. No calculen explícitamente la inversa.
+5. Comprueben primero un caso pequeño sin ruido, elegido y calculado a mano por el equipo. Predigan qué configuración será más sensible antes de observar los resultados.
 
-Organicen módulos el cálculo, los experimentos y la presentación. El núcleo devuelve resultados sin imprimir ni generar figuras. Entreguen al menos **seis pruebas**:
+**Decisiones propias:** organización de funciones, representación de las señales, transposiciones necesarias, contratos y tolerancias. No se entrega una secuencia de llamadas lista para copiar.
 
-1. puntos medios contra el caso manual n=1;
-2. rechazo de entradas inválidas del integrador (parametrizar varios casos es válido);
-3. acuerdo Python/NumPy con tolerancia justificada;
-4. acumulación de una secuencia fija corta de pasos, calculada a mano, incluido el origen;
-5. formas y origen correctos, con diferencias sucesivas únicamente −1 o +1;
-6. repetibilidad con la misma semilla y configuración.
+## Reto 2. Diagnóstico matricial y estadístico del mismo experimento
 
-La comprobación manual no debe calcular el valor esperado llamando a la función que se evalúa. No prueben que la media aleatoria sea exactamente cero.
+1. Para cada una de las dos matrices, obtengan autovalores/autovectores, QR y SVD. Verifiquen numéricamente A v ≈ λ v, QᵀQ ≈ I, QR ≈ A y UΣVᵀ ≈ A. En NumPy la última salida de SVD es Vᵀ para matrices reales; no vuelvan a transponerla sin justificarlo.
+2. Calculen κ₂ a partir de los valores singulares. Expliquen qué dirección resulta más difícil de reconstruir y relacionen esa observación con un autovector de esta matriz simétrica. No generalicen la relación entre valores singulares y autovalores a cualquier matriz.
+3. Calculen el error de cada señal y el residuo. Obtengan media del error y desviación estándar **por componente**, y la norma euclidiana del error **por señal**. Identifiquen los ejes reducidos y usen broadcasting al centrar los errores para comprobar su desviación estándar con ddof=0.
+4. Usen una máscara y `np.where` para clasificar cada señal según si su error euclidiano supera 0.1. Reporten la proporción que supera el umbral y localicen el error máximo con `argmax`. El umbral es un criterio didáctico fijo, no una tolerancia instrumental universal.
+5. Exporten **una figura de dos paneles**: mapa del error de reconstrucción sobre la malla para cada c, con la misma escala de colores, ejes y unidades normalizadas. No agreguen otras simulaciones o figuras obligatorias.
 
-Configuren una distribución local mínima con `pyproject.toml`. Desde un entorno limpio instalen normalmente con `python -m pip install /ruta/al/proyecto`; importen desde una carpeta externa y registren la ruta del módulo. Reutilicen la configuración practicada en clase. No se exige subir el paquete a ningún servicio.
+Entreguen **dos tablas compactas**: una de diagnóstico matricial (autovalores, valores singulares, κ₂ y discrepancias de verificación) y otra de reconstrucción (estadísticas por componente, error máximo, proporción sobre el umbral y máximo residuo). No impriman todas las señales ni todas las matrices en el informe.
 
-## Entregables y preguntas del informe
+**Precauciones:** conserven intacta la señal de referencia al modificar arreglos; expliquen una decisión concreta de vista frente a copia. No dividan por la norma de la señal en el origen: este laboratorio compara errores absolutos. Un residuo pequeño frente a lecturas ruidosas no garantiza recuperar la señal real.
 
-Suban a GitHub código, dependencias, pruebas, las dos tablas, figura, informe único (Markdown o PDF) e instrucciones de ejecución. Entreguen URL y commit evaluable. Registren comandos y resultado de las pruebas e instalación; un notebook, si se usa, debe ejecutar de principio a fin sin estado oculto. No se proporciona un esqueleto de solución.
+## Reto 3. Verificación y ejecución reproducible
 
-El informe debe responder:
+Separen cálculo, experimento y presentación en funciones y módulos. Las clases propias son opcionales. Incluyan **cinco grupos de pruebas**, parametrizados cuando resulte útil:
 
-1. ¿Qué evidencia separa error de implementación y discretización en el primer experimento?
-2. ¿Qué eje reduce cada promedio y por qué la media de los cuadrados no es el cuadrado de la media?
-3. ¿Qué demuestra fijar una semilla y qué no demuestra?
-4. ¿Por qué un resultado aleatorio distinto de su esperanza no implica código incorrecto?
-5. ¿Qué prueba podría detectar un origen omitido o un eje equivocado? ¿Qué prueba no lo detectaría?
-6. ¿Cómo verificaron que el módulo se importó de la instalación y no de la carpeta fuente?
+1. Recuperación del caso manual sin ruido y verificación del producto matricial contra ese cálculo independiente.
+2. Contratos: rechazar formas incompatibles o valores no finitos; reconocer y comunicar el caso singular c=1. No traten c=0.99 como singular solo porque sea sensible.
+3. Identidades de autovectores, QR y SVD, con tolerancias justificadas. Comprueben relaciones, no signos concretos de vectores: distintas convenciones pueden ser válidas.
+4. Estadísticas, máscara y clasificación contra un arreglo pequeño de errores con resultados calculados a mano.
+5. Reproducibilidad del ruido y conservación del arreglo de señales originales después del procesamiento.
 
-Cada integrante añade una nota escrita propia: una predicción previa, una prueba explicada y un error encontrado o plausible. No hay defensa oral, video ni actividad individual adicional presencial. IA nivel 1; notas individuales nivel 0, según la [política](../../programa/politica_ia.md).
+No prueben que cada dato ruidoso sea más preciso en una configuración que en otra ni que su media sea exactamente cero. El valor esperado de una prueba independiente no debe obtenerse llamando al mismo cálculo que se evalúa.
 
-## Tiempo y evaluación
+Desde una copia y entorno limpios instalen las dependencias, ejecuten el análisis completo y las pruebas siguiendo solo el README. Registren comandos, versiones y resultados. **No se exige crear una distribución, pyproject.toml, wheel ni instalar una biblioteca propia.** Esa carga se reemplaza por el refuerzo matricial.
 
-Distribución orientativa: referencia y contratos 60 min; simulación y figura 120; pruebas e instalación 90; análisis, informe y revisión 90–150. Las dos horas acompañadas están incluidas, no se suman. Se aplica la [rúbrica de laboratorios integrados](../README.md#rúbrica-de-los-laboratorios-integrados-3-y-4). Una sola entrega sustituye las dos anteriores; no se exige trabajo retroactivo.
+## Entrega única y discusión
+
+Entreguen URL de GitHub y commit evaluable con código, dependencias, pruebas, dos tablas, una figura e informe Markdown o PDF. Incluyan parámetros y semilla para regenerar los datos sintéticos; no hace falta entregar un CSV grande. El README indica comandos y ubicación de resultados. Un notebook, si se utiliza, debe ejecutar desde cero.
+
+Respondan brevemente, apoyándose en sus resultados:
+
+1. ¿Qué diferencia hay entre `*` y `@` en este problema, y qué errores de formas podrían pasar inadvertidos?
+2. ¿Qué aportan autovalores, QR y SVD a la verificación o interpretación? ¿Por qué no basta con imprimir sus salidas?
+3. ¿Cómo relacionan la dirección difícil de reconstruir con κ₂ y los errores observados? ¿Por qué κ₂ no es una predicción exacta de cada error absoluto?
+4. ¿Por qué el residuo puede ser pequeño aunque la reconstrucción sea mala? ¿Qué cambia en c=1?
+5. ¿Qué eje se reduce en cada estadística, cómo usaron broadcasting y cómo protegieron el arreglo original?
+
+Cada integrante agrega una nota propia con una predicción, una prueba explicada y una decisión de implementación. Sin video, sustentación ni actividad presencial adicional. IA nivel 1; notas individuales nivel 0, según la [política](../../programa/politica_ia.md).
+
+## Carga y evaluación
+
+| Bloque | Tiempo orientativo |
+|---|---:|
+| Modelo, consulta conceptual y predicción | 45 min |
+| Malla, ruido y reconstrucción vectorizada | 75 min |
+| Diagnóstico matricial, estadísticas y figura | 90 min |
+| Pruebas y ejecución limpia | 75 min |
+| Informe y revisión | 75–135 min |
+| **Total, incluido acompañamiento** | **6–7 h** |
+
+Los primeros 120 minutos acompañados se destinan a modelo y conceptos (45), formas y reconstrucción (45) y orientación sobre identidades matriciales (30). Están incluidos en el total. La estimación supone usar las funciones de NumPy y limitarse a las dos configuraciones; no implementar factorizaciones.
+
+Se aplica la [rúbrica integrada](../README.md#rúbrica-de-los-laboratorios-integrados-3-y-4), sin cambiar fechas ni peso. Sustituir integración, caminatas y empaquetado permite reforzar temas sin acumular entregables. El laboratorio 4 de Pandas conserva su alcance.
+
+## Referencias de consulta
+
+- [Álgebra lineal en NumPy](https://numpy.org/doc/stable/reference/routines.linalg.html).
+- [Broadcasting](https://numpy.org/doc/stable/user/basics.broadcasting.html).
+- [Copias y vistas](https://numpy.org/doc/stable/user/basics.copies.html).

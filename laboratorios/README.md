@@ -13,7 +13,7 @@ Fechas de 2026; hora de recepción anunciada en clase.
 | [3](lab03_modelo_verificable/README.md) | Antiguos 3 + 4 | **22 oct.** | **5 nov.** | 6–7 h totales, incluidas 2 h acompañadas |
 | [4](lab04_pandas_auditoria/README.md) | Antiguos 5 + 6 | **5 nov.** | **19 nov.** | 6–7 h totales, incluidos 45 min acompañados |
 
-La dificultad se concentra en decisiones, validación e interpretación; no se suman todos los ejercicios de las guías anteriores. El lab. 3 usa un solo integrando, cuatro configuraciones de caminata y una suite común. El lab. 4 audita su propio análisis de Pandas. Ambos tienen un solo informe, sin video ni sustentación oral. No se exige QR, SVD, autovalores, PyPI, wheel, SQL ni Docker.
+La dificultad se concentra en decisiones, validación e interpretación; no se suman todos los ejercicios de las guías anteriores. El lab. 3 estudia un único sistema de dos sensores con dos configuraciones: refuerza sistemas lineales, autovalores, QR, SVD, vectorización y estadísticas. Sustituye puntos medios, caminatas y empaquetado para mantener 6–7 horas. El lab. 4 audita su propio análisis de Pandas. Ambos tienen un solo informe, sin video ni sustentación oral. QR, SVD y autovalores se aplican con NumPy a matrices 2 × 2, con apoyo conceptual, sin implementar los algoritmos. No se exige PyPI, wheel, SQL ni Docker.
 
 Para conservar el **21 % que figura en la evaluación del repositorio**, los pesos de las actividades fusionadas se suman: lab. 1 y lab. 2, 3,5 % cada uno; nuevos labs. 3 y 4, 7 % cada uno. Prevalece el acta institucional; este ajuste no modifica el peso total de laboratorios ni los demás componentes.
 

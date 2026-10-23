@@ -38,12 +38,12 @@ Las semanas 1–3 son registro de planeación, no certificación de ejecución. 
 |---|---|---|---|---|
 | [1](../laboratorios/lab01_estacion_reproducible/README.md) | 10 sep. | 10 sep. | Registro histórico | Sin cambios |
 | [2](../laboratorios/lab02_python_nativo/README.md) | 8 oct. | 15 oct. | Python y archivos | Según guía original |
-| [3](../laboratorios/lab03_modelo_verificable/README.md) | **22 oct.** | **5 nov.** | Puntos medios, NumPy, caminata, pruebas e instalación | 6–7 h totales, incluidas 2 h acompañadas |
+| [3](../laboratorios/lab03_modelo_verificable/README.md) | **22 oct.** | **5 nov.** | NumPy: reconstrucción de señales, álgebra lineal, estadísticas y pruebas | 6–7 h totales, incluidas 2 h acompañadas |
 | [4](../laboratorios/lab04_pandas_auditoria/README.md) | **5 nov.** | **19 nov.** | Pandas detallado y auditoría del mismo análisis | 6–7 h totales, incluidos 45 min acompañados |
 
 Una sola entrega por laboratorio: código, informe, resultados, pruebas y evidencia individual escrita en GitHub. Sin video ni sustentación oral para los nuevos 3 y 4. Las horas incluyen documentación y revisión. Pesos: 3,5 %, 3,5 %, 7 % y 7 %, conservando el 21 % de laboratorios publicado en el repositorio y sujeto al acta institucional. Las fechas anteriores de los labs. 3–6 dejan de aplicar.
 
-El alcance toma la aclaración docente: NumPy del material visto completo y clases ya trabajadas, con álgebra lineal avanzada solo superficial. No se exige esta última; Pandas incorpora selección, tipos, fechas, faltantes, agrupación, uniones validadas y cambio de forma. Si una operación no se practica, se proporciona acompañamiento o se reduce el alcance antes de exigirla.
+El alcance toma la aclaración docente: NumPy del material visto completo y clases ya trabajadas, con álgebra lineal avanzada solo superficial. El lab. 3 la refuerza mediante sistemas lineales, autovalores, QR y SVD sobre matrices 2 × 2, sustituyendo integración, caminatas y empaquetado sin aumentar la carga. Pandas incorpora selección, tipos, fechas, faltantes, agrupación, uniones validadas y cambio de forma. Si una operación no se practica, se proporciona acompañamiento o se reduce el alcance antes de exigirla.
 
 ## Cortes evaluables
 
