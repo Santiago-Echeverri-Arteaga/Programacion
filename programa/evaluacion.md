@@ -1,6 +1,6 @@
 # Sistema de evaluación ajustado
 
-La evaluación conserva tres parciales, seis laboratorios (cinco pendientes: 2–6) y un proyecto final, sin cambiar pesos. El registro histórico del parcial 1 y laboratorio 1 se conserva; prevalece el acta institucional.
+La evaluación conserva tres parciales, cuatro laboratorios (los nuevos 3 y 4 fusionan 3+4 y 5+6) y un proyecto final, sin cambiar pesos. El registro histórico del parcial 1 y laboratorio 1 se conserva; prevalece el acta institucional.
 
 **Parcial 2: 21 de octubre, sin clase. Parcial 3: 12 de noviembre, sin clase.** La entrega de proyecto se reprograma al lunes 16 de noviembre y las exposiciones se realizan del 17 al 19. Véase el [cronograma](cronograma.md).
 
@@ -9,7 +9,7 @@ La evaluación conserva tres parciales, seis laboratorios (cinco pendientes: 2�
 | Parcial escrito 1 | 18 % |
 | Parcial escrito 2 | 18 % |
 | Parcial escrito 3 | 18 % |
-| Seis laboratorios, 3,5 % cada uno | 21 % |
+| Laboratorios: 1 y 2, 3,5 % cada uno; nuevos 3 y 4, 7 % cada uno | 21 % |
 | Producto computacional del proyecto | 12 % |
 | Sustentación y modificación explicada | 8 % |
 | Reproducibilidad, Git y declaración de IA | 5 % |
@@ -41,12 +41,11 @@ aparecido literalmente en las guías.
 
 ## Laboratorios
 
-Los laboratorios pueden realizarse en parejas, con rotación de roles. Cada uno
-termina con una evidencia individual breve y sin IA. La tabla de prerrequisitos y
+Los laboratorios pueden realizarse en parejas, con rotación de roles. Los nuevos 3 y 4 incluyen evidencia individual escrita y sin IA, sin video ni sustentación oral. La tabla de prerrequisitos y
 fechas está en [`../laboratorios/README.md`](../laboratorios/README.md).
 
 La [rúbrica común de laboratorios](../laboratorios/README.md) es la referencia
-de 100 puntos, incluidos informe, video y evidencia individual.
+de 100 puntos. Para los nuevos 3 y 4 se aplica la rúbrica integrada, con informe y evidencia individual escrita; los 5 puntos anteriores de video pasan al informe. Las guías y rúbricas originales de 1 y 2 se conservan.
 
 ## Proyecto final y suficiencia individual
 

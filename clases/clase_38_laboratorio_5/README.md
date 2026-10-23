@@ -1,7 +1,7 @@
-# Apoyo al laboratorio 5
+# Apoyo al laboratorio 4 integrado
 
-Inicio: 29 oct.; entrega: 10 nov. de 2026. Dedicación por estudiante: 75 min acompañados + 3–4 h autónomas.
+Ventana: **5–19 de noviembre de 2026**. Dedicación estimada: 6–7 horas totales por estudiante, incluido acompañamiento.
 
-La [guía vigente](../../laboratorios/lab05_pandas/README.md) define problema, inicio acompañado, resultados, pruebas y rúbrica. Deben subir código e informe a GitHub e identificar el commit evaluable. Prerrequisitos: Pandas: lectura y limpieza (28 oct.).
+La [guía vigente](../../laboratorios/lab04_pandas_auditoria/README.md) define contenidos, resultados, pruebas y entrega única en GitHub. No exige video ni sustentación oral.
 
-Esta carpeta pertenece al banco original; sus ejemplos no amplían el alcance obligatorio. Prevalece el [cronograma](../../programa/cronograma.md).
+Esta carpeta conserva el identificador del banco original; no corresponde a otra actividad evaluable. Prevalece el [cronograma](../../programa/cronograma.md).

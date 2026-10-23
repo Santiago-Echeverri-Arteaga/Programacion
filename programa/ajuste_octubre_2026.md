@@ -1,5 +1,7 @@
 # Diagnóstico y fundamento del ajuste — 2 de octubre de 2026
 
+> Nota de vigencia: este diagnóstico conserva la planeación histórica del 2 de octubre. Las fechas y entregas de laboratorios fueron sustituidas el 22 de octubre: 3+4 → nuevo 3 (22 oct.–5 nov.); 5+6 → nuevo 4 (5–19 nov.). Consultar el [cronograma vigente](cronograma.md).
+
 ## Evidencia revisada
 
 Se actualizó el repositorio por fast-forward a `8ed5859` y se comparó la planeación del 30 de septiembre con la carpeta local `2026-2/` y el registro de avance. La carpeta es evidencia de trabajo en clase, no una biblioteca de referencia validada; se conserva sin corregir sus originales.

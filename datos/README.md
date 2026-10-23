@@ -14,3 +14,9 @@ uso y una descripción de las transformaciones realizadas.
 Los datos derivados por estudiantes deben guardarse en `datos/generados/`,
 directorio que no se versiona.
 
+
+## Metadatos del laboratorio 4 integrado
+
+`sensores_enfriamiento.csv` es una tabla didáctica creada para el curso, de libre uso en sus actividades: `sensor` es clave única y `zona` identifica la zona sintética asociada. Se une por `sensor` a `enfriamiento_sintetico_sucio.csv`. No representa calibraciones reales ni justifica descartar mediciones. Las etiquetas Zona A y Zona B solo identifican los dos grupos del ejemplo.
+
+En el laboratorio 4 los resultados evaluables sí deben guardarse en GitHub; usen una carpeta de resultados no ignorada. La regla general sobre `datos/generados/` no exime de entregar las tablas solicitadas.

@@ -1,7 +1,7 @@
-# Apoyo al laboratorio 6
+# Apoyo al laboratorio 4 integrado
 
-Inicio: 3 nov.; entrega: 11 nov. de 2026. Dedicación por estudiante: 45 min acompañados + 1,5–2 h autónomas.
+Ventana: **5–19 de noviembre de 2026**. Dedicación estimada: 6–7 horas totales por estudiante, incluido acompañamiento.
 
-La [guía vigente](../../laboratorios/lab06_integracion_cientifica/README.md) define problema, inicio acompañado, resultados, pruebas y rúbrica. Deben subir código e informe a GitHub e identificar el commit evaluable. Prerrequisitos: Validación y ejecución limpia; trabajo previo.
+La [guía vigente](../../laboratorios/lab04_pandas_auditoria/README.md) define contenidos, resultados, pruebas y entrega única en GitHub. No exige video ni sustentación oral.
 
-Esta carpeta pertenece al banco original; sus ejemplos no amplían el alcance obligatorio. Prevalece el [cronograma](../../programa/cronograma.md).
+Esta carpeta conserva el identificador del banco original; no corresponde a otra actividad evaluable. Prevalece el [cronograma](../../programa/cronograma.md).

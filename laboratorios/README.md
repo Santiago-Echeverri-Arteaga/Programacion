@@ -1,24 +1,40 @@
 # Laboratorios del curso
 
-Los seis laboratorios forman una secuencia acumulativa. Cada carpeta contiene un
-enunciado y, solo cuando hace falta, datos de entrada. No se suministran
-plantillas de informe, esqueletos de código ni archivos parcialmente resueltos:
-cada equipo debe decidir cómo organizar su solución y justificarla.
+El ajuste del **22 de octubre de 2026** reduce la secuencia a cuatro laboratorios. Los laboratorios 1 y 2 conservan sus guías y registro; los nuevos 3 y 4 sustituyen cuatro entregas anteriores. Cada equipo organiza su solución desde cero, sin plantillas resueltas.
 
 ## Calendario vigente
 
-Quedan cinco laboratorios (2–6). El lab. 1 conserva su registro histórico y no se reabre. Los inicios acompañados ocupan clase; el resto se termina de forma autónoma. Fechas de 2026; hora de recepción anunciada en clase.
+Fechas de 2026; hora de recepción anunciada en clase.
 
-| Lab. | Inicio | Entrega | Prerrequisitos | Dedicación estimada por estudiante |
+| Lab. | Origen | Inicio | Entrega | Dedicación por estudiante |
 |---|---|---|---|---|
-| [1](lab01_estacion_reproducible/README.md) | 10 sep. | 10 sep. | Linux, Bash y Git | histórico |
-| [2](lab02_python_nativo/README.md) | 8 oct. | 15 oct. | Python, funciones, archivos y validación | 2 h acompañadas + 3–4 h autónomas |
-| [3](lab03_modelo_verificable/README.md) | 15 oct. | 27 oct. | Puntos medios, pytest, módulos e instalación local (13 oct.) | 4–5 h autónomas |
-| [4](lab04_numpy_matplotlib/README.md) | 22 oct. | 3 nov. | NumPy, azar y Matplotlib (20 oct.) | 2 h acompañadas + 3–4 h autónomas |
-| [5](lab05_pandas/README.md) | 29 oct. | 10 nov. | Pandas: lectura y limpieza (28 oct.) | 75 min acompañados + 3–4 h autónomas |
-| [6](lab06_integracion_cientifica/README.md) | 3 nov. | 11 nov. | Validación y ejecución limpia; trabajo previo | 45 min acompañados + 1,5–2 h autónomas |
+| [1](lab01_estacion_reproducible/README.md) | Sin cambios | 10 sep. | 10 sep. | Histórico |
+| [2](lab02_python_nativo/README.md) | Sin cambios | 8 oct. | 15 oct. | Según guía original |
+| [3](lab03_modelo_verificable/README.md) | Antiguos 3 + 4 | **22 oct.** | **5 nov.** | 6–7 h totales, incluidas 2 h acompañadas |
+| [4](lab04_pandas_auditoria/README.md) | Antiguos 5 + 6 | **5 nov.** | **19 nov.** | 6–7 h totales, incluidos 45 min acompañados |
 
-Cada laboratorio vale 3,5 %. Los tiempos incluyen código, comprobaciones, informe y video; son estimaciones por estudiante. Si falta un prerrequisito, se reduce el alcance o se mueve la actividad. No se exige PyPI, wheel, SQL, Docker ni métodos de recuperaciones. El lab. 6 audita un laboratorio previo con evidencia nueva; no exige otro proyecto.
+La dificultad se concentra en decisiones, validación e interpretación; no se suman todos los ejercicios de las guías anteriores. El lab. 3 usa un solo integrando, cuatro configuraciones de caminata y una suite común. El lab. 4 audita su propio análisis de Pandas. Ambos tienen un solo informe, sin video ni sustentación oral. No se exige QR, SVD, autovalores, PyPI, wheel, SQL ni Docker.
+
+Para conservar el **21 % que figura en la evaluación del repositorio**, los pesos de las actividades fusionadas se suman: lab. 1 y lab. 2, 3,5 % cada uno; nuevos labs. 3 y 4, 7 % cada uno. Prevalece el acta institucional; este ajuste no modifica el peso total de laboratorios ni los demás componentes.
+
+## Rúbrica de los laboratorios integrados 3 y 4
+
+| Dimensión | Puntos |
+|---|---:|
+| Comprensión, fundamento y predicciones | 10 |
+| Código y cumplimiento técnico | 25 |
+| Resultados y evidencia | 15 |
+| Validación, pruebas y tratamiento del error | 20 |
+| Informe, decisiones y limitaciones | 15 |
+| Reproducibilidad y Git | 10 |
+| Evidencia individual escrita | 5 |
+| **Total** | **100** |
+
+Se entrega URL del repositorio y commit evaluable, código, informe Markdown o PDF, resultados y pruebas. El README explica cómo reproducirlo. Cada integrante aporta una nota escrita propia conforme a su guía; no se añade una comprobación oral o presencial. En repositorios privados, habilitar acceso de revisión. No subir entornos, cachés, credenciales ni datos personales innecesarios.
+
+## Reglas conservadas para los laboratorios 1 y 2
+
+**Las secciones siguientes conservan los requisitos originales de los laboratorios 1 y 2. No añaden video, sustentación ni otra evidencia presencial a los nuevos laboratorios 3 y 4.**
 
 ## Estructura común de las guías
 

@@ -1,7 +1,7 @@
-# Apoyo al laboratorio 4
+# Apoyo al laboratorio 3 integrado
 
-Inicio: 22 oct.; entrega: 3 nov. de 2026. Dedicación por estudiante: 2 h acompañadas + 3–4 h autónomas.
+Ventana: **22 de octubre–5 de noviembre de 2026**. Dedicación estimada: 6–7 horas totales por estudiante, incluido acompañamiento.
 
-La [guía vigente](../../laboratorios/lab04_numpy_matplotlib/README.md) define problema, inicio acompañado, resultados, pruebas y rúbrica. Deben subir código e informe a GitHub e identificar el commit evaluable. Prerrequisitos: NumPy, azar y Matplotlib (20 oct.).
+La [guía vigente](../../laboratorios/lab03_modelo_verificable/README.md) define contenidos, resultados, pruebas y entrega única en GitHub. No exige video ni sustentación oral.
 
-Esta carpeta pertenece al banco original; sus ejemplos no amplían el alcance obligatorio. Prevalece el [cronograma](../../programa/cronograma.md).
+Esta carpeta conserva el identificador del banco original; no corresponde a otra actividad evaluable. Prevalece el [cronograma](../../programa/cronograma.md).

@@ -139,12 +139,10 @@ Los notebooks se usan para exploración y comunicación; los componentes
 reutilizables se desarrollan en archivos Python y se prueban por separado. Git se
 usa durante todo el semestre, no únicamente como tema inicial.
 
-Se conservan seis laboratorios, con cinco pendientes (2–6), inicios acompañados y
-entregas posteriores. Código e informe deben subirse a GitHub en cada laboratorio.
+El ajuste del 22 de octubre establece cuatro laboratorios: 1 y 2 sin cambios, nuevo 3 (anteriores 3+4) y nuevo 4 (anteriores 5+6). Los dos integrados tienen una sola entrega y no requieren video ni sustentación. Código e informe deben subirse a GitHub en cada laboratorio.
 Cada uno exige solamente contenidos ya explicados y practicados. Las ocho
 recuperaciones complementarias se describen en el cronograma; no se asumen realizadas. Son espacios de apoyo y no amplían el temario evaluable. La última
-semana, del 17 al 19 de noviembre, se dedica completa a sustentaciones y no
-introduce contenidos ni entregables nuevos.
+semana, del 17 al 19 de noviembre, se dedica a sustentaciones del proyecto y a la entrega del laboratorio 4 el 19, anunciado desde el 22 de octubre; no introduce contenidos nuevos.
 
 El proyecto se desarrolla mediante propuesta, aprobación de alcance, demostración
 mínima, congelamiento de código y sustentación. Los proyectos pueden ser
@@ -156,7 +154,7 @@ individuales.
 Se adopta el sistema descrito en [`evaluacion.md`](evaluacion.md):
 
 - tres parciales escritos de 18 % cada uno;
-- seis laboratorios de 3,5 % cada uno;
+- cuatro laboratorios: 1 y 2 de 3,5 % cada uno, nuevos 3 y 4 de 7 % cada uno (21 % total);
 - proyecto final de 25 %, distribuido entre producto (12 %), sustentación y
   modificación explicada (8 %), y reproducibilidad, Git y declaración de IA (5 %).
 

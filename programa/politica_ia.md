@@ -23,7 +23,7 @@ individuales y sustentaciones.
 
 Se permiten notas, documentación oficial, buscadores y discusión delimitada, pero
 no generación automática de código o texto. Es el nivel predeterminado para los
-laboratorios 1 a 4.
+laboratorios 1 a 3. El nuevo laboratorio 4 integrado permite nivel 2, como crítica de trabajo propio después de la práctica correspondiente y con declaración; su evidencia individual sigue siendo nivel 0.
 
 ### Nivel 2 — IA como crítica declarada
 

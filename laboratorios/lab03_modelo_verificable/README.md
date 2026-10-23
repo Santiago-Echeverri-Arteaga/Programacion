@@ -1,93 +1,78 @@
-# Laboratorio 3 — Biblioteca de integración verificable e instalable
+# Laboratorio 3 — Cálculo y simulación verificables con NumPy
+
+Unifica los anteriores laboratorios 3 (biblioteca verificable) y 4 (caminata aleatoria). Es una sola entrega con un informe y una suite de pruebas; no son dos laboratorios completos concatenados.
 
 | Campo | Especificación |
 |---|---|
-| Inicio | Jueves 15 de octubre de 2026 |
-| Entrega | Martes 27 de octubre de 2026 |
-| Dedicación por estudiante | 4–5 horas autónomas; incluye informe y video |
-| Trabajo | Parejas con evidencia individual |
-| Herramientas | Python 3.12, biblioteca estándar, pytest y pip |
+| Inicio | Jueves 22 de octubre de 2026 |
+| Entrega | Jueves 5 de noviembre de 2026 |
+| Dedicación por estudiante | 6–7 horas totales, incluidas 2 horas acompañadas |
+| Trabajo | Máximo dos estudiantes; evidencia individual escrita |
+| Herramientas | Python, NumPy, Matplotlib, pytest y pip |
+| Evaluación | Sin sustentación oral ni video; rúbrica escrita de los laboratorios integrados |
 
-## Teoría breve
+## Pregunta y fundamento
 
-Una integral acumula contribuciones. En puntos medios se divide [a,b] en n
-subintervalos iguales, se evalúa la función en cada centro y se suma su valor
-por el ancho. El error de discretización se estudia comparando n, 2n y 4n con
-una referencia conocida. Un resultado distinto de la referencia no implica por
-sí solo un defecto del programa. Una biblioteca separa cálculo y presentación;
-una distribución permite instalarla en otro entorno.
+¿Cómo distinguir un error de programación, un error de discretización y una fluctuación estadística? Construyan una pequeña biblioteca con dos experimentos que permitan responderlo.
 
-## Objetivos
+Para puntos medios, se divide [a,b] en n intervalos iguales y se aproxima la integral sumando el valor en cada centro multiplicado por el ancho. En una caminata unidimensional, cada paso independiente vale −1 o +1 con igual probabilidad. Para caminantes que parten de cero, en el paso k se cumple E[x]=0 y E[x²]=k. Son predicciones de conjunto, no igualdades exactas de una muestra finita. Usen cantidades adimensionales en ambos experimentos.
 
-- implementar el algoritmo de puntos medios practicado en clase;
-- definir contratos y pruebas de resultados, límites y entradas inválidas;
-- medir error absoluto/relativo y costo cualitativo al refinar;
-- organizar una biblioteca propia y configurar pyproject.toml para instalación local;
-- demostrar instalación normal y uso desde un entorno limpio externo al proyecto.
+## Alcance y objetivos
 
-## Requerimientos y límites
+- Integrar funciones, módulos, contratos, pruebas e instalación local con arreglos, ejes, vectorización y azar reproducible.
+- Usar el NumPy trabajado en clase: formas, indexación, operaciones por ejes y máscaras; justificar vistas/copias cuando intervengan. No es necesario utilizar toda la API vista para demostrar dominio.
+- Comparar resultados con referencias independientes y comunicar error y variabilidad.
+- Se permiten clases propias si ayudan a organizar el código; no son obligatorias. No se exige álgebra lineal avanzada (QR, SVD o autovalores), SciPy, Pandas, EDO, publicación en PyPI ni wheel.
 
-- escribir solución y arquitectura propias, sin copiar el proyecto de apoyo;
-- usar funciones y módulos, sin NumPy, SciPy, Pandas ni clases propias;
-- seleccionar dos integrandos polinómicos sencillos con primitivas conocidas,
-  uno distinto de x²; declarar límites y referencia analítica de cada uno;
-- el algoritmo puede recibir una función como argumento solo si se explicó;
-  también son válidas dos funciones específicas sin esa abstracción;
-- preparar un nombre de distribución propio, README y versión;
-- instalar localmente; construir un wheel es opcional y no suma requisitos; no exigir cuenta, publicación, token ni licencia
-  pública como condición de aprobación;
-- no usar Euler-Cromer ni estimación de periodos: el
-  [péndulo anterior](extension_pendulo.md) es una extensión posterior.
+## Reto 1. Una referencia determinista breve
 
-## Procedimiento
+1. Elijan **un** polinomio de grado 2 o 3, un intervalo con a < b y una integral exacta distinta de cero. Obtengan y documenten la referencia analítica y el cálculo manual con n=1.
+2. Implementen puntos medios con Python y con NumPy. Pueden adaptar su función propia desarrollada en clase, identificando su procedencia. La segunda versión debe evaluar y sumar arreglos sin ciclos sobre subintervalos.
+3. Definan contratos: n entero positivo (rechacen booleanos), límites numéricos finitos y a < b. Se admiten funciones específicas para el polinomio elegido; no se exige una interfaz genérica.
+4. Comparen ambas versiones para n=10, 20, 40 y 80: aproximación, referencia, error absoluto y relativo. Justifiquen una tolerancia para comparar implementaciones. Calculen las razones de error sucesivas; si el denominador es cero, reporten «no aplicable».
 
-1. Escriban el algoritmo y calculen a mano un caso con un subintervalo.
-2. Definan contratos: número entero positivo de subintervalos, límites válidos
-   y significado de las entradas/salidas. Las anotaciones no son validación.
-3. Separen cálculo, experimento y presentación; no impriman desde el núcleo de cálculo.
-4. Estudien al menos cuatro valores crecientes de n para ambos integrandos.
-5. Calculen referencias, errores absolutos y relativos (cuando la referencia
-   no sea cero), razones de error y número de iteraciones esperado.
-6. Escriban al menos cinco pruebas pertinentes: caso manual, entrada inválida,
-   caso límite, otro intervalo y una propiedad esperada. Usen tolerancias razonadas.
-7. Configuren el proyecto instalable y prueben instalación editable durante desarrollo.
-8. Instalen normalmente el proyecto local con `python -m pip install /ruta/al/proyecto` en un entorno limpio. Desde otra carpeta ejecuten un cliente que lo importe y registren la ruta del módulo. No se exige construir ni entregar wheel.
-9. Registren instrucciones, versiones, pruebas, ruta del módulo importado y commit.
+**Incluyan:** una tabla compacta, referencia independiente y explicación de la tendencia del error. **Eviten:** un segundo integrando, benchmarks extensos o atribuir todo desacuerdo al redondeo.
 
-## Resultados puntuales
+## Reto 2. Simulación de un conjunto de caminantes
 
-1. tabla de ambos integrandos con n, aproximación, referencia y errores;
-2. explicación de costo y tendencia del error, sin atribuir todo a redondeo;
-3. resultado visible de la suite y un defecto que una prueba detectaría;
-4. código propio, pyproject.toml y README de la versión entregada;
-5. evidencia de instalación limpia y llamada desde un cliente externo;
-6. una limitación y un caso donde su implementación no debería utilizarse.
+1. Definan los ejes y formas antes de programar. Simulen 200 pasos por caminante para N=100 y N=1000, con semillas 7 y 21: **cuatro configuraciones**.
+2. Usen `numpy.random.default_rng` y operaciones vectorizadas; no recorran caminante por caminante. Incluyan la posición inicial. Se permiten ciclos sobre las cuatro configuraciones.
+3. Obtengan por tiempo la posición media y el desplazamiento cuadrático medio. Construyan una tabla con N, semilla, media final, media cuadrática final y una medida de discrepancia respecto a E[x²]=k. Definan su fórmula y eviten divisiones por k=0.
+4. Exporten **una figura de dos paneles** con Matplotlib OO: unas pocas trayectorias de una configuración y las cuatro curvas de media cuadrática junto con la predicción. Indiquen ejes, leyendas y qué configuración se usa para las trayectorias.
+5. Interpreten el efecto de N y la semilla. Dos semillas permiten comparar realizaciones, pero no demostrar una ley estadística ni garantizar que cada resultado mejore al aumentar N.
 
-## Explicación escrita, video y evidencia individual
+**Incluyan:** formas y tipos de arreglos, semillas y significado físico de las reducciones por eje. **Eviten:** caminatas en 2D, ajustes de difusión o condiciones aleatorias arbitrarias que hagan fallar las pruebas ocasionalmente.
 
-El informe justifica algoritmo, contratos, tolerancias, referencias y separación
-de responsabilidades. El video de 3–5 min muestra una prueba, una tabla de error
-y el uso de la biblioteca instalada; no publica nada. Cada estudiante traza un
-paso de puntos medios, explica una prueba y distingue `pip install` de `import`.
-La [rúbrica común](../README.md) conserva el peso del laboratorio.
+## Reto 3. Verificación y entrega reproducible
 
+Organicen módulos el cálculo, los experimentos y la presentación. El núcleo devuelve resultados sin imprimir ni generar figuras. Entreguen al menos **seis pruebas**:
 
-## Entrega en GitHub
+1. puntos medios contra el caso manual n=1;
+2. rechazo de entradas inválidas del integrador (parametrizar varios casos es válido);
+3. acuerdo Python/NumPy con tolerancia justificada;
+4. acumulación de una secuencia fija corta de pasos, calculada a mano, incluido el origen;
+5. formas y origen correctos, con diferencias sucesivas únicamente −1 o +1;
+6. repetibilidad con la misma semilla y configuración.
 
-Deben **subir el código y el informe a GitHub**. Entregar URL del repositorio y commit evaluable. El README debe enlazar el informe Markdown o PDF e indicar comandos, dependencias y versiones para reproducirlo. Incluir datos permitidos o su fuente, resultados solicitados, evidencia de comprobaciones y enlace al video de 3–5 minutos. El informe responde las preguntas de esta guía, interpreta resultados y reconoce limitaciones; no es una colección de capturas. Cada integrante identifica su contribución. Si el repositorio es privado, habilitar los permisos de revisión antes de entregar.
+La comprobación manual no debe calcular el valor esperado llamando a la función que se evalúa. No prueben que la media aleatoria sea exactamente cero.
 
-Se aplica la [rúbrica común](../README.md). No subir `.venv`, cachés ni credenciales. Comprobar que código, informe y resultados son visibles en GitHub, no solo en el computador.
+Configuren una distribución local mínima con `pyproject.toml`. Desde un entorno limpio instalen normalmente con `python -m pip install /ruta/al/proyecto`; importen desde una carpeta externa y registren la ruta del módulo. Reutilicen la configuración practicada en clase. No se exige subir el paquete a ningún servicio.
 
+## Entregables y preguntas del informe
 
-## Plan de trabajo y alcance
+Suban a GitHub código, dependencias, pruebas, las dos tablas, figura, informe único (Markdown o PDF) e instrucciones de ejecución. Entreguen URL y commit evaluable. Registren comandos y resultado de las pruebas e instalación; un notebook, si se usa, debe ejecutar de principio a fin sin estado oculto. No se proporciona un esqueleto de solución.
 
-Apertura al cierre del 15 oct.; entrega el 27 oct.: doce días para distribuir 4–5 horas. Contratos y algoritmo: 60 min; pruebas y tablas: 90; instalación: 30–60; informe y video: 60–90. No programar trabajo obligatorio el día previo ni el día del parcial 2. La instalación se practica y consolida el 13 oct.
+El informe debe responder:
 
-Usar cuatro refinamientos por integrando basta; no se exige interfaz gráfica, benchmark, publicación ni ecuaciones diferenciales. Si un error es cero, no dividir por él para obtener razones: registrarlo como no aplicable y explicarlo. IA nivel 1; evidencia individual nivel 0.
+1. ¿Qué evidencia separa error de implementación y discretización en el primer experimento?
+2. ¿Qué eje reduce cada promedio y por qué la media de los cuadrados no es el cuadrado de la media?
+3. ¿Qué demuestra fijar una semilla y qué no demuestra?
+4. ¿Por qué un resultado aleatorio distinto de su esperanza no implica código incorrecto?
+5. ¿Qué prueba podría detectar un origen omitido o un eje equivocado? ¿Qué prueba no lo detectaría?
+6. ¿Cómo verificaron que el módulo se importó de la instalación y no de la carpeta fuente?
 
-## Preguntas para el informe
+Cada integrante añade una nota escrita propia: una predicción previa, una prueba explicada y un error encontrado o plausible. No hay defensa oral, video ni actividad individual adicional presencial. IA nivel 1; notas individuales nivel 0, según la [política](../../programa/politica_ia.md).
 
-1. ¿Por qué el punto medio se evalúa dentro de cada subintervalo y no en un extremo?
-2. ¿Cómo cambian error y costo al duplicar n en cada integrando? ¿Qué no se puede concluir de cuatro valores?
-3. ¿Qué detecta una prueba que la tabla de convergencia podría ocultar?
-4. ¿Qué evidencia distingue una importación desde la fuente de una instalación normal?
+## Tiempo y evaluación
+
+Distribución orientativa: referencia y contratos 60 min; simulación y figura 120; pruebas e instalación 90; análisis, informe y revisión 90–150. Las dos horas acompañadas están incluidas, no se suman. Se aplica la [rúbrica de laboratorios integrados](../README.md#rúbrica-de-los-laboratorios-integrados-3-y-4). Una sola entrega sustituye las dos anteriores; no se exige trabajo retroactivo.

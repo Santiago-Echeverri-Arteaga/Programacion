@@ -37,7 +37,7 @@ Git.
 
 Ajuste del **2 de octubre de 2026**, basado en los códigos de clase de `2026-2/` y el registro de avance. El 6 oct. se trabajan pruebas; el **miércoles 7 hay un [taller individual de dos horas](guias/taller_07_octubre_integracion/README.md)** con nueve ejercicios por tema, de lectura/corrección de código y de integración de lo ya visto. Error numérico se traslada al 13 oct.; wheel/PyPI quedan opcionales. Ver [guías 03–05](guias/README.md) y [diagnóstico del ajuste](programa/ajuste_octubre_2026.md).
 
-El **jueves 8 oct. inicia en clase el laboratorio 2**. Quedan cinco laboratorios (2–6), todos con código e informe en GitHub. [Calendario y entregables](laboratorios/README.md). Parcial 2: **21 oct.**; parcial 3: **12 nov.**, sin clase esos días. Proyecto: **16 nov.**; exposiciones: **17–19 nov.** El [cronograma](programa/cronograma.md) fija cortes y fechas.
+Actualización del **22 de octubre**: el [laboratorio 3](laboratorios/lab03_modelo_verificable/README.md) integra los anteriores 3+4 (**22 oct.–5 nov.**) y el [laboratorio 4](laboratorios/lab04_pandas_auditoria/README.md) integra los anteriores 5+6 (**5–19 nov.**). Ambos tienen una única entrega de código e informe en GitHub, sin video ni sustentación oral. Los laboratorios 1 y 2 conservan su registro. [Calendario y entregables](laboratorios/README.md). Parcial 2: **21 oct.**; parcial 3: **12 nov.**, sin clase esos días. Proyecto: **16 nov.**; exposiciones: **17–19 nov.** El [cronograma](programa/cronograma.md) fija cortes y fechas.
 
 ## De las matemáticas al código
 

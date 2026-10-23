@@ -121,7 +121,7 @@ aprobar. No convertir la sesión en diagnóstico de servicios.
 
 ## Continuidad con los laboratorios
 
-El jueves 8 oct. se inicia el [laboratorio 2](../laboratorios/lab02_python_nativo/README.md), con Python nativo y archivos. El [laboratorio 3](../laboratorios/lab03_modelo_verificable/README.md) se abre el 15 oct. y se entrega el 27: puntos medios, pruebas, error e instalación local después de la consolidación del 13. No exige wheel, publicación ni una EDO no practicada. El péndulo se conserva como extensión opcional.
+El jueves 8 oct. se inicia el [laboratorio 2](../laboratorios/lab02_python_nativo/README.md), con Python nativo y archivos. El [laboratorio 3](../laboratorios/lab03_modelo_verificable/README.md) se abre el 22 oct. y se entrega el 5 nov.: integra puntos medios, pruebas, error e instalación local con NumPy y caminatas aleatorias. No exige wheel, publicación ni una EDO no practicada. El péndulo se conserva como extensión opcional.
 
 Referencias: [empaquetado](https://packaging.python.org/en/latest/tutorials/packaging-projects/),
 [TestPyPI](https://packaging.python.org/en/latest/guides/using-testpypi/),

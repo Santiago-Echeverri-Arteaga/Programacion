@@ -1,13 +1,13 @@
-# Cronograma vigente — ajuste del 2 de octubre de 2026
+# Cronograma vigente — laboratorios actualizados el 22 de octubre de 2026
 
-Curso de Programación científica para Física. Encuentros martes, miércoles y jueves de 120 minutos; cierre el 19 de noviembre. Esta versión sustituye las fechas y cortes de la planeación del 30 de septiembre.
+Curso de Programación científica para Física. Encuentros martes, miércoles y jueves de 120 minutos; cierre el 19 de noviembre. El ajuste del 22 de octubre sustituye las fechas y organización de laboratorios del 2 de octubre; los demás hitos conservan su planeación.
 
 ## Punto de partida y decisiones
 
 - El registro de avance indica que el encuentro previsto para archivos del jueves anterior se dedicó a cerrar colecciones y funciones con `*args` y `**kwargs`; se registra como 24 de septiembre, fecha inferida del calendario, sin certificar asistencia.
 - Los códigos de `2026-2/` muestran funciones, módulos/subpaquetes, puntos medios y lectura CSV con `pathlib`, `with` y excepciones. El avance de la semana 29 sep.–1 oct. se considera conjunto: los archivos no acreditan el día exacto ni el dominio individual. Véase [diagnóstico](ajuste_octubre_2026.md).
 - Sesión 2: 6 oct., contratos y pruebas. El 7 oct. se realiza un [taller individual autogestionado de 120 minutos](../guias/taller_07_octubre_integracion/README.md) con nueve ejercicios independientes de análisis y corrección: ciclos, colecciones, recursividad, argumentos, paquetes, archivos, puntos medios, entorno y Git. Usa contenidos ya trabajados hasta el 1 oct., sin exigir las novedades del martes ni construir una aplicación completa. La sesión 3 de error numérico se traslada al 13 oct. (75 min), junto con instalación local (25 min), pregunta del proyecto (10 min) y cierre (10 min). Construir wheel y publicar en PyPI son extensiones, no requisitos evaluables.
-- Quedan **cinco laboratorios: 2–6**. Se conserva el registro del lab. 1 y los pesos; no se presupone que los labs. 2 y 3 se hayan abierto en sus antiguas fechas.
+- Los nuevos **laboratorios 3 y 4** integran los anteriores 3+4 y 5+6. Se conservan los registros de los labs. 1 y 2. No hay video ni sustentación de los laboratorios integrados.
 - El jueves **8 de octubre** se dedica a iniciar el lab. 2. También habrá acompañamiento para los siguientes; una apertura no exige entrega el mismo día.
 - **21 de octubre: parcial 2, sin clase. 12 de noviembre: parcial 3, sin clase. Exposiciones: 17–19 de noviembre.**
 - Se propone entrega del proyecto el **lunes 16 de noviembre**, sin sesión adicional, para separar producto y parcial. Requisitos congelados el 5. La hora de recepción y los turnos individuales se anunciarán en clase.
@@ -25,27 +25,25 @@ Las semanas 1–3 son registro de planeación, no certificación de ejecución. 
 | 4 | **22 sep.** — Booleanos y condicionales | **23 sep.** — Ciclos, acumulación y colecciones | **24 sep.** — Cierre de colecciones y funciones con `*args` y `**kwargs` (registro de avance) |
 | 5 | **29 sep.** — Biblioteca propia: módulos, subpaquetes e importaciones | **30 sep.** — Continuación del ejemplo de biblioteca; pruebas reprogramadas al 6 oct. | **1 oct.** — Sesión 1: archivos, validación, excepciones y sys.path; práctica de la guía 03 |
 | 6 | **6 oct.** — Sesión 2: contratos, casos límite, pytest e instalación editable | **7 oct.** — Taller individual: ejercicios por tema, lectura/corrección de código e integración (120 min) | **8 oct.** — Taller de inicio del laboratorio 2: lectura y análisis con Python |
-| 7 | **13 oct.** — Sesión 3: error y convergencia; instalación local y pregunta del proyecto | **14 oct.** — NumPy: arreglos, formas, tipos, indexación y vistas | **15 oct.** — NumPy: ejes, vectorización y azar; entrega lab. 2 y apertura lab. 3 |
-| 8 | **20 oct.** — Matplotlib OO, unidades, leyendas y variabilidad; sin entrega | **21 oct.** — Parcial 2; sin clase; corte obligatorio del 13 oct. | **22 oct.** — Taller NumPy/Matplotlib e inicio acompañado del lab. 4 |
-| 9 | **27 oct.** — Pandas: lectura, selección y auditoría; entrega lab. 3 | **28 oct.** — Pandas: tipos, faltantes, duplicados y unidades; propuesta del proyecto | **29 oct.** — Taller de limpieza e inicio del lab. 5; agrupación simple guiada |
-| 10 | **3 nov.** — Integración y auditoría reproducible; entrega lab. 4 y apertura lab. 6 | **4 nov.** — Pandas: combinación con claves y validación; crítica de IA sobre código propio | **5 nov.** — Clínica de proyecto y verificación científica; congelamiento de requisitos |
-| 11 | **10 nov.** — Repaso y ejecución limpia; entrega lab. 5 | **11 nov.** — Ensayo y consultas; entrega breve lab. 6, sin contenido nuevo | **12 nov.** — Parcial 3; sin clase ni entrega de proyecto |
-| 12 | **17 nov.** — Exposiciones I | **18 nov.** — Exposiciones II | **19 nov.** — Exposiciones III y cierre |
+| 7 | **13 oct.** — Sesión 3: error y convergencia; instalación local y pregunta del proyecto | **14 oct.** — NumPy: arreglos, formas, tipos, indexación y vistas | **15 oct.** — NumPy: ejes, vectorización y azar; entrega lab. 2 |
+| 8 | **20 oct.** — Matplotlib OO, unidades, leyendas y variabilidad; sin entrega | **21 oct.** — Parcial 2; sin clase; corte obligatorio del 13 oct. | **22 oct.** — Taller NumPy/Matplotlib e inicio del lab. 3 integrado |
+| 9 | **27 oct.** — Pandas: lectura, selección y auditoría | **28 oct.** — Pandas: tipos, faltantes, duplicados y unidades; propuesta del proyecto | **29 oct.** — Taller de limpieza, agrupación y cambio de forma con Pandas |
+| 10 | **3 nov.** — Integración y auditoría reproducible; consultas del lab. 3 | **4 nov.** — Pandas: combinación con claves y validación; crítica de IA sobre código propio | **5 nov.** — Entrega lab. 3 e inicio lab. 4 integrado; clínica y congelamiento del proyecto |
+| 11 | **10 nov.** — Repaso, ejecución limpia y consultas del lab. 4 | **11 nov.** — Ensayo y consultas; sin entregas ni contenido nuevo | **12 nov.** — Parcial 3; sin clase ni entrega de proyecto |
+| 12 | **17 nov.** — Exposiciones I | **18 nov.** — Exposiciones II | **19 nov.** — Exposiciones III del proyecto, entrega lab. 4 y cierre |
 
-## Cinco laboratorios pendientes
+## Laboratorios vigentes
 
-| Lab. | Inicio | Entrega | Prerrequisitos | Dedicación estimada por estudiante |
+| Lab. | Inicio | Entrega | Contenido | Dedicación por estudiante |
 |---|---|---|---|---|
-| [1](../laboratorios/lab01_estacion_reproducible/README.md) | 10 sep. | 10 sep. | Linux, Bash y Git | histórico |
-| [2](../laboratorios/lab02_python_nativo/README.md) | 8 oct. | 15 oct. | Python, funciones, archivos y validación | 2 h acompañadas + 3–4 h autónomas |
-| [3](../laboratorios/lab03_modelo_verificable/README.md) | 15 oct. | 27 oct. | Puntos medios, pytest, módulos e instalación local (13 oct.) | 4–5 h autónomas |
-| [4](../laboratorios/lab04_numpy_matplotlib/README.md) | 22 oct. | 3 nov. | NumPy, azar y Matplotlib (20 oct.) | 2 h acompañadas + 3–4 h autónomas |
-| [5](../laboratorios/lab05_pandas/README.md) | 29 oct. | 10 nov. | Pandas: lectura y limpieza (28 oct.) | 75 min acompañados + 3–4 h autónomas |
-| [6](../laboratorios/lab06_integracion_cientifica/README.md) | 3 nov. | 11 nov. | Validación y ejecución limpia; trabajo previo | 45 min acompañados + 1,5–2 h autónomas |
+| [1](../laboratorios/lab01_estacion_reproducible/README.md) | 10 sep. | 10 sep. | Registro histórico | Sin cambios |
+| [2](../laboratorios/lab02_python_nativo/README.md) | 8 oct. | 15 oct. | Python y archivos | Según guía original |
+| [3](../laboratorios/lab03_modelo_verificable/README.md) | **22 oct.** | **5 nov.** | Puntos medios, NumPy, caminata, pruebas e instalación | 6–7 h totales, incluidas 2 h acompañadas |
+| [4](../laboratorios/lab04_pandas_auditoria/README.md) | **5 nov.** | **19 nov.** | Pandas detallado y auditoría del mismo análisis | 6–7 h totales, incluidos 45 min acompañados |
 
-Cada laboratorio pesa 3,5 %. Código e informe se suben a GitHub; las guías precisan resultados, pruebas y evidencia individual. El tiempo incluye informe y video. Se admiten parejas; la estimación es dedicación por persona, no suma de horas de dos integrantes. Las ventanas permiten distribuir trabajo; no se exige trabajar todos los días. No hay entrega el día de un parcial. El lab. 6 reutiliza un trabajo previo para no convertirse en otro proyecto.
+Una sola entrega por laboratorio: código, informe, resultados, pruebas y evidencia individual escrita en GitHub. Sin video ni sustentación oral para los nuevos 3 y 4. Las horas incluyen documentación y revisión. Pesos: 3,5 %, 3,5 %, 7 % y 7 %, conservando el 21 % de laboratorios publicado en el repositorio y sujeto al acta institucional. Las fechas anteriores de los labs. 3–6 dejan de aplicar.
 
-Si un prerrequisito no se practica, se reduce el alcance o se desplaza la actividad. Las recuperaciones no suplen prerrequisitos obligatorios.
+El alcance toma la aclaración docente: NumPy del material visto completo y clases ya trabajadas, con álgebra lineal avanzada solo superficial. No se exige esta última; Pandas incorpora selección, tipos, fechas, faltantes, agrupación, uniones validadas y cambio de forma. Si una operación no se practica, se proporciona acompañamiento o se reduce el alcance antes de exigirla.
 
 ## Cortes evaluables
 
@@ -66,7 +64,7 @@ Los cortes son explícitos: el parcial 2 termina el martes 13, antes de NumPy, y
 - 16 nov.: subir código e informe definitivos a GitHub e identificar commit evaluable.
 - 17–19 nov.: exposiciones y comprobación individual; después de la entrega solo cambios solicitados en la defensa.
 
-Las ventanas de labs. 3–5 se superponen parcialmente, pero sus entregas están separadas. El lab. 3 no exige trabajar el 20–21 oct.; el lab. 6 es una auditoría corta que puede completarse antes del 10 nov. El 10–11 nov. no introduce materia nueva. Se mantienen 21 % de laboratorios, 54 % de parciales y 25 % de proyecto.
+Las ventanas de los nuevos labs. 3 y 4 son consecutivas: 22 oct.–5 nov. y 5–19 nov. El lab. 4 incluye su propia auditoría, sin proyecto adicional; puede avanzarse antes del parcial del 12 y de la entrega del proyecto del 16. La entrega del 19 no requiere sustentación del laboratorio. El 10–11 nov. no introduce materia nueva. Se conservan los pesos totales publicados; prevalece el acta institucional.
 
 ## Ocho clases de recuperación en los dos primeros meses
 

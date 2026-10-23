@@ -10,12 +10,12 @@ Las fechas y materiales por encuentro están en el [mapa vigente](README.md); lo
 | 13 oct. | Error y convergencia 75; instalación local 25; pregunta del proyecto 10; cierre 10 |
 | 14–15 oct. | Conceptos NumPy 30; demo 30; práctica 45; cierre y comprobación 15, cada día |
 | 20 oct. | Figura OO 60; unidades/variabilidad 30; práctica 20; cierre 10 |
-| 22 oct. | Inicio lab. 4: modelo 20; formas/ejes 25; simulación 40; figura 25; commit 10 |
+| 22 oct. | Inicio lab. 3 integrado: referencia y contratos 30; formas/ejes 20; simulación 40; verificación 20; commit 10 |
 | 27–28 oct. | Pandas: conceptos 30; demo 30; práctica 45; cierre 15, cada día |
-| 29 oct. | Limpieza y agrupación simple 35; inicio lab. 5 acompañado 75; cierre 10 |
-| 3 nov. | Integración y auditoría 45; inicio lab. 6 acompañado 45; retroalimentación lab. 4 y cierre 30 |
+| 29 oct. | Limpieza 35; agrupación y cambio de forma 40; práctica Pandas 35; cierre 10 |
+| 3 nov. | Integración y auditoría 45; práctica de validación 45; consultas lab. 3 y cierre 30 |
 | 4 nov. | Uniones y claves 45; práctica 35; crítica de IA 25; cierre 15 |
-| 5 nov. | Clínicas de proyecto 75; validación 30; congelamiento 15 |
+| 5 nov. | Entrega lab. 3 e inicio lab. 4 integrado 45; clínica de proyecto 60; congelamiento 15 |
 | 10–11 nov. | Repaso/consultas 45; ejecución o ensayo 60; cierre 15, sin temas nuevos |
 
 El 21 oct. y el 12 nov. son exclusivamente parciales. El 17–19 nov. se reserva para exposiciones. Las demos opcionales de SQL y Docker se consultan fuera de la ruta obligatoria, sin añadir entregables.
