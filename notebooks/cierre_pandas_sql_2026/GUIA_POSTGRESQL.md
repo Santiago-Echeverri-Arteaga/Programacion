@@ -8,10 +8,11 @@
 | Bash | Terminal de Ubuntu integrada en esa ventana de VS Code |
 | PostgreSQL | Servicio en Ubuntu: conserva tablas y evalúa SQL |
 | psql | Cliente de terminal que envía archivos `.sql` al servicio |
-| Python/Psycopg | Ampliación futura: otro cliente local, en entorno virtual Ubuntu |
-| Colab | Solo la parte de Pandas; no se conecta a este PostgreSQL |
+| Python/Psycopg | Cliente del pipeline: ingesta HTTP y recuperación de resultados, entorno virtual Ubuntu |
+| Colab | Alternativa para Pandas; no se conecta a este PostgreSQL |
+| Open-Meteo | API remota; copia JSON offline en la carpeta del módulo |
 
-Realiza la preparación antes de la segunda clase. Puede requerir reiniciar Windows y permisos de administrador. La instalación no está incluida en los 270 minutos de contenido. No se ejecutan comandos de configuración automáticamente al abrir los notebooks.
+Realiza la preparación antes de las clases. Puede requerir reiniciar Windows y permisos de administrador. La instalación no está incluida en los 270 minutos de contenido. No se ejecutan comandos de configuración automáticamente al abrir los notebooks.
 
 ## 1. PowerShell de Windows: WSL2 y Ubuntu
 
@@ -70,98 +71,122 @@ Solo estos pasos administrativos usan el usuario postgres. El trabajo de clase s
 
 Si el rol o la base ya existen, no los borres ni repitas la creación. Comprueba la conexión y el propietario: `sudo -u postgres psql -c '\l curso_datos'`. Si la base pertenece a otra persona o a otro ejercicio, crea una base nueva con otro nombre y úsalo de forma consistente en todos los comandos y ejemplos de Python.
 
-## 5. Cargar datos reales y verificar
+## 5. Entorno Python en Ubuntu (fuera de clase)
 
-Desde `~/curso_datos`:
-
-```bash
-psql -X -v ON_ERROR_STOP=1 -d curso_datos -f sql/00_crear_y_cargar.sql
-psql -X -d curso_datos -c 'SELECT COUNT(*) AS filas, COUNT(masa_g) AS masas FROM curso_penguins.observaciones;'
-```
-
-Esperado: **344 filas y 342 masas presentes**. La semilla carga el CSV público Palmer Penguins, crea un catálogo de especies y una tabla de observaciones. Crea el esquema dentro de la base que elegiste; no crea otra base. No contiene datos inventados ni borra tablas. Ejecuta la carga una sola vez. Repetirla da un error de tabla existente; conserva tus tablas y continúa con las consultas.
-
-## 6. Trabajar con SQL puro
-
-Abre `sql/01_consultas_clase.sql` en VS Code y lee sus consultas junto al notebook. Puedes ejecutar el archivo completo desde Bash:
-
-```bash
-psql -X -v ON_ERROR_STOP=1 -d curso_datos -f sql/01_consultas_clase.sql
-```
-
-Para explicar una consulta a la vez, entra a psql:
-
-```bash
-psql -X -d curso_datos
-```
-
-El prompt cambia a `curso_datos=>`. Pega SQL y termina la sentencia con `;`. Si aparece `curso_datos->`, psql espera que termines la sentencia. `\r` limpia el buffer si te equivocaste. `\dt curso_penguins.*` lista tablas, `\d curso_penguins.observaciones` muestra la estructura, `\q` vuelve a Bash. Si el resultado abre un paginador, sal con `q`; `\pset pager off` lo desactiva. Los comandos con barra invertida pertenecen a psql, no al lenguaje SQL. En una transacción fallida ejecuta `ROLLBACK;` antes de continuar.
-
-También puedes escribir una consulta en `sql/mi_consulta.sql` y ejecutarla con `-f`. No necesitas una extensión de bases de datos en VS Code para este flujo. Los archivos son el historial reproducible de tus preguntas.
-
-## 7. Bash y Python: ampliación fuera de clase
-
-Ejecuta el pequeño flujo SQL → CSV desde Bash:
-
-```bash
-bash ampliacion/ejecutar_resumen.sh
-head -n 5 salidas_sql/resumen_isla.csv
-```
-
-Lee el script: detiene la ejecución ante fallos y solo reemplaza el CSV de salida cuando psql termina correctamente. `set -euo pipefail` es control del script, no una transacción de base de datos.
-
-Para conectar Python local, crea un entorno virtual de Ubuntu:
+Desde la carpeta que contiene los notebooks, `sql`, `datos` y `ampliacion`:
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-python -m pip install 'psycopg[binary]>=3,<4'
-python ampliacion/consulta_local.py
+python -m pip install -r ampliacion/requirements.txt
+# Para ejecutar los notebooks y su verificación automática:
+python -m pip install nbformat nbclient ipykernel
 ```
 
-Psycopg usa el mismo socket local y usuario que psql. No requiere Colab, contraseña ni conexión externa. Abre el archivo y observa los parámetros `%s`: SQL y valores viajan separados. Para leer el CSV desde Python puedes instalar Pandas en ese entorno (`python -m pip install pandas`) y usar `pd.read_csv('salidas_sql/resumen_isla.csv')`. Si ejecutas desde VS Code, selecciona el intérprete `.venv/bin/python` de Ubuntu; un Python de Windows no comparte este socket ni el entorno.
+Selecciona `.venv/bin/python` como intérprete/kernel en VS Code conectado a WSL. Un Python de Windows no comparte el socket local ni las bibliotecas de este entorno. La primera instalación necesita red; luego la modalidad offline no consulta la API. No instales Spark, MySQL, DuckDB, Docker ni servicios cloud.
 
-## 8. Errores frecuentes y siguiente sesión
+Psycopg usa por defecto el mismo socket y usuario que psql. `PGDATABASE` selecciona la base en todos los scripts; si no se define usan `curso_datos`. Sin `PGHOST` ni `-h`, la instalación Ubuntu habitual utiliza peer. Una configuración personalizada debe revisarse antes de cambiar variables; no muestres contraseñas en código ni en el notebook.
 
-- **No such file / archivo inexistente:** revisa `pwd` y `ls sql`; entra en la carpeta del material.
-- **Connection refused / socket no encontrado:** ejecuta `sudo service postgresql start` y `pg_isready` en Ubuntu. Si hay varios clústeres, revisa `pg_lsclusters` y usa el puerto correspondiente con `-p` de manera consistente.
-- **role ... does not exist:** revisa `whoami` y crea el rol correspondiente en el paso 4.
-- **Peer authentication failed:** no uses `-U postgres` como usuario común ni `-h localhost` con este esquema de conexión; comprueba que el rol coincide con el usuario Linux. Una instalación previamente personalizada puede necesitar revisión de su administrador.
-- **relation does not exist:** comprueba la base con `SELECT current_database();`, la carga y el prefijo `curso_penguins`.
-- **ModuleNotFoundError psycopg:** activa `.venv` y usa `python -m pip` del mismo intérprete.
-
-Al terminar, `\q` sale del cliente. Cerrar VS Code no borra tablas. Después de reiniciar WSL, verifica `pg_isready` y arranca el servicio si es necesario. No uses `wsl --unregister`: elimina una distribución y sus datos. No necesitas detener ni borrar PostgreSQL para cerrar una práctica.
-
-Documentación: [WSL](https://learn.microsoft.com/en-us/windows/wsl/install), [VS Code y WSL](https://code.visualstudio.com/docs/remote/wsl), [PostgreSQL en Ubuntu](https://ubuntu.com/server/docs/how-to/databases/install-postgresql/), [psql](https://www.postgresql.org/docs/current/app-psql.html), [Psycopg](https://www.psycopg.org/psycopg3/docs/basic/usage.html).
-
-
-## 9. Pipeline completo: .sh + .py + .sql + informe
-
-Este es el puente local después de practicar Pandas en Colab. No ejecuta ni implementa el trabajo final. Bash coordina procesos, Python prepara e interpreta datos y PostgreSQL hace la agregación.
-
-1. `01_preparar.py` descarga el CSV público (o lee la copia local), valida columnas, tipos y valores positivos, conserva ausencias y exporta `datos.csv` con un orden de columnas definido. Guarda la fuente original y su hash en `procedencia.json`.
-2. `02_resumir.sql` carga ese CSV con `\copy` en una tabla temporal, calcula cantidades, medias, dispersión y cobertura por isla y escribe `resumen.csv`. La tabla existe solo durante esa sesión y desaparece al confirmar la transacción. No modifica `curso_penguins`.
-3. `03_informar.py` vuelve a calcular el resumen con Pandas para comprobar la salida SQL y genera `informe.md` y `masa_por_isla.png` con Matplotlib orientado a objetos.
-4. `pipeline.sh` ordena los pasos y detiene la ejecución si alguno falla. Cada corrida usa una carpeta nueva bajo `salidas_pipeline/`; solo escribe `COMPLETADO.txt` al terminar todas las etapas.
-
-Desde Ubuntu, con la base preparada y la terminal en la carpeta del material:
+## 6. Carga inicial y actualización
 
 ```bash
 source .venv/bin/activate
-python -m pip install -r ampliacion/requirements.txt
-bash ampliacion/pipeline.sh
+export PGDATABASE=curso_datos
+bash ampliacion/pipeline.sh offline inicial
+bash ampliacion/pipeline.sh offline actualizacion
+bash ampliacion/pipeline.sh offline actualizacion
 ```
 
-Si aún no creaste el entorno, primero ejecuta `python3 -m venv .venv`. La primera ejecución necesita internet para instalar dependencias y descargar la fuente. Con dependencias instaladas, puedes repetir sin descargar el CSV:
+En una base nueva: Silver **93 → 180 → 180** y Gold **3 → 6 → 6** filas. Cada fase crea una carpeta nueva `salidas_pipeline/ejecucion.XXXXXX/`. Allí aparecen `carga.txt`, `consulta.txt`, `resumen_mensual.csv`, `procedencia.json`, `temperatura_mensual.png`, `informe.md` y, solo al terminar, `COMPLETADO.txt`.
+
+El CSV inicial de Pandas ya contiene los 180 registros; la base se carga en dos etapas. La primera incluye enero; la actualización incluye 25 de enero a 29 de febrero de 2024. Los 21 registros solapados se omiten por clave, se añaden 87 y se conservan los anteriores. Repetir inicial después de actualizar no vuelve a 93: se conserva lo ya cargado. No borres las tablas para repetir consultas.
+
+Para observar cada paso por separado:
 
 ```bash
-bash ampliacion/pipeline.sh datos/penguins.csv
+psql -X -v ON_ERROR_STOP=1 -f sql/00_crear_y_cargar.sql
+python ampliacion/01_preparar.py --modo offline --fase inicial
+psql -X -v ON_ERROR_STOP=1 -f sql/resumen_mensual.sql
+python ampliacion/01_preparar.py --modo offline --fase actualizacion
+python ampliacion/consulta_local.py
 ```
 
-Abre la carpeta que imprime el script y, en VS Code, usa la vista previa Markdown de `informe.md`. Comprueba la existencia del marcador final, las 344 filas de la copia incluida, las 342 masas y las tres islas del resumen. Los controles de tipos se aplican a cada fuente; los conteos 344/342 describen esta copia, no todo dataset futuro.
+`00_crear_y_cargar.sql` crea estructuras y catálogo; la ingesta de valores corresponde a Python. El nombre del archivo se conserva para continuidad con el módulo anterior. No borra datos, y `IF NOT EXISTS` no migra estructuras de otra versión: si el esquema ya tiene tablas ajenas, usa otra base propia.
 
-El archivo SQL contiene metaórdenes `\copy`, por lo que se ejecuta con **psql**, no directamente con `cur.execute()` de Psycopg. `consulta_local.py` demuestra por separado una consulta parametrizada desde Python a las tablas permanentes de clase. Esta distinción evita confundir SQL del servidor con funciones del cliente.
+Para obtener de nuevo las mismas fechas desde internet:
 
-Si falla una etapa, consulta el error y conserva la carpeta parcial para diagnosticar. Un CSV exportado no se revierte con ROLLBACK: los archivos son externos a la transacción. Por eso las carpetas son nuevas y el marcador final solo se crea tras verificar el informe. No reutilices una carpeta incompleta como resultado válido.
+```bash
+bash ampliacion/pipeline.sh online inicial
+bash ampliacion/pipeline.sh online actualizacion
+```
 
-Lectura sugerida: sigue una fila desde el CSV a la tabla temporal; después sigue un grupo desde SQL al informe. Modificaciones de práctica: cambia el agrupamiento a especie y ajusta SQL y validación Pandas juntos; agrega una comprobación de cobertura; explica por qué editar solo el SQL provoca un fallo de contrato. Son ampliaciones sin nota, no requisitos del proyecto.
+La API remota puede revisar su producto. Offline verifica los hashes de JSON congelados y reproduce la muestra documentada. Online registra URL y hash de la respuesta recibida para cada clave nueva. Ambos caminos pasan por las mismas reglas. No existe sustitución silenciosa online→offline ante un fallo; elige el modo explícitamente.
+
+## 7. Consultas en psql y archivos
+
+```bash
+psql -X -v ON_ERROR_STOP=1 -f sql/01_consultas_clase.sql
+psql -X
+```
+
+En el prompt psql, termina cada SQL con `;`. `curso_datos->` significa que falta terminar la sentencia. `\r` limpia el buffer, `\dt silver.*` lista tablas, `\d silver.observaciones` muestra estructura y `\q` regresa a Bash. Sal del paginador con `q` o desactívalo con `\pset pager off`. Las metaórdenes con barra invertida son del cliente, no SQL del servidor. Una transacción fallida requiere `ROLLBACK;`.
+
+```sql
+SELECT COUNT(*) FROM silver.observaciones;
+SELECT ciudad_id,fecha,COUNT(*) FROM silver.observaciones
+GROUP BY ciudad_id,fecha HAVING COUNT(*)>1;
+SELECT * FROM gold.mensual ORDER BY ciudad_id,mes;
+```
+
+La segunda consulta debe devolver cero filas. Gold usa días del calendario: precipitación mensual es NULL si falta algún valor diario, incluso si faltan días enteros de la tabla. Las medias disponibles llevan coberturas. Un mes completamente ausente no aparece en esta vista; no se inventan días ni ceros.
+
+Guarda tus preguntas en `.sql` y ejecútalas con `psql -f`. SQLTools o pgAdmin son clientes opcionales; no hacen falta. Exportación opcional:
+
+```bash
+bash ampliacion/ejecutar_resumen.sh
+head -n 5 salidas_sql/resumen_mensual.csv
+```
+
+El script escribe a un temporal y reemplaza el CSV solo tras terminar la consulta. El flujo principal recupera Gold directamente con Psycopg: no necesita ese CSV intermedio.
+
+## 8. Seguir el pipeline y entender fallos
+
+Bash coordina ingesta, preparación, consultas y análisis. Python usa urllib de la biblioteca estándar para descargar JSON y Psycopg para enviar filas. Bronze conserva primera recepción, URL, SHA-256 y momento de carga. Silver impone tipos, claves y condiciones físicas. `INSERT INTO ... SELECT` promueve datos dentro de la **misma transacción** que la carga Bronze. Gold es una vista mensual; al consultarla incorpora cambios confirmados.
+
+`03_informar.py` recibe solo las filas agregadas, crea un DataFrame, comprueba cobertura con NumPy y genera informe/figura. La persistencia, reglas compartidas y actualización son aportes reales de PostgreSQL. Las tres herramientas no se limitan a recalcular el mismo promedio.
+
+`set -euo pipefail` detiene el flujo ante fallos, pero no revierte toda la ejecución como una sola transacción. Si falla la ingesta, se revierten sus escrituras Bronze/Silver. Si falla la figura después de confirmar la ingesta, las tablas permanecen y la carpeta queda sin COMPLETADO.txt. Repetir no duplica claves. No reutilices carpetas incompletas como resultados finales.
+
+DO NOTHING **no corrige valores existentes**. Un registro nuevo y una revisión de un registro antiguo requieren políticas distintas. Este módulo conserva primera recepción; un historial de revisiones y DO UPDATE quedan como ampliación, no requisito.
+
+## 9. Pruebas en una base independiente
+
+Nunca uses una base personal como banco de pruebas. Si tu rol no tiene permiso CREATEDB, un administrador puede crear una base **nueva**, sin borrar ni reemplazar ninguna:
+
+```bash
+sudo -u postgres createdb --owner="$USER" test_meteo_curso
+python tests/probar_integracion.py --db test_meteo_curso
+python tests/validar_material.py
+```
+
+La prueba integral exige nombre con prefijo `test_meteo_` y rechaza esquemas existentes: no resetea bases ni elimina registros personales. Conserva la base al terminar para inspección; para una nueva ejecución usa otro nombre. Comprueba carga 93, actualización 180, repetición, conservación de datos, restricciones, transacciones, Gold contra Pandas, consulta Python, scripts Bash, figuras y fallo controlado. `validar_material.py` valida notebooks, sintaxis, hashes y ejecución Python desde kernel limpio sin API.
+
+Los resultados concretos de la revisión de este repositorio figuran en `VALIDACION.md`; no confundir un procedimiento disponible con una prueba realmente ejecutada. El entorno de pruebas puede usar una instancia temporal independiente; el entorno docente sigue siendo una sola instancia local.
+
+## 10. Problemas frecuentes y cierre
+
+- **Archivo inexistente:** revisa `pwd`, `ls sql` y la carpeta del módulo. El pipeline resuelve rutas desde su propia ubicación; los comandos manuales de esta guía se ejecutan desde el módulo.
+- **Socket no encontrado:** `sudo service postgresql start`, `pg_isready`, `pg_lsclusters`. Si hay varios puertos, establece `PGPORT` consistentemente.
+- **Rol inexistente:** compara `whoami` con el rol creado en el paso 4.
+- **Peer authentication failed:** no uses `-U postgres` como usuario común ni fuerces `-h localhost`; comprueba rol/usuario. Una instalación personalizada puede necesitar revisión del administrador, no cambiar a trust.
+- **Relation does not exist:** verifica `current_database()`, crea estructuras y ejecuta ingesta en esa misma base.
+- **ModuleNotFoundError:** activa el entorno Ubuntu y utiliza `python -m pip` del mismo intérprete.
+- **HTTP 429, timeout o sin red:** elige offline; no generes datos ficticios ni reintentos masivos.
+- **Hash, unidades o fechas inesperadas:** detén la carga y revisa la procedencia. No desactives controles para forzar un resultado.
+- **CHECK o clave foránea incumplidos:** la transacción revierte la carga; revisa fuente, unidades y catálogo. No elimines restricciones para pasar la prueba.
+
+Cerrar VS Code no borra tablas. Después de reiniciar WSL comprueba el servicio. No uses `wsl --unregister`: elimina distribución y datos. Las copias originales están en archivos del módulo, las tablas en el almacenamiento interno PostgreSQL, la API en internet y los DataFrames en la RAM de Python.
+
+Para continuar: lee los escenarios A–F del notebook. Lotes, agregaciones cercanas a los datos y sistemas distribuidos responden a límites distintos. Spark, Parquet, almacenamiento de objetos y orquestadores son proyección conceptual, no instalaciones de esta práctica.
+
+Documentación: [WSL](https://learn.microsoft.com/en-us/windows/wsl/install), [VS Code/WSL](https://code.visualstudio.com/docs/remote/wsl), [PostgreSQL](https://www.postgresql.org/docs/current/tutorial-sql.html), [psql](https://www.postgresql.org/docs/current/app-psql.html), [Psycopg](https://www.psycopg.org/psycopg3/docs/basic/usage.html).

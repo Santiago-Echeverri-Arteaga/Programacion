@@ -1,0 +1,122 @@
+{
+  "consulta_documentacion": "2026-11-02",
+  "producto": "ERA5",
+  "fuente": "Open-Meteo / Copernicus Climate Change Service (C3S) / ECMWF",
+  "licencia": "CC BY 4.0",
+  "archivos": [
+    {
+      "archivo": "originales/armenia_inicial.json",
+      "ciudad_id": "armenia",
+      "fase": "inicial",
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=4.53656&longitude=-75.67263&start_date=2024-01-01&end_date=2024-01-31&daily=temperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_sum&models=era5&timezone=America%2FBogota&temperature_unit=celsius&precipitation_unit=mm&timeformat=iso8601&cell_selection=land",
+      "descargado_utc": "2026-11-02T17:54:15.655018+00:00",
+      "sha256": "34b7bc8f8371928785e9f9bd744d20630d8dc9ec2de4072009a729a0a60dd4c0",
+      "filas": 31
+    },
+    {
+      "archivo": "originales/armenia_actualizacion.json",
+      "ciudad_id": "armenia",
+      "fase": "actualizacion",
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=4.53656&longitude=-75.67263&start_date=2024-01-25&end_date=2024-02-29&daily=temperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_sum&models=era5&timezone=America%2FBogota&temperature_unit=celsius&precipitation_unit=mm&timeformat=iso8601&cell_selection=land",
+      "descargado_utc": "2026-11-02T17:54:16.367351+00:00",
+      "sha256": "abef55e1c7df63e831188993b482527f073a4180df11136dde87ec0a61ebcaa9",
+      "filas": 36
+    },
+    {
+      "archivo": "originales/bogota_inicial.json",
+      "ciudad_id": "bogota",
+      "fase": "inicial",
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=4.60971&longitude=-74.08175&start_date=2024-01-01&end_date=2024-01-31&daily=temperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_sum&models=era5&timezone=America%2FBogota&temperature_unit=celsius&precipitation_unit=mm&timeformat=iso8601&cell_selection=land",
+      "descargado_utc": "2026-11-02T17:54:17.883460+00:00",
+      "sha256": "0f612655f4c2f88f247aaf8d369fb630b37f8caade2209fb9580d8b03ae56380",
+      "filas": 31
+    },
+    {
+      "archivo": "originales/bogota_actualizacion.json",
+      "ciudad_id": "bogota",
+      "fase": "actualizacion",
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=4.60971&longitude=-74.08175&start_date=2024-01-25&end_date=2024-02-29&daily=temperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_sum&models=era5&timezone=America%2FBogota&temperature_unit=celsius&precipitation_unit=mm&timeformat=iso8601&cell_selection=land",
+      "descargado_utc": "2026-11-02T17:54:18.627365+00:00",
+      "sha256": "0739f0e9b04265ca68fc8179d67d2823f365022ae700d9ddc2e57b28131d76bb",
+      "filas": 36
+    },
+    {
+      "archivo": "originales/barranquilla_inicial.json",
+      "ciudad_id": "barranquilla",
+      "fase": "inicial",
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=10.96854&longitude=-74.78132&start_date=2024-01-01&end_date=2024-01-31&daily=temperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_sum&models=era5&timezone=America%2FBogota&temperature_unit=celsius&precipitation_unit=mm&timeformat=iso8601&cell_selection=land",
+      "descargado_utc": "2026-11-02T17:54:20.104233+00:00",
+      "sha256": "ff69033c26010b42f07e95a129850cf48e7e865a2c03c564de279b6c2fb62e3b",
+      "filas": 31
+    },
+    {
+      "archivo": "originales/barranquilla_actualizacion.json",
+      "ciudad_id": "barranquilla",
+      "fase": "actualizacion",
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=10.96854&longitude=-74.78132&start_date=2024-01-25&end_date=2024-02-29&daily=temperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_sum&models=era5&timezone=America%2FBogota&temperature_unit=celsius&precipitation_unit=mm&timeformat=iso8601&cell_selection=land",
+      "descargado_utc": "2026-11-02T17:54:20.825897+00:00",
+      "sha256": "ee65547e56b49aba7ac442260d78a660a3ec5f5137e0d3d717164b164ce96365",
+      "filas": 36
+    }
+  ],
+  "ubicaciones": [
+    {
+      "ciudad_id": "armenia",
+      "consulta_geocodificacion": "https://geocoding-api.open-meteo.com/v1/search?name=Armenia&count=10&countryCode=CO&language=es",
+      "id": 3689560,
+      "name": "Armenia",
+      "latitude": 4.53656,
+      "longitude": -75.67263,
+      "elevation": 1390.0,
+      "feature_code": "PPLA",
+      "country_code": "CO",
+      "admin1_id": 3671087,
+      "admin2_id": 3689563,
+      "timezone": "America/Bogota",
+      "population": 304314,
+      "country_id": 3686110,
+      "country": "Colombia",
+      "admin1": "Departamento del Quindío",
+      "admin2": "Armenia"
+    },
+    {
+      "ciudad_id": "bogota",
+      "consulta_geocodificacion": "https://geocoding-api.open-meteo.com/v1/search?name=Bogota&count=10&countryCode=CO&language=es",
+      "id": 3688689,
+      "name": "Bogotá",
+      "latitude": 4.60971,
+      "longitude": -74.08175,
+      "elevation": 2582.0,
+      "feature_code": "PPLC",
+      "country_code": "CO",
+      "admin1_id": 3688685,
+      "admin2_id": 9609540,
+      "timezone": "America/Bogota",
+      "population": 7674366,
+      "country_id": 3686110,
+      "country": "Colombia",
+      "admin1": "Bogotá D.C.",
+      "admin2": "Bogotá, D.C."
+    },
+    {
+      "ciudad_id": "barranquilla",
+      "consulta_geocodificacion": "https://geocoding-api.open-meteo.com/v1/search?name=Barranquilla&count=10&countryCode=CO&language=es",
+      "id": 3689147,
+      "name": "Barranquilla",
+      "latitude": 10.96854,
+      "longitude": -74.78132,
+      "elevation": 24.0,
+      "feature_code": "PPLA",
+      "country_code": "CO",
+      "admin1_id": 3689436,
+      "admin2_id": 3689152,
+      "timezone": "America/Bogota",
+      "population": 1206319,
+      "country_id": 3686110,
+      "country": "Colombia",
+      "admin1": "Atlántico",
+      "admin2": "Barranquilla"
+    }
+  ],
+  "csv_derivado": "meteorologia.csv: union sin duplicados de las respuestas; nombres traducidos, sin imputacion"
+}

@@ -1,20 +1,23 @@
 #!/usr/bin/env bash
-# Usar: bash ampliacion/pipeline.sh [ruta_opcional_al_csv]
+# Uso: bash ampliacion/pipeline.sh [offline|online] [inicial|actualizacion]
 set -euo pipefail
 raiz=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)
-entrada=()
-if [[ $# -gt 1 ]]; then
-  printf '%s\n' 'Uso: bash ampliacion/pipeline.sh [csv_local]' >&2
+modo=${1:-offline}
+fase=${2:-inicial}
+if [[ $# -gt 2 || ! "$modo" =~ ^(offline|online)$ || ! "$fase" =~ ^(inicial|actualizacion)$ ]]; then
+  printf '%s\n' 'Uso: pipeline.sh [offline|online] [inicial|actualizacion]' >&2
   exit 2
 fi
-if [[ $# -eq 1 ]]; then entrada=(--entrada "$(realpath -- "$1")"); fi
+export PGDATABASE=${PGDATABASE:-curso_datos}
+command -v psql >/dev/null
+command -v python >/dev/null
+python -c 'import psycopg, pandas, numpy, matplotlib'
 mkdir -p "$raiz/salidas_pipeline"
 ejecucion=$(mktemp -d "$raiz/salidas_pipeline/ejecucion.XXXXXX")
-# Si algo falla se conserva la carpeta para diagnosticar, sin marcador COMPLETADO.
 trap 'printf "Pipeline detenido; revisa %s\n" "$ejecucion" >&2' ERR
-python "$raiz/ampliacion/01_preparar.py" --salida "$ejecucion" "${entrada[@]}"
-# Una sesión mantiene la tabla temporal durante la carga y el resumen.
-(cd "$ejecucion" && psql -X -v ON_ERROR_STOP=1 -d curso_datos -f "$raiz/ampliacion/02_resumir.sql")
+psql -X -v ON_ERROR_STOP=1 -f "$raiz/sql/00_crear_y_cargar.sql"
+python "$raiz/ampliacion/01_preparar.py" --modo "$modo" --fase "$fase" | tee "$ejecucion/carga.txt"
+psql -X -v ON_ERROR_STOP=1 -f "$raiz/sql/resumen_mensual.sql" > "$ejecucion/consulta.txt"
 python "$raiz/ampliacion/03_informar.py" --carpeta "$ejecucion"
-printf '%s\n' 'Todas las etapas terminaron correctamente.' > "$ejecucion/COMPLETADO.txt"
+printf '%s\n' 'Ingesta, preparacion, consulta y analisis completados.' > "$ejecucion/COMPLETADO.txt"
 printf 'Resultados: %s\n' "$ejecucion"

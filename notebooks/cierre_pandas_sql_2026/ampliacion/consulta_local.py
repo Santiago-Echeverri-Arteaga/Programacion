@@ -1,14 +1,13 @@
-"""Ejecutar en Ubuntu WSL, después de preparar la base y el entorno virtual."""
+"""Consulta parametrizada local; ejecutar tras la carga inicial."""
+import os
 import psycopg
-# Socket Unix + autenticación peer: usa el usuario actual de Ubuntu, sin contraseña.
-# El rol del mismo nombre y la base se crean siguiendo GUIA_POSTGRESQL.md.
-with psycopg.connect(dbname="curso_datos") as con:
+import pandas as pd
+
+with psycopg.connect(dbname=os.environ.get('PGDATABASE','curso_datos')) as con:
     with con.cursor() as cur:
-        cur.execute(
-            "SELECT registro_id, especie, masa_g FROM curso_penguins.observaciones "
-            "WHERE especie=%s AND masa_g>=%s ORDER BY registro_id",
-            ("Gentoo", 5500),
-        )
-        print([col.name for col in cur.description])
-        for fila in cur.fetchall():
-            print(fila)
+        cur.execute('''SELECT ciudad_id, fecha, tmax_c FROM silver.observaciones
+                       WHERE ciudad_id=%s AND tmax_c>=%s ORDER BY fecha''', ('armenia', 24))
+        datos = pd.DataFrame(cur.fetchall(), columns=[c.name for c in cur.description])
+print(datos)
+# Los valores viajan separados del SQL: no usar f-strings para construir condiciones.
+# fetchall es adecuado para este resultado pequeno; para grandes resultados ver escenario D.

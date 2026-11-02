@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+salidas_curso/
+salidas_sql/
+salidas_pipeline/
+salidas_pruebas/
