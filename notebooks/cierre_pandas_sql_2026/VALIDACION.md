@@ -2,6 +2,27 @@
 
 Ejecutada el **2 de noviembre de 2026**. Alcance: `notebooks/cierre_pandas_sql_2026/`.
 
+
+## Revisión didáctica de scripts: menos parsing y ejemplos ejecutables
+
+Se simplificaron los scripts tras el rediseño inicial. Se eliminaron argparse, el análisis de parámetros de URLs, expresiones regulares Bash, arrays Bash y trap. Se sustituyeron comprensiones/generadores y expresiones condicionales compactas del flujo por ciclos y if explícitos. La ingesta se organiza en cuatro funciones con una responsabilidad y realiza INSERT mediante un ciclo apropiado para la muestra pequeña. Bash exporta la configuración; las fechas del periodo ahora son campos explícitos del manifiesto. Los bytes de los seis JSON originales no cambiaron.
+
+Se conservan las conversiones necesarias JSON/fechas, hashes, parámetros SQL, transacciones y reglas de integridad. Los programas de clase rechazan opciones antiguas en vez de ignorarlas silenciosamente; no interpretan sus valores. La guía y el notebook muestran la nueva configuración. Los comandos `bash ampliacion/pipeline.sh offline inicial` y `bash ampliacion/pipeline.sh offline actualizacion` se mantienen.
+
+Se añadieron `ejemplos/01_archivos_y_json.py`, `02_conexion_y_transaccion.py`, `03_tablas_e_informe.py` y `04_bash_paso_a_paso.sh`, con comentarios, propósito, comandos y resultados esperados en `ejemplos/README.md`. Cubren rutas, bytes, JSON, ausencias, fechas, hashes, with, variables de entorno, cursores, parámetros, rollback, formato de informes y las funcionalidades Bash conservadas. Las utilidades tests son mantenimiento, no contenido que se deba implementar en clase.
+
+**Pruebas ejecutadas sobre la revisión:**
+
+- Clúster PostgreSQL temporal nuevo, socket aislado y base `test_meteo_sencillo`; detenido al terminar. Ninguna base personal modificada.
+- Integración offline completa: 93 → 180 → 180, conservación de filas y procedencia, restricciones, rollback, cobertura con NULL/día ausente, Gold contra Pandas, psql, Psycopg, exportación y fallo sin marcador final.
+- Validación de las seis respuestas con fechas explícitas; preservación de None y rechazo de unidades, longitudes, fechas y números no finitos incorrectos.
+- Ambos notebooks ejecutados offline desde kernels limpios; sintaxis Python y Bash incluyendo los nuevos ejemplos.
+- Los cuatro ejemplos ejecutados; el ejemplo PostgreSQL revierte su ensayo temporal.
+- Actualización online real con los nuevos scripts: 180 registros conservados y seis resúmenes, sin duplicados.
+- Tres ejecuciones con seis filas de Gold comparadas con el resultado anterior al cambio: **resumen_mensual.csv, informe.md y temperatura_mensual.png idénticos byte a byte**. No se exige identidad de los metadatos de ejecución (base, instante de carga) entre bases distintas.
+
+Los registros de esta revisión están en las carpetas ignoradas salidas_pruebas (prefijo sencillo_) y salidas_pipeline. Versiones de dependencias iguales a las indicadas en este informe. También se corrigió la codificación del literal Bogotá en el ensayo de UNIQUE para que compruebe el nombre real del catálogo.
+
 ## Entorno utilizado
 
 Ubuntu WSL2, Python 3.14.4, PostgreSQL 18.6, Psycopg 3.3.6, Pandas 3.1.0, NumPy 2.5.4, Matplotlib 3.11.2, nbformat 5.11.1, nbclient 0.11.0 e ipykernel 7.4.0.

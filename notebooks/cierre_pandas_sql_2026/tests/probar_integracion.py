@@ -1,6 +1,5 @@
 """Pruebas en una base NUEVA precreada: nunca borra ni reinicia bases existentes."""
 from pathlib import Path
-import argparse
 import os
 import subprocess
 import sys
@@ -18,13 +17,11 @@ def marco(con,sql):
 
 
 def main():
-    parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--db',required=True)
-    args=parser.parse_args()
-    if not args.db.startswith('test_meteo_'):
+    base=os.environ.get('PGDATABASE', '')
+    if not base.startswith('test_meteo_'):
         raise ValueError('Usa una base independiente con prefijo test_meteo_')
-    env={**os.environ,'PGDATABASE':args.db}
-    with psycopg.connect(dbname=args.db) as con:
+    env={**os.environ,'PGDATABASE':base}
+    with psycopg.connect(dbname=base) as con:
         if con.execute("SELECT 1 FROM pg_namespace WHERE nspname IN ('bronze','silver','gold')").fetchone():
             raise ValueError('La base ya tiene esquemas; crea otra. No se borra nada.')
     def pipeline(fase):
@@ -32,13 +29,13 @@ def main():
         subprocess.run(['bash',str(RAIZ/'ampliacion/pipeline.sh'),'offline',fase],
                        cwd=RAIZ.parent,env=env,check=True)
     pipeline('inicial')
-    with psycopg.connect(dbname=args.db) as con:
+    with psycopg.connect(dbname=base) as con:
         assert con.execute('SELECT COUNT(*) FROM silver.observaciones').fetchone()[0]==93
         assert con.execute('SELECT COUNT(*) FROM gold.mensual').fetchone()[0]==3
         inicial=con.execute('SELECT * FROM silver.observaciones ORDER BY 1,2').fetchall()
         bronze_inicial=con.execute('SELECT * FROM bronze.observaciones ORDER BY 1,2').fetchall()
     pipeline('actualizacion');pipeline('actualizacion')
-    with psycopg.connect(dbname=args.db) as con:
+    with psycopg.connect(dbname=base) as con:
         assert con.execute('SELECT COUNT(*) FROM silver.observaciones').fetchone()[0]==180
         assert con.execute('SELECT COUNT(*) FROM bronze.observaciones').fetchone()[0]==180
         assert con.execute("SELECT * FROM silver.observaciones WHERE fecha<'2024-02-01' ORDER BY 1,2").fetchall()==inicial
@@ -67,14 +64,14 @@ def main():
         ("UPDATE silver.observaciones SET fecha=NULL WHERE ciudad_id='armenia'",psycopg.errors.NotNullViolation),
         ("UPDATE silver.observaciones SET ciudad_id='inexistente' WHERE ciudad_id='armenia'",psycopg.errors.ForeignKeyViolation),
         ("INSERT INTO silver.observaciones SELECT * FROM silver.observaciones LIMIT 1",psycopg.errors.UniqueViolation),
-        ("INSERT INTO silver.ciudades VALUES ('otra','BogotÃ¡',0,0)",psycopg.errors.UniqueViolation),
+        ("INSERT INTO silver.ciudades VALUES ('otra','Bogotá',0,0)",psycopg.errors.UniqueViolation),
     ]:
-        with psycopg.connect(dbname=args.db) as con:
+        with psycopg.connect(dbname=base) as con:
             try:con.execute(sentencia)
             except error:con.rollback()
             else:
                 con.rollback();raise AssertionError('No rechazo la restriccion: '+sentencia)
-    with psycopg.connect(dbname=args.db) as con:
+    with psycopg.connect(dbname=base) as con:
         con.execute("UPDATE silver.observaciones SET precipitacion_mm=NULL,tmax_c=NULL WHERE ciudad_id='armenia' AND fecha='2024-01-01'")
         row=con.execute("SELECT n_precipitacion,cobertura_precipitacion,precipitacion_total_mm,n_tmax FROM gold.mensual WHERE ciudad_id='armenia' AND mes='2024-01-01'").fetchone()
         assert row[0]==30 and np.isclose(row[1],30/31) and row[2] is None and row[3]==30
@@ -95,7 +92,7 @@ def main():
     subprocess.run(['bash',str(RAIZ/'ampliacion/ejecutar_resumen.sh')],env=env,check=True)
     carpetas=set((RAIZ/'salidas_pipeline').glob('ejecucion.*'))
     # Base inexistente: el pipeline debe fallar y no marcar su carpeta como completa.
-    fallo=subprocess.run(['bash',str(RAIZ/'ampliacion/pipeline.sh')],env={**env,'PGDATABASE':args.db+'_no_existe'},capture_output=True)
+    fallo=subprocess.run(['bash',str(RAIZ/'ampliacion/pipeline.sh')],env={**env,'PGDATABASE':base+'_no_existe'},capture_output=True)
     assert fallo.returncode!=0
     nuevas=set((RAIZ/'salidas_pipeline').glob('ejecucion.*'))-carpetas
     assert len(nuevas)==1 and not any((c/'COMPLETADO.txt').exists() for c in nuevas)

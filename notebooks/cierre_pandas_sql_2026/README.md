@@ -96,7 +96,8 @@ python -m pip install -r tests/requirements.txt
 python tests/validar_material.py
 # Un administrador crea UNA BASE NUEVA (no reemplazar una existente):
 sudo -u postgres createdb --owner="$USER" test_meteo_curso
-python tests/probar_integracion.py --db test_meteo_curso
+export PGDATABASE=test_meteo_curso
+python tests/probar_integracion.py
 ```
 
 La prueba rechaza esquemas preexistentes y no borra bases. Consulta [VALIDACION.md](VALIDACION.md) para evidencia concreta. Los resultados temporales, caches y entornos están excluidos de Git.
@@ -108,3 +109,7 @@ Ante fallos de conexión revisa servicio, rol, base y PGPORT; ante error HTTP ut
 Se preservan fuentes internet/local/Drive/alternativas; Series y DataFrames; índices/tipos; loc/iloc; filtros/orden; vectorización; ausencias; groupby/agg; merge con cardinalidad; transform; pivot/pivot_table/melt/concat; exportación, hashes, NumPy, Matplotlib e interpretación. SQL conserva selección, NULL, agregados, GROUP BY/HAVING, INNER/LEFT JOIN, claves, restricciones, CREATE/INSERT, transacciones, CTE y ejecución psql/Bash.
 
 Los escenarios A–F explican datos locales/remotos, memoria cliente/servidor, lotes, Python remoto y procesamiento distribuido. Spark/PySpark, Parquet, objetos y orquestadores motivan la continuación; no se instalan. Volumen, rendimiento y validez científica son cuestiones distintas.
+
+## Lectura de scripts para un primer curso
+
+Los programas de clase no utilizan argparse ni analizan URLs. Bash mantiene sus dos argumentos sencillos, y exporta variables que Python lee con `os.environ.get`. Los ciclos y condiciones se escriben explícitamente; los controles de calidad, transacciones y resultados se conservan. Los [ejemplos comentados](ejemplos/README.md) explican las funcionalidades nuevas de Python y Bash paso a paso, como práctica autónoma.

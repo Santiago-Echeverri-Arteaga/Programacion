@@ -105,9 +105,13 @@ Para observar cada paso por separado:
 
 ```bash
 psql -X -v ON_ERROR_STOP=1 -f sql/00_crear_y_cargar.sql
-python ampliacion/01_preparar.py --modo offline --fase inicial
+export MODO_DATOS=offline
+export FASE_DATOS=inicial
+python ampliacion/01_preparar.py
 psql -X -v ON_ERROR_STOP=1 -f sql/resumen_mensual.sql
-python ampliacion/01_preparar.py --modo offline --fase actualizacion
+export MODO_DATOS=offline
+export FASE_DATOS=actualizacion
+python ampliacion/01_preparar.py
 python ampliacion/consulta_local.py
 ```
 
@@ -165,7 +169,8 @@ Nunca uses una base personal como banco de pruebas. Si tu rol no tiene permiso C
 
 ```bash
 sudo -u postgres createdb --owner="$USER" test_meteo_curso
-python tests/probar_integracion.py --db test_meteo_curso
+export PGDATABASE=test_meteo_curso
+python tests/probar_integracion.py
 python tests/validar_material.py
 ```
 
@@ -190,3 +195,23 @@ Cerrar VS Code no borra tablas. Después de reiniciar WSL comprueba el servicio.
 Para continuar: lee los escenarios A–F del notebook. Lotes, agregaciones cercanas a los datos y sistemas distribuidos responden a límites distintos. Spark, Parquet, almacenamiento de objetos y orquestadores son proyección conceptual, no instalaciones de esta práctica.
 
 Documentación: [WSL](https://learn.microsoft.com/en-us/windows/wsl/install), [VS Code/WSL](https://code.visualstudio.com/docs/remote/wsl), [PostgreSQL](https://www.postgresql.org/docs/current/tutorial-sql.html), [psql](https://www.postgresql.org/docs/current/app-psql.html), [Psycopg](https://www.psycopg.org/psycopg3/docs/basic/usage.html).
+
+## 11. Scripts sencillos y configuración explícita
+
+Las órdenes del pipeline no cambian. Los programas Python ya no reciben opciones --modo, --fase, --db o --carpeta: Bash les comunica esas decisiones con export. Para ejecutarlos individualmente:
+
+```bash
+export PGDATABASE=curso_datos
+export MODO_DATOS=offline
+export FASE_DATOS=inicial
+python ampliacion/01_preparar.py
+export FASE_DATOS=actualizacion
+python ampliacion/01_preparar.py
+mkdir -p salidas_pipeline
+export CARPETA_SALIDA=$(mktemp -d salidas_pipeline/manual.XXXXXX)
+python ampliacion/03_informar.py
+```
+
+Python usa offline/inicial/curso_datos si sus variables no existen. El informe exige CARPETA_SALIDA para evitar escribir en una ubicación no elegida. Las variables siguen definidas en esa terminal; compruébalas o reasígnalas antes de ejecutar otra práctica. El pipeline establece explícitamente modo y fase a partir de sus argumentos. La prueba integral también toma su base de PGDATABASE y sigue exigiendo el prefijo test_meteo_ y esquemas aún inexistentes.
+
+Consulta `ejemplos/README.md`. Allí se explican archivos, JSON, fechas, hashes, export, with, cursores, parámetros SQL, formato de informes y las órdenes Bash conservadas. En Bash retiramos las expresiones regulares, arrays y trap; la exportación opcional usa if para conservar el CSV previo si psql falla. Una interrupción externa podría dejar un temporal, sin reemplazar el resultado válido.
